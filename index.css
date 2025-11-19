@@ -1,0 +1,1006 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+h2{
+    font-size: 36px;
+    /* margin-left: 100px; */
+
+}
+h3{
+    font-size: 36px;
+}
+
+body{
+    background-image: url(./banner/background.png);
+    /* background-repeat: repeat-y; */
+    /* width: 1920px; */
+    height: auto;
+    
+    
+}
+/* 連結樣式 */
+/* a:link – 一般的、未被點擊過的連結
+
+a:visited -已被點擊的連結
+
+a:hover - 滑鼠指標移到連結上方時的狀態
+
+a:active - 連結被點擊時的狀態
+
+另外，text-decoration 屬性大多用於去除掉連結的下劃線
+
+範例：
+
+a:link {
+
+text-decoration:none;
+
+}
+*/
+/* <a href="seanacnet.com" target="_blank">
+   另開一個首頁
+</a> */
+a:link{
+    color: black;
+    text-decoration:none;
+}
+a:visited{
+    color: black;
+    text-decoration:none;
+}
+
+/* ==================================== */
+.line-icon{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+}
+.line-icon img{
+    width: 80px;
+    
+}
+/* hover */
+.line-icon:hover img{
+    width: 100px;
+
+}
+
+/* ================================== */
+/* 導覽列 */
+.header{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px ;
+    justify-content: space-between;
+    margin-bottom:30px;
+    /* 更改點↓ */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; /* 確保橫跨整個頁面 */
+    z-index: 1000; /* 確保它在其他內容之上 */
+}
+.header .logo img{
+    
+    height: 120px;
+    position: relative;
+    top: -25px;
+    left: 100px;
+    
+}
+.header-whiteLine{
+    background-color: white;
+    box-sizing: border-box;
+    width: 800px;
+    height: 80px;
+    border-radius:40px 0 0 40px ;
+    /* padding-left: 100px;
+    padding-right: 50px; */
+    justify-content: center;
+    align-content: center;
+    
+}
+.header-txt ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-left: 20px;
+}
+.header-txt ul li{
+    padding:20px ;
+    border-radius: 40px ;
+}
+/* hover */
+.header-txt li:hover  {
+    background-color: #FF9800;
+    color: white;
+}
+/* =================== */
+
+
+
+section{
+    max-width: 1320px;
+    margin: auto;
+    height: auto;
+    justify-content: center;
+    padding: 0 150px;
+   
+}
+
+/* ===================== */
+/* 裝飾品(封面) */
+
+.banner-pic{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    overflow:hidden;
+}
+
+
+
+.deco1{
+    position: absolute;
+    top: 0px;
+    left: 500px;
+    z-index: -2;
+}
+.deco1 img{
+    width: 100%;
+    opacity: 0.6;
+}
+.deco2{
+    position: absolute;
+    z-index: -1;
+    top: 500px;
+}
+.deco2 img{
+    width: 75%;
+    opacity: 0.6;
+}
+.deco3{
+    position: absolute;
+    z-index: -1;
+    top: 120px;
+    right: 0;
+    /* animation: myAnimation .3s ease-in-out 1s  alternate forwards; */
+}
+.deco3 img{
+    width: 100%;
+}
+.deco4{
+    position: absolute;
+    z-index: -1;
+    top: 300px;
+    right: 0px;
+}
+.deco4 img{
+    width: 100%;
+}
+.deco5{
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 350px;
+}
+.deco5 img{
+    width: 100%;
+}
+.deco6{
+    position: absolute;
+    z-index: -1;
+    top: -100px;
+    left: 0px;
+}
+.deco6 img{
+    width: 60%;
+}
+.deco7{
+    position: absolute;
+    z-index: -1;
+    top: 600px;
+    right: 0px;
+}
+.deco7 img{
+    width: 100%;
+}
+
+.another-deco1{
+    position: absolute;
+    top: 0;
+}
+
+
+
+/* 封面裝飾品特效 */
+/* @keyframes myAnimation {
+    0% {
+        transform: translateX(45deg ,100px) 
+    }
+    100% {
+        transform: rotate(45deg);
+       
+    }
+} */
+
+
+
+/* ====================================== */
+.banner{
+    /* padding-bottom: 400px; */
+    padding-top: 0px;
+    
+    
+}
+.banner .contain {
+    margin-left: 150px;
+    margin-top: 65px;
+}
+.banner .contain .title h1{
+    line-height: 100px;
+    font-size:40px;
+    /* 更改點↓ */
+    /* 增加上邊距，避開固定導覽列 */
+    margin-top: 200px; /* 給予足夠的空間，讓 h2 位於 banner-bg 頂部 */
+
+    
+}
+.banner .contain .txt{
+    margin: 15px 0;
+    font-size: 20px;
+}
+.banner .contain .button img{
+    width: 280.93px;
+    height: 75px;
+}
+/* ================== */
+.qa{
+    margin-top: 300px;
+}
+.qa-arrow {
+    position: relative;
+    top: 300px;
+    left: 0px;
+}
+.qa-arrow img{
+    width: 100%;
+}
+/* .qa .contain .title h2{
+    margin-left: 150px;
+
+} */
+
+.qa-cardlist{
+    display: flex;
+    /* margin-top: 50px; */
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.qa-cardlist .card{
+    display: flex;
+    margin: 0 50px 50px;
+}
+
+.qa-cardlist .card:nth-child(1){
+    width: 1253px;
+    /* height: 521px; */
+}
+
+.qa-cardlist .card:nth-child(2){
+    width: 1106px;
+    /* height: 543px; */
+}
+
+.qa-cardlist .card:nth-child(3){
+    width: 1022px;
+    /* height: 514px; */
+} 
+.qa-cardlist .card .pic{
+    display: flex;
+    align-items: center;
+}
+.qa-cardlist .card .pic img{
+    width: 100%;
+    
+}
+.qa-cardlist .card .txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 45px;
+    width: 900px;
+    
+}
+.qa-cardlist .card .txt .name{
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+.qa-cardlist .card .txt .profession{
+    font-size: 16px;
+    color: #444;
+    letter-spacing: 2px;
+    margin: 10px 0;
+}
+.qa-cardlist .card .txt .content{
+    font-size: 28px;
+    line-height:35px ;
+    letter-spacing: 2px;
+
+}
+.qa-1 .contain .down{
+    margin-bottom:230px ;
+    width: 300px;
+    border-bottom: 1px solid gray;
+    margin-left: auto;
+}
+
+.qa-1 .contain .down p{
+    margin-right: 100px;
+}
+/* ================================== */
+
+
+/* .contract .contain .title h2{
+    margin-left: 150px;
+    
+} */
+
+.contract .contain .title h3{
+    position: relative;
+    
+}
+
+/* 裝飾品一 */
+.another-deco1{
+    position: absolute;
+    /* right:-100px; */
+    top: 1500px;
+    z-index: -1;
+    
+}
+
+
+
+.contract .contain .sub-txt {
+    /* border:1px solid #000000; */
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 150px;
+    
+}
+.contract .contain .sub-txt p:nth-child(1){
+    padding:15px ;
+    font-size: 24px;
+    font-weight: bold;
+}
+.contract .contain .sub-txt p:nth-child(2){
+    padding:15px ;
+    font-size: 16px;
+}
+.ct-button{
+    font-size: 24px;
+    width: 325px;
+    height: 93px;
+    background-color: #FF9800;
+    border-radius: 10px;
+    margin-bottom: 65px;
+    align-content: center;
+    justify-items: center;
+    color: white;
+    text-align: center;
+    /* margin-left: 150px; */
+}
+.contract .contain .ct-cardlist{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.ct-card{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+   
+}
+/* .ct-card:nth-child(2){
+    margin-top: 100px;
+}  測試用 */
+
+.ct-card img{
+    width: 100%;
+    
+}
+.ct-card .txt{
+    width: 100%;
+    box-sizing: border-box;
+    
+    margin-top: -10px;
+    height: 143.41px;
+    background-color: #FFDD83;
+    margin-bottom: 200px;
+    align-content: center;
+    
+    border-radius: 0 0 7px 7px ;
+    /* border: 1px solid #5A5A5A; */
+    border-top: none;
+    
+}
+.ct-card .txt p{
+    line-height: 35px;
+    padding: 15px;
+}
+
+.contract .contain .ct-cardlist .ct-card .title{
+    position: relative;
+}
+.contract .contain .ct-cardlist .ct-card .title h3{
+    position: absolute;
+    top: 210px;
+    padding-left: 15px;
+    font-size: 28px;
+
+}
+
+/* 按鈕連結 */
+.ct-button:link{
+    font-size: 24px;
+    width: 325px;
+    height: 93px;
+    background-color: #FF9800;
+    border-radius: 10px;
+    margin-bottom: 65px;
+    align-content: center;
+    justify-items: center;
+    color: white;
+    text-align: center;
+}
+.ct-button:visited{
+    font-size: 24px;
+    width: 325px;
+    height: 93px;
+    background-color: #FF9800;
+    border-radius: 10px;
+    margin-bottom: 65px;
+    align-content: center;
+    justify-items: center;
+    color: white;
+    text-align: center;
+}
+/* 按鈕hover */
+.ct-button:hover{
+    border: 1px solid #FF9800;
+    background-color: white;
+    color: black;
+}
+/* ================================ */
+
+/* --- 區塊佈局 --- */
+.reason .contain .title h2{
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+
+/* 裝飾品二 */
+.another-deco2{
+    position: absolute;
+    right: 0;
+    top: 2500px;
+    z-index: -1;
+    
+}
+.reason .contain .title h3{
+    margin-bottom: 12px;
+    
+}
+.reason .contain .sub-txt{
+    margin-bottom: 50px;
+    font-size: 24px;
+    text-align: center;
+    
+
+}
+.reason .contain .reason-cardlist{
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* 建議添加間距，讓卡片之間不擁擠 */
+}
+
+/* 確保單個卡片有容器（如果您的 HTML 採用了上次的建議） */
+.reason-cardlist .reason-card {
+    width: 300px; /* 設定單張卡片寬度 */
+    text-align: center;
+}
+
+/* --- 圓圈樣式 (核心) --- */
+.circle{
+    background-color: white; /* 預設白色背景 */
+    width: 271.77px;
+    height: 271.77px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* 讓內容水平垂直置中 */
+    margin: auto;
+    transition: background-color 0.3s ease; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    z-index: -1;
+}
+
+.circle img{
+    width: 86px;
+    height: 80px;
+    display: block; 
+    margin: 0; 
+    
+    filter: invert(0%); 
+    transition: filter 0.3s ease; 
+}
+
+.circle .title{
+    padding-top:10px ; /* 調整圖示和文字的距離 */
+}
+.circle .title h3{
+    padding: 0;
+    margin: 0;
+    color: #000000; 
+    transition: color 0.3s ease; 
+}
+
+/* [修正 3] 移除這個，它會導致錯誤的定位 */
+/* .reason .contain .reason-cardlist .circle .txt{
+    position: relative;
+    top: 100px;
+}
+*/
+
+/* 圓圈下方的詳細文字 (如果文字在圓圈外) */
+.reason .contain .reason-cardlist .txt {
+    padding-top: 40px; 
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* --- 懸停動畫 (Hover Effect)?????? --- */
+
+/* 1. 變色 (背景) */
+.reason-card:hover .circle {
+    background-color: #FF9800 !important; 
+    
+}
+
+/* 2. 變色 (圖示) */
+.reason-card:hover .circle img {
+    /* opacity: 0; */
+    filter: invert(100%); 
+   
+}
+
+/* 3. 變色 (標題) */
+.reason-card:hover .circle .title h3 {
+    color: white;
+}
+
+section.reason{
+    margin-bottom: 50px;
+}
+/* ====================================== */
+
+.user .contain .title{
+    padding-bottom: 50px;
+    justify-items: center;
+}
+.user .contain .txt{
+    font-size: 24px;
+    justify-items: center;
+    padding-bottom: 50px;
+}
+/* 裝飾品三 */
+.another-deco3-1{
+    position: absolute;
+    left: 0;
+    top: 3200px;
+    z-index: -1;
+}
+/* 裝飾品三 */
+.another-deco3{
+    position: absolute;
+    left: 0;
+    top: 4200px;
+    z-index: -1;
+    
+}
+
+
+.user .contain .user-cardlist{
+    display: flex;
+    /* margin: auto; */
+}
+
+.arrow{
+    position: relative;
+    top: 600px;
+    left: 0px;
+}
+.arrow img{
+    width: 100%;
+}
+
+.user .contain .user-cardlist .user-card{
+    background-color: white;
+    margin: 8px;
+    height: 590px;
+    width: 480px;
+
+}
+.user .contain .user-cardlist .user-card .user-date{
+    display: flex;
+    flex-direction:row;
+}
+
+.user .contain .user-cardlist .user-card .user-date .user-pic{
+    padding-top: 45px;
+    padding-left: 20px;
+    
+}
+.user-dataTxt{
+    padding-top: 50px;
+    padding-left: 15px;
+}
+.user-dataTxt .user-name{
+    font-size: 20px;
+    padding-right: 20px;
+}
+.user .contain .user-cardlist .user-card .user-com{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    
+    
+}
+.user .contain .user-cardlist .user-card .star{
+    align-self: flex-end;
+    padding-top: 80px;
+    
+}
+
+section.user{
+    /* 與下一張卡片的距離 */
+    margin-bottom: 205px;
+}
+/* ============================================ */
+
+
+.comment .contain .title{
+    justify-items: center;
+    position: relative;
+    padding-bottom: 50px; 
+}
+.comment .contain .title .penlight{
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+}
+
+
+.com-cardlist-row1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* 重要 */
+    overflow: hidden;
+
+}
+.com-card{
+    background-color: white;
+    border-radius:42px ;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    width: 730px;
+
+}
+.com-cardlist-row2{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 190px;
+    justify-content: start;
+    /* 重要 */
+    overflow: hidden;
+}
+.com-pic{
+    padding: 32px;
+    
+}
+.com-pic img{
+    width: fit-content;
+}
+.com-txt{
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    justify-content: space-between;
+    width: 390px;
+    padding-right:32px ;
+}
+.com-txt .com-from{
+    font-size: 24px;
+    padding-bottom:60px ;
+    /* 姓名注意換行 */
+    padding-left: 50px;
+}
+
+/* 裝飾品四 */
+.another-deco4{
+    position: absolute;
+    right: 0;
+    top: 5000px;
+    z-index: -1;
+    
+}
+
+
+
+/* ================================= */
+.update .contain .title{
+    justify-items: center;
+    padding-bottom: 50px ;
+}
+
+.up-cardlist{
+    display: flex;
+    justify-content: center;
+}
+.up-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    margin: 0 50px;
+    height: 500px;
+    width: 375px;
+    padding: 50px;
+    justify-content: space-between;
+    border-radius:10px ;
+    
+    
+
+}
+.up-card .prize{
+    font-size: 32px;
+    
+}
+.up-card .version{
+    font-size: 24px;
+}
+.up-card .txt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.up-card .txt p{
+    
+    font-size: 12px;
+    padding: 15px;
+    color: gray;
+}
+.up-button{
+    width: 236.58px;
+    height: 70px;
+    /* border: 1px solid black; */
+    /* 文字垂直置中 */
+    align-content: center;
+    border-radius: 3px;
+    background-color: #FDEBB9;
+    transition:  0.3s ease-in-out;
+
+    
+
+}
+.up-button p{
+    /* 文字水平置中 */
+    justify-self: center;
+    
+}
+section.update{
+    /* 與下一張卡片的距離 */
+    margin-bottom: 125px;
+}
+
+
+/* hover */
+
+/* 背景往上變色 */
+.up-card:hover {
+    margin-top: -20px;
+    background-color: #FF9800;
+    box-shadow: 0 0px 30px #b06a00;
+    
+}
+/* 價格字體變色變大 */
+.up-card:hover .prize p{
+    color:white;
+    font-size: 40px;
+}
+/* 內容變白 */
+.up-card:hover .txt p{
+    color:white
+    
+}
+
+/* 按鈕變色 */
+.up-button:hover {
+    background-color: white;
+}
+
+
+/* ======================================= */
+.lawer{
+    padding-bottom: 240px;
+}
+.lawer .contain .title{
+    justify-items: center;
+    padding-bottom: 50px ;
+}
+.lawer .contain .txt{
+    justify-items: center;
+    font-size: 20px;
+    padding-bottom: 50px;
+}
+
+.lawer .contain .pen-light{
+    position: relative;
+}
+.lawer .contain .pen-light img{
+    position: absolute;
+    bottom: 30px;
+    right: 170px;
+    z-index: -1;
+}
+
+
+.lawer-cardlist{
+    display: flex;
+    
+}
+
+.lawer-cardlist .lawer-card{
+    position: relative;
+    overflow: hidden;
+    object-fit: cover; /* 確保圖片覆蓋整個區域，不變形 */
+    display: block;
+    transition: filter 0.3s ease; /* 為圖片的過濾效果添加過渡 */
+    margin: 0 20px;
+}
+
+.lawer-pic img{
+    width: 100%;
+    height: 100%;
+
+}
+
+.experience {
+    background-color: rgba(0,0,0,85);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    align-content: center;
+    padding: 10px;
+
+
+    opacity: 0; /* 預設隱藏 (透明度為 0) */
+    transition: opacity 0.3s ease; /* 讓顯示/隱藏有平滑的過渡效果 */
+    transition: opacity 0.3s ease; /* 讓顯示/隱藏有平滑的過渡效果 */
+}
+.experience p{
+    background-color: #000000;
+    font-size: 18px;
+    color: white;
+    line-height: 35px;
+    padding-left: 25px;
+    
+}
+.experience ul{
+    color: white;
+    font-size: 18px;
+    color: white;
+    line-height: 35px;
+    padding: 10px 25px;
+}
+
+.lawer-name{
+    font-size:28px ;
+    justify-items: center;
+    background-color: white;
+    border-radius:0 0 7px 7px ;
+    margin: 0 ;
+    padding:25px;
+}
+
+/* 懸停動畫 */
+/* 懸停在圖片時，讓詳細資訊顯示 (不透明度為 1) */
+.lawer-card:hover .experience {
+    border-radius: 7px;
+    opacity: 1;
+    pointer-events: auto; /* 懸停時恢復點擊 */
+}
+/* ========================= */
+/* 頁尾 */
+.footer{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+.bg-footer{
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    z-index: -1;
+}
+.bg-footer .gray-line{
+    /* border:1px solid #000000; */
+    height: 35px;
+    background-color:#5A5A5A ;
+}
+.bg-footer img{
+    width: 100%;
+}
+.footer .logo{
+    padding-top: 84px;
+}
+
+.footer .logo img{
+    width: 80%;
+}
+
+.txt-footer{
+    padding-top: 84px;
+    display: flex;
+}
+.txt-footer1{
+    margin-right:100px;
+}
+
+.txt-footer1 p{
+    padding: 20px 0;
+    font-size: 16px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+    
+}
+.txt-footer2 p{
+    padding: 20px 0;
+    font-size: 16px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.copyright{
+    display: flex;
+    align-self: self-end;
+    font-size: 15px;
+    
+}
+
+

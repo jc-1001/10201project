@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    position: relative;
+}
+
+
+
+body{
+    background-image: url(./background.png);
+    /* background-repeat: repeat-y; */
+    /* width: 1920px; */
+    height: auto;
+    
+}
+section{
+    max-width: 1320px;
+    margin: auto;
+    height: auto;
+    justify-content: center;
+    padding:0 150px;
+}
+
+/* 連結樣式 */
+a:link{
+    color: black;
+    text-decoration:none;
+    width: 100%;
+    text-align: center;
+}
+
+a:visited{
+    color: black;
+    text-decoration:none;
+    
+}
+
+/* ============================= */
+.header{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px ;
+    justify-content: space-between;
+    /* 更改點↓ */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; /* 確保橫跨整個頁面 */
+    z-index: 1000; /* 確保它在其他內容之上 */
+}
+.header .logo img{
+    
+    height: 120px;
+    position: relative;
+    top: -25px;
+    left: 100px;
+    margin-bottom: px;
+}
+.header-whiteLine{
+    background-color: white;
+    box-sizing: border-box;
+    width: 800px;
+    height: 80px;
+    border-radius:40px 0 0 40px ;
+    /* padding-left: 100px;
+    padding-right: 50px; */
+    justify-content: center;
+    align-content: center;
+    
+}
+.header-txt ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-left: 20px;
+}
+.header-txt ul li{
+    padding:20px ;
+    border-radius: 40px ;
+}
+/* hover */
+.header-txt li:hover a {
+    color: white;
+}
+.header-txt li:hover{
+    background-color: #FF9800;
+}
+/* ============================ */ 
+
+.banner-bg {
+    background-color: #EBCBAC;
+    
+
+}
+.lawer-banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.lawer-banner-card{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.lawer-pic {
+    box-sizing: border-box;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    display: block;
+}
+.lawer-pic img{
+    width: 80%;
+}
+.lawer-txt{
+    display: flex;
+    flex-direction: column;
+    font-size: 36px;
+    font-weight: bold;
+    position: relative;
+}
+.lawer-txt p{
+    margin: 10px 0;
+}
+.lawer-name{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+.deco img{
+    width: 150px;
+    position: absolute;
+    top: -50px;
+    right: 180px;
+    
+    
+}
+.socialmed{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-top: 100px;
+    
+}
+.socialmed img{
+    width: 70%;
+    padding: 0 10px;
+}
+/* hover */
+.socialmed img:hover{
+    transform: scale(1.2)
+}
+
+/* 標示連結處 */
+.socialmed img:link img{
+    width: 70%;
+    padding: 0 10px;
+}
+.socialmed img:visited img{
+    width: 70%;
+    padding: 0 10px;
+}
+/* ============================= */
+/* 律師背景介面 */
+.lawer-background{
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+}
+.experience{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 100%;
+    
+    align-items: center;
+    
+}
+.experience p{
+    font-size: 20px;
+    margin-bottom: 100px;
+    margin-right: 50px;
+    letter-spacing: 2px;
+
+}
+.experience p::first-letter{
+    font-size: 45px;
+    font-weight: 100px;
+
+}
+
+.goodat{
+    margin-top: 50px;
+    border-left: 5px solid #FF9800;
+    padding:10px ;
+    
+    
+
+}
+.goodat ul{
+    list-style: none;
+    li{
+        font-size: 18px;
+        padding: 10px;
+        letter-spacing: 2px;
+    }
+}
+/* ============================ */
+/* 頁尾 */
+.footer{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+.bg-footer{
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    z-index: -1;
+}
+.bg-footer .gray-line{
+    /* border:1px solid #000000; */
+    height: 35px;
+    background-color:#5A5A5A ;
+}
+.bg-footer img{
+    width: 100%;
+}
+.footer .logo{
+    padding-top: 84px;
+}
+
+.footer .logo img{
+    width: 80%;
+}
+
+.txt-footer{
+    padding-top: 84px;
+    display: flex;
+}
+.txt-footer1{
+    margin-right:100px;
+}
+
+.txt-footer1 p{
+    padding: 20px 0;
+    font-size: 16px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+    
+}
+.txt-footer2 p{
+    padding: 20px 0;
+    font-size: 16px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.copyright{
+    align-self: self-end;
+    font-size: 15px;
+    
+}

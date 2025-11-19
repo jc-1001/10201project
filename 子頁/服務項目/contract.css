@@ -1,0 +1,328 @@
+/* 基本設定 */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    position: relative;
+}
+
+body{
+    background-image: url(./background.png);
+    /* background-repeat: repeat-y; */
+    /* width: 1920px; */
+    height: auto;
+    
+}
+h2{
+    font-size: 32px;
+}
+section{
+    max-width: 1320px;
+    margin: auto;
+    height: auto;
+    justify-content: center;
+    padding:0 150px;
+}
+a:link{
+    color: black;
+    text-decoration:none;
+}
+a:visited{
+    color: black;
+    text-decoration:none;
+}
+/* ========================== */
+/* 導覽列 */
+.header{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px ;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    /* 更改點↓ */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; /* 確保橫跨整個頁面 */
+    z-index: 1000; /* 確保它在其他內容之上 */
+
+}
+.header .logo img{
+    
+    height: 120px;
+    position: relative;
+    top: -25px;
+    left: 100px;
+    
+}
+.header-whiteLine{
+    background-color: white;
+    box-sizing: border-box;
+    width: 800px;
+    height: 80px;
+    border-radius:40px 0 0 40px ;
+    /* padding-left: 100px;
+    padding-right: 50px; */
+    justify-content: center;
+    align-content: center;
+    
+}
+.header-txt ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-left: 20px;
+}
+.header-txt ul li{
+    padding:20px ;
+    border-radius: 40px ;
+}
+/* hover */
+.header-txt li:hover  {
+    background-color: #FF9800;
+    color: white;
+}
+/* ===================================== */
+
+.banner-bg img{
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    top: 0px; 
+    z-index: -1;
+
+}
+.banner-title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    color: white;
+    /* 更改點↓ */
+    /* 增加 .title 的上邊距，避開固定導覽列 */
+    margin-top: 170px; /* 給予足夠的空間，讓 h2 位於 banner-bg 頂部 */
+
+}
+
+.banner-botton p{
+    border-radius: 10px;
+    background-color: #FF9800;
+    width: 279px;
+    height: 75px;
+    align-content: center;
+    text-align: center;
+    font-size: 24px;
+    margin-right: 55px;
+    
+}
+
+/* ========================================== */
+.servers h3{
+    font-size: 28px;
+    text-align: center;
+    
+    margin-bottom: 30px; 
+}
+.ct-cardlist{
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    gap: 25px;
+    margin-top: 50px;
+}
+.ct-cardlist .ct-card{
+    box-sizing: border-box;
+    width: 280px;
+    height: 174px;
+    padding: 25px 15px 15px 15px;
+    /* border: 1px solid black; */
+    border-radius:22px ;
+    background-color: #FFDD83;
+}
+.ct-cardlist .ct-card .sub-title{
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding-bottom: 15px;
+}
+.ct-cardlist .ct-card .contain{
+    line-height: 20px;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+/* hover */
+.ct-card:hover {
+    /* border:3px solid rgba(311,121,111,11) ; */
+    /* x軸 y軸 暈染程度 顏色 */
+    box-shadow: 0 0px 30px #bc7100;
+    margin-top: -10px;
+}
+
+
+
+/* ============================= */
+.no-search{
+    width: 487px;
+    height: 75px;
+    background-color: #FF9800;
+    align-content: center;
+    text-align: center;
+    border-radius: 10px;
+    margin: 80px auto;
+    animation: myAnimation .8s ease-in-out 3s infinite alternate forwards;
+    color: white;
+}
+
+
+/* 定義動畫 */
+@keyframes myAnimation {
+    0% {
+        transform: rotate(-5deg);
+        background-color:#FF9800;
+        color: rgb(255, 255, 255);
+        
+    }
+    100% {
+        transform: rotate(5deg);
+        background-color:#FF9800;
+        color: rgb(255, 255, 255);
+    }
+}
+/* ============================= */
+.ser-sibTitle{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom:75px ;
+}
+.sec-servers h3{
+    margin-bottom:30px ;
+    font-size: 28px;
+    text-align: center;
+}
+
+.step-cardlist{
+    box-sizing: border-box;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    row-gap: 100px;
+    column-gap:150px ;
+    justify-content: center;
+    align-content: center;
+    
+}
+.step-card{
+    display: flex;
+    box-sizing: border-box;
+    height: 311px;
+    border: radius 500px;
+    position: relative;
+
+
+}
+.num{
+    box-sizing: border-box;
+    height: 125px;
+    width: 110px;
+    background-color: #FFDD83;
+    border-radius:30px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:50px ;
+    position: absolute;
+    left:-50px;
+}
+.st-title{
+    font-size: 30px;
+    letter-spacing: 2px;
+    padding-bottom: 30px;
+}
+.st-contain{
+    background-color: #FFDD83;
+    font-size: 20px;
+    line-height: 35px;
+    letter-spacing: 2px;
+    padding: 45px 75px;
+}
+.st-button{
+    display: flex;
+    justify-content: center;
+    margin: 115px 0;
+}
+.st-button p{
+    border-radius: 10px;
+    background-color: #FF9800;
+    width: 279px;
+    height: 75px;
+    align-content: center;
+    text-align: center;
+    font-size: 24px;
+}
+.st-button p:hover{
+    background-color: white;
+    border:1px solid #FF9800;
+}
+
+/* ============================ */
+/* 頁尾 */
+.footer{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+.bg-footer{
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    z-index: -1;
+}
+.bg-footer .gray-line{
+    /* border:1px solid #000000; */
+    height: 35px;
+    background-color:#5A5A5A ;
+}
+.bg-footer img{
+    width: 100%;
+}
+.footer .logo{
+    padding-top: 84px;
+}
+
+.footer .logo img{
+    width: 80%;
+}
+
+.txt-footer{
+    padding-top: 84px;
+    display: flex;
+}
+.txt-footer1{
+    margin-right:100px;
+}
+
+.txt-footer1 p{
+    padding: 20px 0;
+    font-size: 16px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+    
+}
+.txt-footer2 p{
+    padding: 20px 0;
+    font-size: 16px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.copyright{
+    align-self: self-end;
+    font-size: 15px;
+    
+}

@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    position: relative;
+}
+
+h4{
+    font-size: 24px;
+    /* margin-left: 100px; */
+
+}
+
+
+body{
+    background-image: url(./background.png);
+    /* background-repeat: repeat-y; */
+    /* width: 1920px; */
+    height: auto;
+    
+}
+section{
+    max-width: 1320px;
+    margin: auto;
+    height: auto;
+    justify-content: center;
+    padding:0 150px;
+}
+
+
+/* ============================= */
+.header{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px ;
+    justify-content: space-between;
+    /* 更改點↓ */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; /* 確保橫跨整個頁面 */
+    z-index: 1000; /* 確保它在其他內容之上 */
+}
+.header .logo img{
+    
+    height: 120px;
+    position: relative;
+    top: -25px;
+    left: 100px;
+    margin-bottom: px;
+}
+.header-whiteLine{
+    background-color: white;
+    box-sizing: border-box;
+    width: 800px;
+    height: 80px;
+    border-radius:40px 0 0 40px ;
+    /* padding-left: 100px;
+    padding-right: 50px; */
+    justify-content: center;
+    align-content: center;
+    
+}
+.header-txt ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-left: 20px;
+}
+.header-txt ul li{
+    padding:20px ;
+    border-radius: 40px ;
+}
+/* hover */
+.header-txt li:hover  {
+    background-color: #FF9800;
+    color: white;
+}
+/* ============================ */ 
+
+.banner-bg img{
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    top: 0px; ;
+    z-index: -1;
+
+}
+.banner-title{
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+
+
+
+
+
+
+/* ============================ */
+.title{
+    font-size: 24px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 40px;
+    /* 更改點↓ */
+    /* 增加 .title 的上邊距，避開固定導覽列 */
+    margin-top: 120px; /* 給予足夠的空間，讓 h2 位於 banner-bg 頂部 */
+}
+.target{
+    margin-bottom: 200px;
+}
+.target-cardlist{
+    display: grid;
+    gap: 60px;
+    grid-template-columns: repeat(3,297px);
+    justify-content: center;
+    justify-items: center;
+
+}
+.target-icon {
+    display: flex;
+    justify-content: center;
+
+    
+}
+
+/* ============================ */
+
+.lawer .title h3{
+    font-size: 32px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.sub-title{
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.lawer-card1{
+    display: flex;
+    margin-bottom:75px ;
+}
+
+.lawer-card1 .lawer-intr{
+    border: 1px solid black;
+    background-color: white;
+    padding-top: 60px;
+    border-radius: 10px;
+    
+    
+}
+.lawer-card2{
+    display: flex;
+    margin-bottom:165px ;
+}
+.lawer-card2 .lawer-intr{
+    border: 1px solid black;
+    background-color: white;
+    padding-top: 60px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+.lawer-name{
+    font-weight: bold;
+    border-bottom: 1px solid #5A5A5A;
+    width: 400px;
+    font-size: 20px;
+}
+.lawer-name p{
+    margin: 18px 55px;
+    
+}
+
+.lawer-content{
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 35px;
+    margin-left: 100px;
+    margin-top:20px ;
+    margin-right:40px ;
+    margin-bottom: 40px;
+    
+    
+}
+
+
+
+
+/* ============================ */
+/* 頁尾 */
+.footer{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+.bg-footer{
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    z-index: -1;
+}
+.bg-footer .gray-line{
+    /* border:1px solid #000000; */
+    height: 35px;
+    background-color:#5A5A5A ;
+}
+.bg-footer img{
+    width: 100%;
+}
+.footer .logo{
+    padding-top: 84px;
+}
+
+.footer .logo img{
+    width: 80%;
+}
+
+.txt-footer{
+    padding-top: 84px;
+    display: flex;
+}
+.txt-footer1{
+    margin-right:100px;
+}
+
+.txt-footer1 p{
+    padding: 20px 0;
+    font-size: 16px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+    
+}
+.txt-footer2 p{
+    padding: 20px 0;
+    font-size: 16px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.copyright{
+    align-self: self-end;
+    font-size: 15px;
+    
+}

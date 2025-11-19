@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>填寫資料2</title>
+    <link rel="stylesheet" href="./填寫資料2.css">
+</head>
+<body>
+    <!-- header -->
+    <div class="banner">
+        <div class="header">
+            <div class="logo">
+                <img src="./logo-small.svg" alt="">
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- 進度條 -->
+        
+        <section class="loading">
+            <p>生成文件進度</p>
+            <img src="./loading2.svg" alt="">
+        </section>
+
+        
+
+    <!-- 介面 -->
+     <section class="container">
+        <!-- 左邊視窗 -->
+        <div class="contain-left">
+            <!-- 問題一 -->
+             <div class="qa1">
+                <div class="question">
+                    <h2>每月租金多少錢？</h2>
+                </div>
+            </div>
+
+            <div class="answer">
+                <label for="pay1">新台幣</label>
+                <input type="number" id="pay1" name="pay1" value="pay1" placeholder="輸入金額" autocomplete="off">元
+            </div>
+
+            <!-- 問題二 -->
+
+            <div class="qa2">
+                <div class="question">
+                    <h2>承租人應於每月幾號支付每期租金？</h2>
+                </div>
+            </div>
+
+            <div class="answer">
+                <label for="patday">每月的</label>
+                <input type="number" id="payday" name="payday" value="payday" min="1" max="10">日
+            </div>
+
+            <!-- 問題三 -->
+            <div class="qa3">
+                <div class="question">
+                    <h2>支付方式</h2>
+                </div>
+            </div>
+
+        <div class="answer">
+            <div class="option1">
+                <input type="radio" id="howtoPay" name="howtoPay" value="howtoPay">
+                <label for="howtoPay">現金支付</label>
+            </div>
+
+            <div class="option2">
+                <input type="radio" id="howtoPay1" name="howtoPay" value="howtoPay1">
+                <label for="howtoPay1">轉帳支付</label>
+            </div>   
+        </div>
+
+        <!-- 問題四 -->
+            <div class="qa4">
+                <div class="question">
+                    <h2>是否有押租金約定？押租金多少錢？</h2>
+                </div>
+                <div class="hint">
+                    <img src="./Lightbulb.svg" alt="">
+                    <p>小提醒</p>
+                    <div class="hint-block">
+                        <p>押金不得超過兩個月租金總額且應明確約定押金金額、交付方式及退還條件。</p>
+                    </div>
+                </div>
+                
+            </div>
+
+        <div class="answer">
+            <div class="option1">
+                <input type="radio" id="pre-rant1" name="pre-rant" value="pre-rant1">
+                <label for="pre-rant1">無約定</label>
+            </div>
+
+            <div class="option2">
+                <input type="radio" id="pre-rant2" name="pre-rant" value="pre-rant2">
+                <label for="pre-rant2">有押金</label>
+            <br>
+            <div class="pre-pay-name">
+                <label for="pre-pay" class="pre-pay-name"></label>
+                押金金額為：新台幣<input type="number" id="pre-pay" name="pre-pay" value="pre-pay" placeholder="輸入金額">元
+            </div>
+            <br>
+                
+            </div>
+        </div>
+
+        <!-- 按鍵處 -->
+            <div class="button-all">
+                <a href="/子頁/服務項目/生成契約1/生成契約1.html"><div class="goback">
+                    <img src="./backicon.svg" alt="">
+                    <p>返回上一步</p>
+                </div></a>
+                <a href="/子頁/服務項目/完成填寫預覽3/完成填寫預覽.html"><div class="button">
+                    <p>下一步</p>
+                </div></a>
+            </div>
+        </div>
+
+
+        <!-- 右邊視窗 -->
+        <div class="contain-right">
+            <div class="view-text">
+                <p>預覽：</p>
+            </div>
+            <div class="view-box">
+                <div class="contract">
+                    <p>二、租金：</p>
+                    <br>
+                    <ul>
+                        <li>承租人每月租金為______________________元整，應於每月_________日前支付，不得有任何理由拖延或拒絕；出租人於租賃期間亦不得以任何理由要求調漲租金</li>
+                        <li>租金支付方式為：</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+      
+</body>
+</html>

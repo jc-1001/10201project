@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 基本容器和樣式 */
+.accordion-item {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    background-color: #fff8f8; /* 接近圖片的底色 */
+    border-radius: 4px;
+}
+
+/* 問題行 */
+.accordion-header {
+    display: flex;
+    justify-content: space-between; /* 讓問題和 '+' 分開 */
+    padding: 15px;
+    cursor: pointer; /* 顯示可點擊 */
+    font-weight: bold;
+    color: #555;
+}
+
+/* 答案內容 (預設隱藏) */
+.accordion-content {
+    /* 核心：預設高度為 0，並隱藏溢出內容 */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* 添加動畫效果 */
+}
+
+/* 當內容展開時的樣式 */
+.accordion-item.active .accordion-content {
+    /* 展開時給一個足夠大的高度，讓內容顯示 */
+    max-height: 500px; /* 這裡的值要足夠大，以容納答案內容 */
+    padding: 0 15px 15px 15px; /* 展開後添加內邊距 */
+}
+
+/* '+' 號的旋轉（可選的視覺效果） */
+.accordion-item.active .toggle-icon {
+    transform: rotate(45deg); /* 將 '+' 號變成 'x' 號或簡單旋轉 */
+}
+
+.toggle-icon {
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+    </style>
+</head>
+<body>
+    <div class="accordion-item">
+    <div class="accordion-header">
+        <span class="question">Q: 網站生成的契約真的具有法律效力嗎？</span>
+        <span class="toggle-icon">+</span>
+    </div>
+    <div class="accordion-content">
+        <p>是的。我們的所有契約範本皆由專業律師團隊審定與把關，並依循最新法規定期更新。只要您如實填寫個資訊，文件便具備法律效力，可作為法庭證據。</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // 獲取所有問題的標頭
+    const headers = document.querySelectorAll('.accordion-header');
+
+    headers.forEach(header => {
+        header.addEventListener('click', function() {
+            // 找到當前點擊標頭的父元素 (.accordion-item)
+            const item = this.closest('.accordion-item');
+            
+            // 檢查 item 是否有 'active' class
+            const isActive = item.classList.contains('active');
+
+            // 關閉所有其他已開啟的項目 (可選，但常見於手風琴)
+            document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+
+            // 切換當前項目的 'active' class
+            if (isActive) {
+                item.classList.remove('active'); // 如果已經開啟，則關閉
+            } else {
+                item.classList.add('active'); // 如果關閉，則開啟
+            }
+        });
+    });
+});
+    </script>
+</div>
+</body>
+</html>

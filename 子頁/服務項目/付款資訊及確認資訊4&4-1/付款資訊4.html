@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>付款資訊</title>
+    <link rel="stylesheet" href="./付款資訊4.css">
+</head>
+<body>
+    <!-- header -->
+    <div class="banner">
+        <div class="header">
+            <div class="logo">
+                <img src="./logo-small.svg" alt="">
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- 進度條 -->
+        
+        <section class="loading">
+            <div class="un-compelet">
+                <div class="step-icon">
+                    <p>1</p>
+                </div>
+                <div class="step-txt">
+                    <p>預覽契約</p>
+                </div>
+            </div>
+
+
+            <!-- <div class="line"></div> -->
+
+
+            <div class="compelet">
+                <div class="step-icon">
+                    <p>2</p>
+                </div>
+                <div class="step-txt">
+                    <p>選購方案及付款資訊</p>
+                </div>
+            </div>
+
+
+
+            <!-- <div class="line"></div> -->
+
+
+
+            <div class="un-compelet">
+                <div class="step-icon">
+                    <p>3</p>
+                </div>
+                <div class="step-txt">
+                    <p>確認資訊</p>
+                </div>
+            </div>
+
+
+            <!-- <div class="line"></div> -->
+
+
+
+            <div class="un-compelet">
+                <div class="step-icon">
+                    <p>4</p>
+                </div>
+                <div class="step-txt">
+                    <p>下載文件</p>
+                </div>
+            </div>
+        </section>
+
+        
+
+    <!-- 介面 -->
+        <section class="contain-main">
+            <!-- 第一步 -->
+                <div class="step1">
+                    <div class="step-title">
+                        <p>step1</p>
+                        <p>選取購買方案</p>
+                    </div>
+                    
+                    <div class="step1-cardlist">
+                        <div class="step1-card">
+
+                            <input type="radio" name="ver-card">
+                            <div class="version">
+                                <p>基本版</p>
+                            </div>
+                            <div class="prize">
+                                <p>NT$699~1299</p>
+                            </div>
+                            <div class="txt">
+                                <p>基礎契約範本</p>
+                                <p>提供Word及PDF檔案下載</p>
+                                <p>有浮水印</p>
+                            </div>
+                        </div>
+
+                        <div class="step1-card">
+
+                            <input type="radio" name="ver-card">
+                            <div class="version">
+                                <p>專業版</p>
+                            </div>
+                            <div class="prize">
+                                <p>NT$2000</p>
+                            </div>
+                            <div class="txt">
+                                <p>包含進階保密協定（NDA）等多元範本</p>
+                                <p>提供Word及PDF檔案下載</p>
+                                <p>無浮水印</p>
+                                <p>30分鐘律師諮詢</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!-- =================================================== -->
+
+            <!-- 第二步 -->
+                <div class="step2">
+                    <div class="step-title">
+                        <p>step2</p>
+                        <p>填入購買人資訊，以便我們聯絡或將文件寄送於您的電子信箱</p>
+                    </div>
+
+                    <div class="enter-info">
+                        <div class="info-txt">
+                            <label for="name"><p>請輸入姓名</p></label>
+                            <label for="email"><p>請輸入Email</p></label>
+                            <label for="phone"><p>請輸入手機號碼</p></label>
+                        </div>
+                        <div class="info-type">
+                            <input type="text" id="name">
+                            <input type="email" id="email">
+                            <input type="tel" id="phone">
+                        </div>
+                        
+                        
+                        
+                    </div>
+
+                    <div class="pay-select">
+                        <input type="radio" id="pay-select1" name="pay-select">
+                        <label for="pay-select1">信用卡付款</label>
+                        <input type="radio" id="pay-select2" name="pay-select">
+                        <label for="pay-select2">ATM轉帳</label>
+                        <input type="radio" id="pay-select3" name="pay-select">
+                        <label for="pay-select3">第三方支付</label>
+                        
+                    </div>
+                </div>
+                
+        </section>
+
+
+<!-- 按鍵處 -->
+            <section class="button-all">
+                <a href="/子頁/服務項目/完成填寫預覽3/完成填寫預覽.html"><div class="goback">
+                    <img src="./backicon.svg" alt="">
+                    <p>返回上一步</p>
+                </div></a>
+                <a href="/子頁/服務項目/付款資訊及確認資訊4&4-1/確認資訊4-1.html"><div class="button">
+                    <p>下一步</p>
+                </div></a>
+            </section>
+        </div>
+
+
+
+      
+</body>
+</html>

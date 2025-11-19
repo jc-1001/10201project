@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>租賃契約生成</title>
+    <link rel="stylesheet" href="./生成契約1.css">
+</head>
+<body>
+    <!-- header -->
+    <div class="banner">
+        <div class="header">
+            <div class="logo">
+                <img src="./logo-small.svg" alt="">
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- 進度條 -->
+        
+        <section class="loading">
+            <p>生成文件進度</p>
+            <img src="./loading1.svg" alt="">
+        </section>
+
+        
+
+    <!-- 介面 -->
+     <section class="container">
+        <!-- 左邊視窗 -->
+        <div class="contain-left">
+            <div class="qa">
+                <div class="question">
+                    <h2>請問您是出租人(房東)？承租人？
+                    <br>或是轉租人(二房東)？</h2>
+                </div>
+                <div class="hint">
+                    <img src="./Lightbulb.svg" alt="">
+                    <p>小提醒</p>
+                    <div class="hint-block">
+                        <p>若您是「轉租人」，請確認您已獲得原「出租人」的書面同意。</p>
+                    </div>
+                </div>
+            </div>
+
+        <div class="answer">
+            <div class="option1">
+            <input type="radio" id="role_lessor" name="role" value="lessor">
+            <label for="role_lessor">出租人(房東)</label>
+            </div>
+
+            <div class="option2">
+            <input type="radio" id="role_tenant" name="role" value="tenant">
+            <label for="role_tenant">承租人</label>
+            </div>
+
+            <div class="option3">
+            <input type="radio" id="role_sublessor" name="role" value="sublessor">
+            <label for="role_sublessor">轉租人(二房東)</label>
+            </div>    
+        </div>
+
+            <div><a href="/子頁/服務項目/填寫資料2/填寫資料2.html">
+                <div class="button">
+                    <p>下一步</p>
+                </div>
+            </a></div>
+        </div>
+
+
+        <!-- 右邊視窗 -->
+        <div class="contain-right">
+            <div class="view-text">
+                <p>預覽：</p>
+            </div>
+            <div class="view-box">
+                <div class="contract">
+                    <p>一、當事人：</p>
+                    <br>
+                    <ul>
+                        <li>出租人：______________</li>
+                        <li>承租人：______________</li>
+                        <li>茲因住宅租賃事宜，立契約書人雙方同意本契約之條款如下：</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+      
+</body>
+</html>
