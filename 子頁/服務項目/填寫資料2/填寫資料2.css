@@ -132,11 +132,10 @@ input[type=number]::-webkit-inner-spin-button {
 .pre-pay-name {
     margin-left: 30px;
     opacity: 0; /* 預設為隱藏/透明 */
-    transition: opacity 0.3s ease; /* 增加過渡效果讓切換更平滑 */
+    transition: opacity 0.3s ease; /* 過渡效果 */
 }
 
-/* 當 ID 為 pre-rant2 的單選按鈕被選中時，
-   選取其後面所有的兄弟元素中，具有 class 為 pre-pay-name 的元素，並顯示它 */
+/* pre-rant2 按鈕被選中時，選取其後面所有元素中的pre-pay-name，並顯示它 */
 #pre-rant2:checked ~ .pre-pay-name {
     opacity: 1;
 }
