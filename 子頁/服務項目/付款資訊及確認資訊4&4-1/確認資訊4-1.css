@@ -197,13 +197,17 @@ a:visited{
     flex-direction: column;
     
 }
-
+.input {
+    margin: 10px;
+    height: 20px;
+}
 .pay-select{
     background-color: white;
     display: flex;
     flex-direction: row;
-    padding: 5px;
+    padding: 10px;
     justify-content: flex-start;
+    letter-spacing: 2px;
 }
 .pay-select label{
     margin: 10px;
