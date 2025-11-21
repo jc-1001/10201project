@@ -477,10 +477,7 @@ section.reason{
 .contract .title .sub-txt{
     margin-left: 20px;
 }
-.contract .title .sub-txt p:{
-    font-size: 16px;
-    
-}
+
 /* ================================ */
 .ct-cardlist{
     display: flex;
