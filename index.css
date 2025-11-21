@@ -1,56 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    
-}
 
-h2{
-    font-size: 36px;
-    /* margin-left: 100px; */
-
-}
-h3{
-    font-size: 36px;
-}
-
-body{
-    background-image: url(./banner/background.png);
-    /* background-repeat: repeat-y; */
-    /* width: 1920px; */
-    height: auto;
-    
-    
-}
-/* 連結樣式 */
-/* a:link – 一般的、未被點擊過的連結
-
-a:visited -已被點擊的連結
-
-a:hover - 滑鼠指標移到連結上方時的狀態
-
-a:active - 連結被點擊時的狀態
-
-另外，text-decoration 屬性大多用於去除掉連結的下劃線
-
-範例：
-
-a:link {
-
-text-decoration:none;
-
-}
-*/
-/* <a href="seanacnet.com" target="_blank">
-   另開一個首頁
-</a> */
-a:link{
-    color: black;
-    text-decoration:none;
-}
-a:visited{
-    color: black;
-    text-decoration:none;
-}
 
 /* ==================================== */
 .line-icon{
@@ -70,69 +18,7 @@ a:visited{
 }
 
 /* ================================== */
-/* 導覽列 */
-.header{
-    display: flex;
-    flex-direction: row;
-    margin-top: 30px ;
-    justify-content: space-between;
-    margin-bottom:30px;
-    /* 更改點↓ */
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    width: 100%; /* 確保橫跨整個頁面 */
-    z-index: 1000; /* 確保它在其他內容之上 */
-}
-.header .logo img{
-    
-    height: 120px;
-    position: relative;
-    top: -25px;
-    left: 100px;
-    
-}
-.header-whiteLine{
-    background-color: white;
-    box-sizing: border-box;
-    width: 800px;
-    height: 80px;
-    border-radius:40px 0 0 40px ;
-    /* padding-left: 100px;
-    padding-right: 50px; */
-    justify-content: center;
-    align-content: center;
-    
-}
-.header-txt ul{
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    margin-left: 20px;
-}
-.header-txt ul li{
-    padding:20px ;
-    border-radius: 40px ;
-}
-/* hover */
-.header-txt li:hover  {
-    background-color: #FF9800;
-    color: white;
-}
-/* =================== */
 
-
-
-section{
-    max-width: 1320px;
-    margin: auto;
-    height: auto;
-    justify-content: center;
-    padding: 0 150px;
-   
-}
-
-/* ===================== */
 /* 裝飾品(封面) */
 
 .banner-pic{
@@ -215,18 +101,6 @@ section{
     top: 0;
 }
 
-
-
-/* 封面裝飾品特效 */
-/* @keyframes myAnimation {
-    0% {
-        transform: translateX(45deg ,100px) 
-    }
-    100% {
-        transform: rotate(45deg);
-       
-    }
-} */
 
 
 
@@ -441,14 +315,17 @@ section{
     padding: 15px;
 }
 
-.contract .contain .ct-cardlist .ct-card .title{
+.contract .contain .ct-cardlist .ct-card .ct-pic{
+    display: flex;
+    flex-direction: column;
     position: relative;
+
 }
-.contract .contain .ct-cardlist .ct-card .title h3{
+.contract .contain .ct-cardlist .ct-card .ct-title h3{
     position: absolute;
-    top: 210px;
     padding-left: 15px;
-    font-size: 28px;
+    font-size: 24px;
+    bottom:20px; 
 
 }
 
@@ -944,63 +821,5 @@ section.update{
     pointer-events: auto; /* 懸停時恢復點擊 */
 }
 /* ========================= */
-/* 頁尾 */
-.footer{
-    position: relative;
-    display: flex;
-    justify-content: space-evenly;
-}
-.bg-footer{
-    position: absolute;
-    bottom: 0;
-    background-color: white;
-    z-index: -1;
-}
-.bg-footer .gray-line{
-    /* border:1px solid #000000; */
-    height: 35px;
-    background-color:#5A5A5A ;
-}
-.bg-footer img{
-    width: 100%;
-}
-.footer .logo{
-    padding-top: 84px;
-}
-
-.footer .logo img{
-    width: 80%;
-}
-
-.txt-footer{
-    padding-top: 84px;
-    display: flex;
-}
-.txt-footer1{
-    margin-right:100px;
-}
-
-.txt-footer1 p{
-    padding: 20px 0;
-    font-size: 16px;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    
-    
-}
-.txt-footer2 p{
-    padding: 20px 0;
-    font-size: 16px;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-}
-.copyright{
-    display: flex;
-    align-self: self-end;
-    font-size: 15px;
-    
-}
 
 

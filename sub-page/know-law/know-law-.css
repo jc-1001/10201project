@@ -1,0 +1,56 @@
+/* 基本設定 */
+
+h4{
+    font-size: 24px;
+    /* margin-left: 100px; */
+
+}
+
+
+
+/* ============================ */
+.banner-bg img{
+    width: 50%;
+}
+/* ============================ */
+.know-cardlist{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-self: center;
+    gap: 25px;
+    margin-top: 80px;
+}
+.card{
+    box-sizing: border-box;
+    height: 175px;
+    padding: 15px;
+    border-radius:22px ;
+    background-color: #FFDD83;
+}
+.card-title{
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding-bottom: 15px;
+}
+.card-txt{
+    line-height: 20px;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+/* hover */
+.card:hover {
+    /* border:3px solid rgba(311,121,111,11) ; */
+    /* x軸 y軸 暈染程度 顏色 */
+    box-shadow: 0 0px 30px #bc7100;
+    margin-top: -10px;
+}
+
+/* ============================ */
+
+.more{
+    text-align: end;
+    margin: 50px;
+}
+
+/* ============================ */

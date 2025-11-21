@@ -1,0 +1,97 @@
+
+h4{
+    font-size: 24px;
+    /* margin-left: 100px; */
+
+}
+
+
+
+/* ============================ */
+
+.target{
+    margin-bottom: 200px;
+}
+.target-cardlist{
+    display: grid;
+    gap: 60px;
+    grid-template-columns: repeat(3,297px);
+    justify-content: center;
+    justify-items: center;
+
+}
+.target-icon {
+    display: flex;
+    justify-content: center;
+
+    
+}
+
+/* ============================ */
+
+.lawer .title h3{
+    font-size: 32px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.sub-title{
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+
+
+.lawer-cardlist{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    
+}
+.lawer-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    
+    
+}
+.lawer-name{
+    font-size: 24px;
+    border-bottom:none;
+    margin: 30px 0;
+    transition: border-bottom .7s ease; 
+}
+.lawer-name p{
+    padding-bottom: 15px;
+}
+.lawer-pic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform .7s ease; 
+}
+.lawer-pic img{
+    width: 80%;
+    border-radius: 10px;
+    
+}
+
+/* hover */
+
+.lawer-pic:hover {
+    transform: scale(1.2);
+    
+}
+
+.lawer-pic:hover ~ .lawer-name{
+   
+    border-bottom: 5px solid #444;
+}
+
+.lawer-card a:hover + .lawer-name {
+    border-bottom: 5px solid #444; /* Hover 時顯示底線 */
+}
+/* ============================ */

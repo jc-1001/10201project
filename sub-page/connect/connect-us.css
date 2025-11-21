@@ -1,0 +1,293 @@
+/* 基本設定 */
+
+
+.contain{
+    box-sizing: border-box;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    margin: 50px;
+    border: 1px solid black;
+}
+/* ============================ */
+
+
+.tel-email img{
+    width: 50%;
+}
+
+
+/* group1 */
+.connect-us{
+    margin: 0 50px;
+
+}
+.sub-title-group1 p{
+    font-size:16px ;
+    line-height: 24px;
+    letter-spacing: 2px;
+    margin: 10px 0;
+}
+.tel-email{
+    display: flex;
+    flex-direction:column;
+    gap: 15px;
+    margin: 15px 10px;
+}
+.phone{
+    display: flex;
+    flex-direction: row;
+    align-items:center ;
+}
+.phone-icon{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #FFDD83;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.phone-num{
+    margin-left: 30px;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: bold;
+}
+
+.email{
+    display: flex;
+    flex-direction: row;
+    align-items:center ;
+}
+.email-icon{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #FFDD83;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.email-name{
+    margin-left: 30px;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: bold;
+}
+
+/* ============================ */
+
+
+.social-icons img{
+    width: 50%;
+}
+/* fb的icon單獨調整下面 */
+
+/* group2 */
+
+.sub-title-group2{
+    margin-top: 10px;
+}
+.sub-title-group2 p{
+    font-size:16px ;
+    line-height: 24px;
+    letter-spacing: 2px;
+    margin: 10px 0;
+}
+
+.social-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin: 15px 10px;
+}
+.ig{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #FFDD83;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.line{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #FFDD83;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fb{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #FFDD83;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fb img{
+    width: 30%;
+}
+.twitter{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #FFDD83;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* hover */
+.ig:hover{
+    box-shadow: 0 0px 10px #b06a00;
+}
+.fb:hover{
+    box-shadow: 0 0px 10px #b06a00;
+}
+.line:hover{
+    box-shadow: 0 0px 10px #b06a00;
+}
+.twitter:hover{
+    box-shadow: 0 0px 10px #b06a00;
+}
+/* ============================ */
+/* group3 */
+.feedback{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+.sub-title-group3 p{
+    font-size:16px ;
+    line-height: 24px;
+    letter-spacing: 2px;
+    margin: 10px 0;
+}
+
+.name-group{
+    margin: 10px 0;
+}
+.email-group{
+    margin: 10px 0;
+}
+.comment-group{
+    margin: 10px 0;
+}
+
+#Usaername{
+    width: 100%;
+    height: 30px;
+    border-radius:7px ;
+    border:1px solid #000000;
+}
+#email{
+    width: 100%;
+    height: 30px;
+    border-radius:7px ;
+    border:1px solid #000000;
+}
+#comment {
+    resize: none; /* 禁用使用者手動調整大小 */
+    width: 100%;
+    height: 150px;
+    border-radius:7px ;
+    border:1px solid #000000;
+    margin-bottom: 10px;
+    font-size: 16px;
+    
+}
+.button{
+    width: 100%;
+    /* border: 1px solid black; */
+    text-align: center;
+    border-radius:7px ;
+    background-color: #FFDD83;
+    height: 50px;
+    align-content: center;
+    letter-spacing: 2px;
+}
+
+
+/* ============================ */
+/* 頁尾 */
+.footer{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+}
+.bg-footer{
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    z-index: -1;
+}
+.bg-footer .gray-line{
+    /* border:1px solid #000000; */
+    height: 35px;
+    background-color:#5A5A5A ;
+}
+.bg-footer img{
+    width: 100%;
+}
+.footer .logo{
+    padding-top: 84px;
+}
+
+.footer .logo img{
+    width: 80%;
+}
+
+.txt-footer{
+    padding-top: 84px;
+    display: flex;
+}
+.txt-footer1{
+    margin-right:100px;
+}
+
+.txt-footer1 p{
+    padding: 20px 0;
+    font-size: 16px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+    
+}
+.txt-footer2 p{
+    padding: 20px 0;
+    font-size: 16px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.copyright{
+    align-self: self-end;
+    font-size: 15px;
+    
+}
+
+.txt-footer1 p{
+    padding: 20px 0;
+    font-size: 16px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    
+    
+}
+.txt-footer2 p{
+    padding: 20px 0;
+    font-size: 16px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.copyright{
+    align-self: self-end;
+    font-size: 15px;
+}
