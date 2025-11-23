@@ -1,20 +1,28 @@
 
 h4{
-    font-size: 24px;
+    font-size: 20px;
     /* margin-left: 100px; */
 
 }
 
-
-
 /* ============================ */
+.banner-bg img{
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    top: 0px; 
+    z-index: -1;
+
+}
 
 .target{
     margin-bottom: 200px;
+    position: absolute;
+    top: 200px;
 }
 .target-cardlist{
     display: grid;
-    gap: 60px;
+    gap: 20px;
     grid-template-columns: repeat(3,297px);
     justify-content: center;
     justify-items: center;
@@ -33,13 +41,10 @@ h4{
     font-size: 32px;
     letter-spacing: 2px;
     text-align: center;
+    margin-top: 650px;
     margin-bottom: 50px;
 }
-.sub-title{
-    letter-spacing: 2px;
-    text-align: center;
-    margin-bottom: 100px;
-}
+
 
 
 

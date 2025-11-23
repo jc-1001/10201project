@@ -35,7 +35,13 @@
     top: 0px;
     left: 500px;
     z-index: -2;
+    /* 設置動畫 */
+  animation: slideDiagonal 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards; 
+  /* 1.5s: 動畫時長 */
+  /* cubic-bezier 曲線讓滑動更流暢自然 */
+  /* forwards: 結束後保持在 100% 的狀態 */
 }
+
 .deco1 img{
     width: 100%;
     opacity: 0.6;
@@ -54,7 +60,15 @@
     z-index: -1;
     top: 120px;
     right: 0;
-    /* animation: myAnimation .3s ease-in-out 1s  alternate forwards; */
+    /* --- 動畫設置 --- */
+    animation: slideDiagonal 1.5s cubic-bezier(0.23, 1, 0.32, 1) forwards; 
+    
+    /* !!! 關鍵設置：動畫延遲 !!! */
+    /* 延遲時間 = 第一個動畫的持續時間 (1.5s) */
+    animation-delay: 1s;
+    /* !!! 新增或確認：初始透明度為 0 !!! */
+    /* 確保在動畫開始前和延遲期間是不可見的 */
+    opacity: 0;
 }
 .deco3 img{
     width: 100%;
@@ -95,7 +109,22 @@
 .deco7 img{
     width: 100%;
 }
-
+/* 3. 定義 Keyframes 動畫 */
+@keyframes slideDiagonal {
+  0% {
+    /* 將圖形從最終位置 (top: 150px, left: 50px) 往右上方推開 */
+    /* 假設推開自身寬度 (100%) 和高度 (100%) 的距離作為起始點 */
+    transform: translate(100%, -100%); 
+    
+    /* 增加透明度變化，讓效果更自然 */
+    opacity: 0; 
+  }
+  100% {
+    /* 恢復到最終位置 (top: 150px, left: 50px) */
+    transform: translate(0, 0); 
+    opacity: 1;
+  }
+}
 
 /* ====================================== */
 .banner{
@@ -245,6 +274,20 @@
 
 /* --- 使用理由 --- */
 
+.reason{
+    position: relative;
+}
+.re-bg{
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top:0;
+    box-sizing: border-box;
+
+}
+.re-bg img{
+    width: 100%;
+}
 .reason .title h2{
     
     margin-bottom: 50px;
@@ -257,40 +300,71 @@
     
 }
 
-.reason-cardlist{
+.big-conner{
     display: flex;
     flex-direction: row;
+}
+.reason-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    font-weight: 350px;
+    width: 600px;
+    font-family: "noto sans";
+    margin:0 50px;
+}
+.sub-re-txt p{
+    font-size: 28px;
+    letter-spacing: 2px;
+    line-height: 34px;
+    margin-bottom: 60px;
+    padding: 10px;
+
+}
+.re-content p{
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 35px;
+}
+
+
+.reason-cardlist{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 20px; 
+
+   
 }
 
 /* 單個卡片容器*/
 .reason-cardlist .reason-card {
-    width: 300px; /* 設定單張卡片寬度 */
     text-align: center;
 }
-
+.reason-cardlist-big{
+    display: flex;
+    justify-content: center;
+}
 /* --- 圓圈樣式 (核心) --- */
 .circle{
     background-color: white; /* 白色背景 */
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center; /* 水平垂直置中 */
-    margin: auto;
+    margin: 20px;
     transition: background-color 0.3s ease; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     z-index: -1;
+    
 }
 
 .circle img{
     width: 30%;
     display: block; 
     margin: 0; 
-    
     filter: invert(0%); 
     transition: filter 0.3s ease; 
 }
@@ -412,6 +486,7 @@ section.reason{
 /* ======================================= */
 .lawer{
     margin-top: 100px;
+    
 }
 .lawer .contain .title{
     padding-bottom: 50px ;
@@ -480,19 +555,30 @@ section.reason{
 }
 .experience ul{
     color: white;
-    font-size: 12px;
+    font-size: 10px;
     color: white;
     line-height: 20px;
     padding: 10px ;
 }
 
 .lawer-name{
-    font-size:16px ;
+    font-size:14px ;
     justify-items: center;
     background-color: white;
     border-radius:0 0 7px 7px ;
     margin: 0 ;
     padding:25px;
+}
+
+/* 箭頭 */
+.arrow-left{
+    align-self: center;
+    font-size: 30px;
+    
+}
+.arrow-right{
+    align-self: center;
+    font-size: 30px;
 }
 
 /* 懸停動畫 */
@@ -566,15 +652,25 @@ section.reason{
     display: flex;
     flex-direction: column;
     position: relative;
-
+    overflow: hidden;
+}
+.ct-pic img{
+    transition: scale 0.3s ease-in-out;
 }
 .ct-title h3{
     margin: 20px 0;
     padding-left: 15px;
     font-size: 24px;
     bottom:20px; 
+    
+
 
 }
 
+.ct-card:hover .ct-pic img{
+    scale: 1.2;
+}
+.ct-card:hover .ct-title h3{
+    border-bottom:1px solid #444;
 
-
+}
