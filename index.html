@@ -12,11 +12,6 @@
     </head>
 <body>
 
-<!-- 背景圖片 -->
-<!-- <div class="bg-img">
-    <img src="./banner/background.png" alt="">
-</div> -->
-
 
 
 <!-- 聯絡固定 -->
@@ -32,6 +27,40 @@
             <div class="logo">
                 <a href="https://jc-1001.github.io/10201project/"><img src="./banner/logo(正式).svg" alt="網站首頁"></a>
             </div>
+            <!-- 手機版清單 -->
+            <div class="hamburger-menu">
+                
+                <label class="hb">
+                    <input type="checkbox" class="menu-switch">
+                    <span class="bar bar1"></span>
+                    <span class="bar bar2"></span>
+                    <span class="bar bar3"></span>
+                </label>
+                <nav class="main-menu">
+                    <ul class="menu">
+                        <li class="menu-item">
+                            <a href="#">目的與使命</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">契約生成</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">服務定價</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">法律小百科</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">常見問題</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">聯繫我們</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- 手機版清單 end -->
+
             <div class="header-whiteLine">
                 <div class="header-txt">
                     <ul>
@@ -47,10 +76,20 @@
         </div>
     </div>
 
-    <!-- 首頁 封面-->
+<!-- 首頁 封面-->
+
+    <!-- 手機版封面 -->
+    <div class="banner-phone-pic">
+        <img src="./phone-img/phone-bg.png" alt="">
+        <div class="banner-phone-cir">
+            <img src="./phone-img/phone-bg-circle.svg" alt="">
+        </div>
+    </div>
+    <!-- 手機版封面 -->
 
     <div class="banner">
         <div class="contain">
+            
             <div class="title">
                 <h1>快速生成契約</h1>
                 <h1>使法律不再冰冷</h1>
@@ -263,105 +302,89 @@
 
                 <!-- 內容開始 -->
 
-    <section class="com-cardlist-row1">
-        <div class="com-card">
+    <ul class="com-cardlist-all-grid">
+        <li class="com-card">
             <div class="com-pic">
                 <img src="./comment-river-img/ms.wu.png" alt="評論輪播頭像">
             </div>
-
             <div class="com-txt">
                 <p>省時高效！契約生成快速又專業。</p>
             </div>
-        </div>
-
-
-        <div class="com-card">
+        </li>
+        <li class="com-card">
             <div class="com-pic">
                 <img src="./comment-river-img/ms.yang.png" alt="評論輪播頭像">
             </div>
-
             <div class="com-txt">
                 <p>介面簡單易用，新手也能輕鬆上手。</p>
-            </div>        
-        </div>
-        <div class="com-card">
+            </div>
+        </li>
+        <li class="com-card">
             <div class="com-pic">
                 <img src="./comment-river-img/ms.chan designer.png" alt="評論輪播頭像">
             </div>
             <div class="com-txt">
-                <p>法律條款清晰，讓人感到安心可靠。 </p>
+                <p>法律條款清晰，讓人感到安心可靠。</p>
             </div>
-        </div>
-    </section>
-
-                
-
-            <!-- 上下卷軸分界 -->
-            <section class="com-cardlist-row2">
-                <div class="com-card">
-                    <div class="com-pic">
-                        <img src="./comment-river-img/mr.lawer.png" alt="評論輪播頭像">
-                    </div>
-                    <div class="com-txt">
-                        <p>告別繁瑣步驟，幾分鐘搞定合約。 </p>
-                    </div>
-                </div>
-                <div class="com-card">
-                    <div class="com-pic">
-                        <img src="./comment-river-img/ms.chan designer2.png" alt="評論輪播頭像">
-                    </div>
-                    <div class="com-txt">
-                        <p>範本種類豐富，滿足各種需求。</p>
-                    </div>
-                </div>
-                <div class="com-card">
-                    <div class="com-pic">
-                        <img src="./comment-river-img/lee houseload.png" alt="評論輪播頭像">
-                    </div>
-                    <div class="com-txt">
-                        <p>價格合理，是小型企業的最佳助手。 </p>
-                    </div>
-                </div>
-                <div class="com-card">
-                    <div class="com-pic">
-                        <img src="./comment-river-img/ms.wu2.png" alt="評論輪播頭像">
-                    </div>
-                    <div class="com-txt">
-                        <p>自動化流程，大幅減少錯誤風險。 </p>
-                    </div>
-                </div>
-            </section>
-            <!-- 上下卷軸分界 -->
-        <section class="com-cardlist-row1">
-        <div class="com-card">
+        </li>
+        <li class="com-card">
+            <div class="com-pic">
+                <img src="./comment-river-img/mr.lawer.png" alt="評論輪播頭像">
+            </div>
+            <div class="com-txt">
+                <p>告別繁瑣步驟，幾分鐘搞定合約。</p>
+            </div>
+        </li>
+        <li class="com-card">
+            <div class="com-pic">
+                <img src="./comment-river-img/ms.chan designer2.png" alt="評論輪播頭像">
+            </div>
+            <div class="com-txt">
+                <p>範本種類豐富，滿足各種需求。</p>
+            </div>
+        </li>
+        <li class="com-card">
+            <div class="com-pic">
+                <img src="./comment-river-img/lee houseload.png" alt="評論輪播頭像">
+            </div>
+            <div class="com-txt">
+                <p>價格合理，是小型企業的最佳助手。</p>
+            </div>
+        </li>
+        <li class="com-card">
+            <div class="com-pic">
+                <img src="./comment-river-img/ms.wu2.png" alt="評論輪播頭像">
+            </div>
+            <div class="com-txt">
+                <p>自動化流程，大幅減少錯誤風險。</p>
+            </div>
+        </li>
+        <li class="com-card">
             <div class="com-pic">
                 <img src="./comment-river-img/mr.lawer4.png" alt="評論輪播頭像">
             </div>
-
             <div class="com-txt">
                 <p>即時預覽功能，內容一目瞭然。</p>
             </div>
-        </div>
-
-
-        <div class="com-card">
+        </li>
+        <li class="com-card">
             <div class="com-pic">
                 <img src="./comment-river-img/lawer3.png" alt="評論輪播頭像">
             </div>
-
             <div class="com-txt">
                 <p>客服回應迅速，問題迎刃而解。</p>
-            </div>        
-        </div>
-        <div class="com-card">
+            </div>
+        </li>
+        <li class="com-card">
             <div class="com-pic">
                 <img src="./comment-river-img/Group 12.png" alt="評論輪播頭像">
             </div>
             <div class="com-txt">
                 <p>數位簽名整合，簽約過程超便利。</p>
             </div>
-        </div>
-    </section>
+        </li>
+    </ul>
+</section>
 
                 
 

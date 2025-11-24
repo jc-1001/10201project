@@ -28,7 +28,9 @@
     overflow:hidden;
 }
 
-
+.deco1, .deco2, .deco3, .deco4, .deco5, .deco6, .deco7 {
+    display: block ;
+}
 
 .deco1{
     position: absolute;
@@ -127,6 +129,11 @@
 }
 
 /* ====================================== */
+/* 手機背景換圖 */
+.banner-phone-pic{
+    display: none;
+}
+/*===============================================  */
 .banner{
     /* padding-bottom: 400px; */
     padding-top: 0px;
@@ -436,52 +443,61 @@ section.reason{
 }
 
 
-.com-cardlist-row1{
+.com-cardlist-all-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto; /* 水平居中 */
+    max-width: 1200px; /* 限制最大寬度，與圖片相符 */
+    width: 90%; /* 確保在較小螢幕上有內邊距 */
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    width: 60%;
-
+    flex-wrap: wrap;
+    gap: 20px; /* 卡片之間的間距 */
+    justify-content: center; /* 在列少於 4 時，讓它們居中 */
+    align-items: center; /* 頂部對齊 */
 }
-.com-card{
+
+.com-card {
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
     background-color: white;
-    border-radius:42px ;
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
+    border-radius: 50px; /* 圓角卡片 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.com-pic {
+    width: 50px; /* 圖片容器寬度 */
+    height: 50px; /* 圖片容器高度 */
+    border-radius: 50%; /* 圓形圖片 */
+    overflow: hidden;
+    margin-bottom: 10px;
+    border: 2px solid #ddd; /* 圖片邊框 */
+    margin: 5px;
+}
+
+.com-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 圖片填充整個容器 */
+}
+
+.com-txt p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.5;
+}
+
+.com-cardlist-all-grid li:nth-child(4),
+.com-cardlist-all-grid li:nth-child(5),
+.com-cardlist-all-grid li:nth-child(6),
+.com-cardlist-all-grid li:nth-child(7){
+    width: 230px;
     
-
 }
-.com-cardlist-row2{
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    width: 75%;
-}
-.com-pic{
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    
-}
-.com-pic img{
-    width: 80%;
-    border-radius: 50%;
-}
-.com-txt{
-    display: flex;
-    flex-direction: column;
-    padding-top: 10px;
-    padding-right:10px ;
-    padding-bottom:10px ;
-    color: #444;
-    align-items: center;
-    justify-content: center;
-    letter-spacing: 2px;
-    font-size: 12px;
-}
-
-
 
 /* ======================================= */
 .lawer{
@@ -674,35 +690,93 @@ section.reason{
     border-bottom:1px solid #444;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ================================================= */
 /* 💻 RWD 媒體查詢：最大寬度 576px 以下的手機版樣式 */
 /* ================================================= */
 @media screen and (max-width: 576px) {
 
+    .banner-phone-pic{
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .banner-phone-cir{
+        position: absolute;
+        top: 220px;
+        
+        /* 應用動畫屬性 */
+        animation-name: spin; 
+        animation-duration: 7s; /* 完整旋轉一圈所需時間 */
+        animation-iteration-count: infinite; 
+        animation-timing-function: linear; /* 旋轉保持勻速 */
+    }
+
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg); 
+        }
+        100% {
+            transform: rotate(360deg); 
+        }
+    }
+
+
+
+
     /* --- 1. 全局和基礎調整 --- */
-    
-    /* 調整主要容器邊距，使其更貼合手機寬度 */
     .banner .contain {
         margin-left: 5%; /* 減少左邊距 */
         margin-right: 5%;
-        margin-top: 50px; /* 減少頂部邊距 */
+        margin-top: 300px; /* 減少頂部邊距 */
+        margin-bottom: 500px;
     }
     .banner .contain .title{
-        margin-top: 50px; /* 減少 banner 標題的上邊距 */
+        margin-top: 150px; 
+        
     }
     /* 調整主標題字體大小，避免過大 */
     .banner .contain .title h1 {
         line-height: 1.5;
         font-size: 30px; 
+        text-align: center;
     }
     .banner .contain .txt {
         font-size: 16px; /* 縮小內文 */
+        text-align: center;
     }
 
     /* 浮動按鈕：縮小尺寸 */
     .line-icon {
-        bottom: 5px;
-        right: 5px;
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+        z-index: 10;
     }
     .line-icon img {
         width: 50px; /* 縮小 Line 圖示 */
@@ -713,12 +787,13 @@ section.reason{
 
     /* 裝飾品：在手機版隱藏 */
     .deco1, .deco2, .deco3, .deco4, .deco5, .deco6, .deco7, .re-bg {
-        display: none !important;
+        display: none;
     }
 
     /* 按鈕調整 */
     .button {
         margin-top: 50px;
+        justify-self: center;
     }
     .button-style {
         width: 70px;
@@ -748,7 +823,7 @@ section.reason{
     /* 取消所有絕對定位，使其按照文件流垂直排列 */
     #ab-card1, #ab-card2, #ab-card3 {
         position: static;
-        width: 50%; /* 讓卡片佔滿寬度 */
+        width: 70%; /* 讓卡片佔滿寬度 */
         margin-bottom: 40px; /* 增加卡片間距 */
     }
     .txt-sub {
@@ -777,36 +852,40 @@ section.reason{
         line-height: 1.8;
     }
     .reason-cardlist-big {
-        flex-direction: row; /* 將卡片列表也垂直堆疊 */
-        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
     }
     .reason-cardlist {
         flex-direction: column;
     }
     /* 讓圓圈內的文字和圖標更明顯 */
     .circle {
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
         margin: 10px;
     }
     .circle .title h3 {
-        font-size: 14px;
+        font-size: 16px;
     }
-    .reason .contain .reason-cardlist .txt {
-        padding-top: 10px; /* 調整下方文字間距 */
-        font-size: 14px;
-    }
+    
 
     /* --- 4. 客戶評論 (.comment) --- */
     
-    .com-cardlist-row1, .com-cardlist-row2 {
-        flex-direction: row; /* 垂直堆疊 */
-        width: 100%; /* 佔滿寬度 */
-        justify-content: center;
+    .com-cardlist-all-grid  {
         
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap; /* 關鍵：強制不換行，卡片橫向排列 */
+        overflow-x: scroll; /* 啟用水平滾動 */
+        padding-bottom: 20px; /* 增加底部內邊距，避免滾動條遮擋內容 */
     }
+    /* .com-cardlist-all-grid::-webkit-scrollbar {
+        display: none;
+    } */
     .com-card {
         flex-direction: row; /* 卡片內部圖片和文字也垂直堆疊 */
+        width: 280px; /* 根據需求調整單個卡片的寬度 */
+        flex-shrink: 0; /* 阻止卡片在空間不足時縮小 */
         margin: 10px 0;
         align-items: center;
         text-align: center;
@@ -818,9 +897,14 @@ section.reason{
         font-size: 14px; /* 調整字體大小 */
         padding: 5px 10px 15px;
     }
+    
+
+
+
+
 
     /* --- 5. 律師團隊 (.lawer) --- */
-    
+
     .lawer {
         padding: 0 5%;
     }
@@ -830,31 +914,24 @@ section.reason{
         overflow-x: auto; /* **關鍵：允許橫向滾動 (溢出)** */
         justify-content: flex-start; /* 卡片從左邊開始排列 */
         padding-bottom: 20px; /* 增加底部間距，避免滾動條擋住內容 */
+        padding-left: 0;
+        padding-right: 0;
     }
-    .lawer-cardlist::-webkit-scrollbar {
-        display: none; /* Chrome, Safari, Opera */
-    }
+    /* .lawer-cardlist::-webkit-scrollbar {
+        display: none; 
+    } */
     .lawer-cardlist .lawer-card {
         /* 讓每張卡片佔據容器約 85% 的寬度，留一點空間露出下一張卡片 */
         /* 這樣使用者就知道還可以滑動 */
         flex-shrink: 0; /* 防止卡片被壓縮 */
-        width: 85%; 
+        width: 70%; 
         margin: 0 10px; /* 卡片間距 */
     }
     
-    /* 隱藏箭頭 */
-    /* .arrow-left, .arrow-right {
-        display: none;
-    } */
     
     /* 調整經驗內容樣式，使其在小螢幕下易讀 */
-    .experience p {
-        font-size: 14px;
-        line-height: 1.5;
-        padding-left: 10px;
-    }
     .experience ul {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 1.4;
         padding: 5px 10px;
     }

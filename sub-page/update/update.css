@@ -12,8 +12,25 @@ a:visited{
 }
 
 /* ============================= */
-
-
+/* 升級文案 */
+.talk-box{
+    display: flex;
+    flex-direction: column;
+}
+.talk-box-title{
+    font-size: 20px;
+    letter-spacing: 2px;
+    border-left:3px solid #FF9800;
+    padding-left: 30px;
+}
+.talk-txt{
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 35px;
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-bottom: 50px;
+}
 /* ============================ */
 .update{
     display: flex;
@@ -29,7 +46,7 @@ a:visited{
     justify-content: center;
     box-sizing: border-box;
     padding: 30px;
-    min-height: 350px;
+    min-height: 300px;
 }
 .up-icon{
     display: flex;
@@ -38,7 +55,7 @@ a:visited{
     margin-bottom: 20px;
 }
 .up-icon img{
-    width: 50%;
+    width: 40%;
 }
 .up-content{
     display: flex;
