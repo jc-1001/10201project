@@ -13,12 +13,17 @@ h4{
     width: 50%;
 }
 /* ============================ */
+.know-law{
+    display: flex;
+    flex-direction: column;
+}
 .know-cardlist{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-self: center;
     gap: 25px;
     margin-top: 80px;
+    
 }
 .card{
     box-sizing: border-box;

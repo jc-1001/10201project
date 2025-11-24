@@ -660,7 +660,7 @@ section.reason{
 .ct-title h3{
     margin: 20px 0;
     padding-left: 15px;
-    font-size: 24px;
+    font-size: 21px;
     bottom:20px; 
     
 
@@ -673,4 +673,228 @@ section.reason{
 .ct-card:hover .ct-title h3{
     border-bottom:1px solid #444;
 
+}
+/* ================================================= */
+/* 💻 RWD 媒體查詢：最大寬度 576px 以下的手機版樣式 */
+/* ================================================= */
+@media screen and (max-width: 576px) {
+
+    /* --- 1. 全局和基礎調整 --- */
+    
+    /* 調整主要容器邊距，使其更貼合手機寬度 */
+    .banner .contain {
+        margin-left: 5%; /* 減少左邊距 */
+        margin-right: 5%;
+        margin-top: 50px; /* 減少頂部邊距 */
+    }
+    .banner .contain .title{
+        margin-top: 50px; /* 減少 banner 標題的上邊距 */
+    }
+    /* 調整主標題字體大小，避免過大 */
+    .banner .contain .title h1 {
+        line-height: 1.5;
+        font-size: 30px; 
+    }
+    .banner .contain .txt {
+        font-size: 16px; /* 縮小內文 */
+    }
+
+    /* 浮動按鈕：縮小尺寸 */
+    .line-icon {
+        bottom: 5px;
+        right: 5px;
+    }
+    .line-icon img {
+        width: 50px; /* 縮小 Line 圖示 */
+    }
+    .line-icon:hover img {
+        width: 60px; /* 縮小 Hover 尺寸 */
+    }
+
+    /* 裝飾品：在手機版隱藏 */
+    .deco1, .deco2, .deco3, .deco4, .deco5, .deco6, .deco7, .re-bg {
+        display: none !important;
+    }
+
+    /* 按鈕調整 */
+    .button {
+        margin-top: 50px;
+    }
+    .button-style {
+        width: 70px;
+        height: 70px;
+        left: 0; /* 讓圓圈靠左 */
+    }
+    .button-txt {
+        padding-left: 80px; /* 為圓圈騰出空間 */
+        padding-right: 10px;
+        font-size: 16px;
+    }
+    
+    /* --- 2. 關於我們 (.about-us) --- */
+    
+    .about-us {
+        /* 將絕對定位的卡片區域，改為正常的間距 */
+        margin-top: 100px; 
+        margin-bottom: 50px;
+        padding: 0 5%;
+    }
+    .aboutus-con {
+        flex-direction: column; /* 垂直堆疊 */
+        position: static; /* 取消相對定位的影響 */
+        align-items: center; /* 內容置中 */
+    }
+    
+    /* 取消所有絕對定位，使其按照文件流垂直排列 */
+    #ab-card1, #ab-card2, #ab-card3 {
+        position: static;
+        width: 50%; /* 讓卡片佔滿寬度 */
+        margin-bottom: 40px; /* 增加卡片間距 */
+    }
+    .txt-sub {
+        width: 100%; /* 讓文字佔滿卡片寬度 */
+    }
+
+    /* --- 3. 使用理由 (.reason) --- */
+    
+    section.reason {
+        margin-top: 100px; /* 減少與上一區塊的巨大間距 */
+        padding: 0 5%;
+    }
+    .big-conner {
+        flex-direction: column; /* 垂直堆疊 */
+    }
+    .reason-text {
+        width: 100%; /* 佔滿寬度 */
+        margin: 0 0 40px 0; /* 調整間距 */
+    }
+    .sub-re-txt p {
+        font-size: 20px; /* 縮小字體 */
+        line-height: 1.5;
+    }
+    .re-content p {
+        font-size: 14px; /* 縮小內文字體 */
+        line-height: 1.8;
+    }
+    .reason-cardlist-big {
+        flex-direction: row; /* 將卡片列表也垂直堆疊 */
+        align-items: center;
+    }
+    .reason-cardlist {
+        flex-direction: column;
+    }
+    /* 讓圓圈內的文字和圖標更明顯 */
+    .circle {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+    }
+    .circle .title h3 {
+        font-size: 14px;
+    }
+    .reason .contain .reason-cardlist .txt {
+        padding-top: 10px; /* 調整下方文字間距 */
+        font-size: 14px;
+    }
+
+    /* --- 4. 客戶評論 (.comment) --- */
+    
+    .com-cardlist-row1, .com-cardlist-row2 {
+        flex-direction: row; /* 垂直堆疊 */
+        width: 100%; /* 佔滿寬度 */
+        justify-content: center;
+        
+    }
+    .com-card {
+        flex-direction: row; /* 卡片內部圖片和文字也垂直堆疊 */
+        margin: 10px 0;
+        align-items: center;
+        text-align: center;
+    }
+    .com-pic img {
+        width: 60px; /* 縮小頭像 */
+    }
+    .com-txt {
+        font-size: 14px; /* 調整字體大小 */
+        padding: 5px 10px 15px;
+    }
+
+    /* --- 5. 律師團隊 (.lawer) --- */
+    
+    .lawer {
+        padding: 0 5%;
+    }
+    .lawer-cardlist {
+        display: flex; 
+        flex-wrap: nowrap;
+        overflow-x: auto; /* **關鍵：允許橫向滾動 (溢出)** */
+        justify-content: flex-start; /* 卡片從左邊開始排列 */
+        padding-bottom: 20px; /* 增加底部間距，避免滾動條擋住內容 */
+    }
+    .lawer-cardlist::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+    .lawer-cardlist .lawer-card {
+        /* 讓每張卡片佔據容器約 85% 的寬度，留一點空間露出下一張卡片 */
+        /* 這樣使用者就知道還可以滑動 */
+        flex-shrink: 0; /* 防止卡片被壓縮 */
+        width: 85%; 
+        margin: 0 10px; /* 卡片間距 */
+    }
+    
+    /* 隱藏箭頭 */
+    /* .arrow-left, .arrow-right {
+        display: none;
+    } */
+    
+    /* 調整經驗內容樣式，使其在小螢幕下易讀 */
+    .experience p {
+        font-size: 14px;
+        line-height: 1.5;
+        padding-left: 10px;
+    }
+    .experience ul {
+        font-size: 12px;
+        line-height: 1.4;
+        padding: 5px 10px;
+    }
+    .lawer-name {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    /* --- 6. 契約生成 (.contract) --- */
+    
+    .contract {
+        flex-direction: column; /* 垂直堆疊 */
+        align-items: center;
+        padding: 0 5%;
+    }
+    .contract .contain .sub-txt {
+        margin-left: initial;
+        margin-right: initial;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .ct-cardlist {
+        flex-direction: column; /* 垂直堆疊卡片 */
+        width: 100%;
+        padding: 0 5%;
+    }
+    .ct-card {
+        width: 100%;
+        margin-bottom: 20px; /* 增加卡片間距 */
+        padding: 0;
+    }
+    .ct-card .txt {
+        margin-bottom: 50px; /* 減少底部間距 */
+    }
+    .ct-title h3 {
+        font-size: 18px; /* 縮小標題字體 */
+    }
+    .ct-card .txt p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
 }
