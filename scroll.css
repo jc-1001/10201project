@@ -1,0 +1,32 @@
+/* ================================================= */
+/* 滾動動畫 (Scroll Reveal) 樣式 - 針對使用步驟卡片 */
+/* ================================================= */
+
+.scroll-reveal {
+  /* 初始狀態：隱藏且向下移動 */
+  opacity: 0;
+  transform: translateY(50px);
+  /* 動畫過渡效果：同時作用於透明度和位移 */
+  /* 設置一個統一的過渡時間 0.8s */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* 動畫完成後的狀態：顯示且歸位 */
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 設置依序出現的延遲 (Staggered Effect) */
+/* 這樣當區域進入視窗時，卡片會依次觸發動畫 */
+#ab-card1 {
+  transition-delay: 0s; /* 第一個立即出現 */
+}
+
+#ab-card2 {
+  transition-delay: 0.3s; /* 第二個延遲 0.3s */
+}
+
+#ab-card3 {
+  transition-delay: 0.6s; /* 第三個延遲 0.6s */
+}
