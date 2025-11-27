@@ -273,7 +273,7 @@
 #ab-card2{
     position: absolute;
     top: 100px;
-    left: 480px;
+    left: auto;
 }
 #ab-card3{
     position: absolute;
@@ -898,14 +898,19 @@ section.reason{
     
 
     /* --- 4. 客戶評論 (.comment) --- */
-    
+    .com-cardlist-all-grid li:nth-child(4), .com-cardlist-all-grid li:nth-child(5), .com-cardlist-all-grid li:nth-child(6), .com-cardlist-all-grid li:nth-child(7) {
+    width: 280px;
+}
     .com-cardlist-all-grid  {
         
-        width: 100%;
+        width:ma;
         display: flex;
-        flex-wrap: nowrap; /* 關鍵：強制不換行，卡片橫向排列 */
-        overflow-x: scroll; /* 啟用水平滾動 */
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow:hidden;
         padding-bottom: 20px; /* 增加底部內邊距，避免滾動條遮擋內容 */
+        
+        
         
     }
     /* .com-cardlist-all-grid::-webkit-scrollbar {
@@ -924,7 +929,8 @@ section.reason{
         margin: 10px 0;
         align-items: center;
         text-align: center;
-        /* animation: scrolling 2s linear infinite; */
+        animation: scrolling 1s linear infinite;
+        
     }
     .com-pic img {
         width: 60px; /* 縮小頭像 */
@@ -936,7 +942,7 @@ section.reason{
     @keyframes scrolling {
             /* 0%：文字位於最右側外部 */
             0% {
-                transform: translateX(0);
+                transform: translateX(0%);
             }
             /* 100%：文字向左移動一個完整的寬度 */
             100% {
@@ -1031,92 +1037,7 @@ section.reason{
     }
 
     
-    /* 頁尾 */
-.footer {
-    /* 移除原來的 space-evenly，改為垂直排列 */
-    display: flex;
-    flex-direction: column; /* 垂直堆疊 */
-    align-items: center; /* 水平居中 */
-    text-align: center;
-    padding: 20px 0; /* 增加上下內邊距 */
-    position: relative;
-    /* 確保內容在 background 之上 */
-    z-index: 1; 
-    background-color: white;
-}
 
-/* 背景圖層 (bg-footer) - 保持原樣但確保它不會干擾內容排列 */
-.bg-footer {
-    /* 保持原樣，但需要確保它能覆蓋整個 footer 寬度 */
-    position: absolute;
-    bottom: 0;
-    width: 100%; /* 確保寬度佔滿 */
-    background-color: white;
-    z-index: -1; 
-}
-.bg-footer .gray-line {
-    height: 35px;
-    background-color: #5A5A5A;
-    width: 100%; /* 確保寬度佔滿 */
-    position: relative;
-    top: -600px;
-}
-/* 假設 footer/LAWSJIN.svg 是背景圖片 */
-.bg-footer img {
-    width: 100%;
-}
-
-/* Logo 區域 */
-.footer .logo {
-    padding-top: 20px; /* 調整為適合手機的內邊距 */
-    padding-bottom: 20px;
-}
-
-.footer .logo img {
-    width: 70%; /* 讓 logo 在小螢幕上佔更大比例 */
-    max-width: 300px; /* 設置最大寬度避免過大 */
-    height: auto;
-}
-
-/* 導覽文字區域 (txt-footer) */
-.txt-footer {
-    /* 垂直排列三個項目 */
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    padding-top: 0;
-    margin-bottom: 20px; /* 底部間距 */
-}
-
-/* 導覽列  */
-.txt-footer1{
-    margin-right: 0; /* 移除左右間距 */
-    width: 100%; 
-}
-
-.txt-footer1 p, .txt-footer2 p {
-    padding: 20px 0; /* 調整行高 */
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-
-
-/* 版權資訊 (copyright) */
-.copyright p{
-    display: none;
-}
-
-
-
-.copyright img {
-    /* 讓 CC 圖標行也居中 */
-    display: none;
-   
-}
 
 
 

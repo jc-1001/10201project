@@ -12,6 +12,7 @@ h4{
 .banner-bg img{
     width: 50%;
 }
+
 /* ============================ */
 .news{
     display: flex;
@@ -35,15 +36,16 @@ h4{
 }
 .news-law-card{
     width: 100%;
+    height: 150px;
     display: flex;
     flex-direction: column;
-    height: 100px;
     align-items: end;
     justify-content: end;
     position: relative;
     letter-spacing: 2px;
     overflow: hidden;
     transition: background .3s ease;
+    border-radius: 10px;
 }
 .news-tag{
     margin: 10px 0 0 10px;
@@ -52,21 +54,45 @@ h4{
     position: absolute;
     top: -50px;
     left:-70px;
-    background-color: rgb(177, 46, 46);
-    color: white;
+    background-color: yellow;
+    color: #444;
     border-radius: 30px;
     transition: all .3s ease;
 }
+.news-card-pic{
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+}
+.news-card-pic img{
+    width: 50%;
+}
 .news-txt{
     margin: 0 10px 10px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
-#criminal ,#administrative{
-    background-color:#A8B6C7;
+.news-txt p{
+    margin-right: 5px;
+}
+#criminal {
+    background: #F03A3A;
+    background: linear-gradient(144deg, rgba(240, 58, 58, 1) 42%, rgba(255, 255, 255, 1) 100%);
     
 
 }
-#civil ,#supreme-court{
-    background-color:rebeccapurple ;
+#civil{
+    background: #F0A13A;
+    background: linear-gradient(144deg, rgba(240, 161, 58, 1) 42%, rgba(255, 255, 255, 1) 100%);
+}
+#administrative{
+    background: #BEEADD;
+    background: linear-gradient(144deg, rgba(190, 234, 221, 1) 42%, rgba(255, 255, 255, 1) 100%);   
+    }
+#supreme-court{
+    background: #8A422E;
+    background: linear-gradient(144deg, rgba(138, 66, 46, 1) 42%, rgba(255, 255, 255, 1) 100%);
 }
 .news-law-card:hover .news-tag{
     top: 0px;
@@ -121,4 +147,57 @@ h4{
     margin: 50px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ============================ */
+@media screen and (max-width: 576px){
+    /* section介面要改padding: 0 5%; */
+    .news{
+        padding: 0 5%;
+    }
+    .news-cardlist{
+        flex-direction: column;
+    }
+    .news-law-card {
+        align-items: center;
+        justify-content: space-between;
+        height: 200px;
+    }
+    .news-tag{
+        position: static;
+        font-size: 20px;
+        margin-right:80%;
+        margin-top: 10px;
+
+    }
+    .news-card-pic {
+        margin-left: 50px;
+    }
+    .news-card-pic img{
+        width: 80%;
+    }
+    .news-txt{
+        margin: 0 0 10px 0;
+        margin-left: 70%;
+    }
+    .know-law{
+        padding: 0 5%;
+    }
+    .know-cardlist{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .more{
+        margin: 50px 0;
+    }
+}
