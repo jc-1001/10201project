@@ -151,52 +151,89 @@ a:visited{
     text-align: center;
 }
 
+
+
+
+
 .step-cardlist{
     box-sizing: border-box;
-    width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 400px);
-    row-gap: 100px;
-    column-gap:150px ;
-    justify-content: center;
-    align-content: center;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
     
 }
 .step-card{
+    background-color: white;
     display: flex;
-    box-sizing: border-box;
     height: 311px;
-    border: radius 500px;
+    border-radius: 31px;
     position: relative;
+    z-index: 1;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.st-icon{
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -70px;
+    left: -70px;
+    transition: all 0.3s ease-out, right 0.3s ease-out;
+}
+.st-icon span{
+    font-size: 60px;
+    
+}
+.st-card-design img{
+    position: absolute;
+    z-index: -1;
+}
+.st-card-tit-box{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
 
-
+}
+.st-card-tit{
+    font-size: 20px;
+    padding-left: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
 }
 .num{
     box-sizing: border-box;
-    height: 125px;
     width: 110px;
-    background-color: #FFDD83;
-    border-radius:30px ;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size:50px ;
-    position: absolute;
-    left:-50px;
+    font-size:36px ;
     font-family: "noto sans";
+    border-left:3px solid #777;
+    padding-bottom: 10px;
 }
-.st-title{
-    font-size: 30px;
-    letter-spacing: 2px;
-    padding-bottom: 30px;
+.num p + p{
+    color: red;
+    font-size: 40px;
 }
+
 .st-contain{
-    background-color: #FFDD83;
-    font-size: 20px;
-    line-height: 35px;
+    font-size: 16px;
     letter-spacing: 2px;
-    padding: 45px 75px;
+    line-height: 35px;
+    width: 50%;
+    margin-top: 20px;
 }
+
+/* card hover */
+.step-card:hover .st-icon{
+    top: 10px;
+    left: 10px;
+}
+
+
+
 .st-button{
     display: flex;
     justify-content: center;
@@ -205,11 +242,11 @@ a:visited{
 .st-button p{
     border-radius: 10px;
     background-color: #FF9800;
-    width: 279px;
+    width: 250px;
     height: 75px;
     align-content: center;
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
 }
 .st-button p:hover{
     background-color: white;
@@ -227,6 +264,7 @@ a:visited{
 /* ============================ */
 @media screen and (max-width: 576px){
     /* section介面要改padding: 0 5%; */
+    
     .servers{
         padding: 0 5%;
     }
@@ -250,7 +288,27 @@ a:visited{
 
     .phone-downdown span{
         font-size: 50px;
-        
+        animation-name: downdown-icon;
+        animation-duration: 2s; 
+        animation-timing-function: ease-in-out; 
+        animation-iteration-count: infinite;
+        animation-delay: 1s; /* 頁面加載後延遲 1 秒再開始 */
+        /* 確保元素在動畫開始時可以被看見*/
+        opacity: 1;
+    }
+    @keyframes downdown-icon {
+        0% {
+        transform: translateY(0);
+        opacity: 0; 
+        }
+        50% {
+            transform: translateY(-15px);
+            opacity: 1; /* 完全顯示 */
+        }
+        100% {
+            transform: translateY(0); /* 回到底部 */
+            opacity: 0; /* 再次隱藏 */
+        }
     }
     
     /* 契約清單 */
@@ -298,7 +356,74 @@ a:visited{
         
     }
     
+    /* 步驟清單 */
+    .step-cardlist {
+        grid-template-columns: 1fr;
+        gap: 20px; 
+    }
+
     
+    .step-card {
+        flex-direction: column; 
+        height: auto; /* 讓高度根據內容調整 */
+        padding-bottom: 20px;
+        
+    }
+    .st-card-design{
+        position: absolute;
+        top: -10px;
+    }
+    
+
+    .st-icon {
+        top: 0px; 
+        left: 0px; 
+    }
+    .st-icon span {
+        font-size: 50px; 
+    }
+
+    
+    .st-card-tit-box {
+        position: static; 
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-items: center;
+    }
+    .st-card-tit {
+        font-size: 18px; 
+        padding-left: 0; 
+        letter-spacing: 1px;
+    }
+    
+    /* 內容文字 */
+    .st-contain {
+        width: auto; 
+        margin: 10px 20px 0 20px; 
+        font-size: 14px; 
+        line-height: 28px; 
+    }
+
+
+    .num {
+       margin: 20px auto;
+       background-color: white;
+        border-left: none;
+        /* border: 1px solid black; */
+       
+    }
+    
+
+    .num p + p {
+        font-size: 34px;
+    }
+
+    /* 卡片懸停效果：調整圖示位置 */
+    .step-card:hover .st-icon {
+        top: 15px; 
+        left: 15px;
+    }
     
     
     
