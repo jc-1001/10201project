@@ -87,6 +87,7 @@ a:visited{
     z-index: -1;
 }
 .title{
+    margin-top: 200px;
     display: flex;
     justify-content: center;
     margin-bottom: 100px;
@@ -122,6 +123,7 @@ a:visited{
     box-sizing: border-box;
     margin-bottom: 80px;
     border-radius: 10px;
+    
    
 }
 .ques{
