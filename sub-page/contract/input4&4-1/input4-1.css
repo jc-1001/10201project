@@ -128,91 +128,7 @@ a:visited{
     letter-spacing: 2px;
 }
 /* =============================== */
-/* 第一步驟方塊 */
-.step1{
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom:50px ;
-    padding: 20px;
-    background-color: #EBCBAC;
-}
-
-.step1-cardlist{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.step1-card{
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-    border: 1px solid black;
-    padding: 10px;
-    align-items: center;
-    border-radius: 10px;
-    margin: 10px 20px;
-    background-color: white;
-}
-
-.step1-card .prize{
-    font-size: 24px;
-    
-}
-.step1-card .version{
-    font-size: 24px;
-}
-.step1-card .txt{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
-.step1-card .txt p{
-    
-    font-size: 12px;
-    padding: 15px;
-    color: gray;
-}
-/* ============================================ */
-/* 步驟二方塊 */
-.step2{
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom:50px ;
-    padding: 20px;
-    background-color: #EBCBAC;
-}
-.enter-info{
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.enter-info p{
-    margin: 10px 0;
-    /* 輸入框前面文字對齊 */
-    letter-spacing: 2px;
-    display: flex;
-    flex-direction: column;
-    
-}
-.input {
-    margin: 10px;
-    height: 20px;
-}
-.pay-select{
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-    justify-content: flex-start;
-    letter-spacing: 2px;
-}
-.pay-select label{
-    margin: 10px;
-}
-
+/* 付款介面 */
 /* ============================ */
 /* 按鈕 */
 .goback{
@@ -262,5 +178,64 @@ a:visited{
     padding: 50px;
 }
 
+@media screen and (max-width: 768px) {
+    /* header */
+    .header {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
 
+    .header .logo img {
+        position: static;
+       
+        max-height: 100px;
+    }
+    .loading{
+        padding: 0 30px;
+        letter-spacing:0px;
+        margin-top: 30px;
+    }
+    .step-txt{
+        font-size: 15px;
+        text-align: center;
+        
+    }
+
+    /* 介面 */
+    .contain-main{
+        padding: 0 50px;
+    }
+
+    .view-box{
+        padding: 15px;
+        
+    }
+
+    iframe{
+        max-height: 300px;
+        overflow-x: hidden;
+    }
+
+
+    .button-all{
+        padding: 0 50px;
+    }
+    .goback{
+        flex-direction: column;
+        gap: 10px;
+    } 
+    .button{
+        width:120px;
+    }
+
+
+
+
+
+
+
+
+
+
+}
 

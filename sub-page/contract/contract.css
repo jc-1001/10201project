@@ -303,12 +303,21 @@ a:visited{
         }
         50% {
             transform: translateY(-15px);
-            opacity: 1; /* 完全顯示 */
+            opacity: 1; 
         }
         100% {
             transform: translateY(0); /* 回到底部 */
-            opacity: 0; /* 再次隱藏 */
+            opacity: 0; 
         }
+    }
+    /* 漸進出現 */
+    .servers {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    .servers.is-visible {
+        opacity: 1;
     }
     
     /* 契約清單 */

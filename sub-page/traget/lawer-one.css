@@ -147,4 +147,76 @@ a:visited{
     }
 }
 /* ============================ */
-
+@media screen and (max-width: 576px){
+    .banner-bg{
+        
+        padding: 0 5%;
+    }
+    .lawer-banner{
+        padding: 0 5%;
+    }
+    .lawer-banner-card{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .lawer-pic img{
+        width: 100%;
+    }
+    .deco img{
+        width: 100px;
+        top: -20px;
+        left: -20px;
+    }
+    .lawer-name{
+        font-size:28px ;
+    }
+    .socialmed{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .socialmed img{
+        width: 50%;
+    }
+    
+    .lawer-background{
+        padding: 0 5%;
+        gap: 30px;
+    }
+    .experience{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .experience p{
+        margin-bottom:0;
+        margin-right: 0px;
+        margin-left: 20px;
+    }
+    .goodat{
+        margin-top:20px;
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}

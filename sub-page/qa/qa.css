@@ -24,6 +24,7 @@
     justify-content: space-between;
     align-items: center;
     font-size: 18px;
+    letter-spacing: 2px;
     font-weight: 300px;
     height: 75px;
     border-radius: 5px;
@@ -65,9 +66,12 @@
 
 .qa-toggle:checked ~ .qa-header{
     border-radius: 5px 5px 0 0;
+    /* background-color: aquamarine; */
+    /* border-bottom: 3px solid black; */
 }
 .qa-toggle:checked ~ .qa-header + .down-list{
     max-height: 500px;
+    /* background-color: aquamarine; */
     
 }
 .qa-toggle:checked ~ .qa-header + .down-list p{
@@ -79,6 +83,42 @@
 .qa-toggle:checked ~ .qa-header .icon{
     transform: rotate(45deg);
 }
+
+@media screen and (max-width: 576px) {
+
+    .qa-page{
+        padding: 0 5%;
+    }
+    .qa-header{
+        font-size: 18px;
+    }
+    .down-list{
+        font-size: 16px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
+
 
 
 

@@ -1,0 +1,193 @@
+/* 付款介面 */
+h2{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+h3{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.contain-main{
+    background-color: #EBCBAC;
+    margin:0 150px;
+    padding: 50px 50px;
+    font-family: "noto sans";
+    border-radius: 10px;
+}
+form{
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+.buy-sel-cardlist{
+    display: flex;
+    flex-direction: row;
+}
+.buy-sel-card{
+    display: flex; 
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    padding: 15px; 
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    width: 200px;
+    height: 100px;
+    background-color: white;
+    border: 1px solid  #ccc; 
+    border-radius: 20px;
+}
+/* 購買卡片hover */
+.buy-sel-card:hover {
+    background-color: #FF9800;
+    border: 2px dashed red;
+    font-weight: bold;
+}
+
+/* 表單樣式 */
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        /* input樣式  */
+        select {
+            margin: 10px 0;
+            height: 25px;
+            padding: 2px;
+            border-radius: 7px;
+            border: 1px solid #000000;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        input[type="tel"],
+        input[type="email"],
+        input[type="text"] {
+            width: 50%;
+            margin: 10px 0;
+            height: 20px;
+            border-radius: 7px;
+            border: 1px solid #000000;
+            padding: 5px; 
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        input:focus {
+            border-color: #FF9800;
+            outline: none;
+        }
+
+        input[readonly],
+        select[disabled] {
+            /* 唯讀禁止樣式 */
+            background-color: #f0f0f0;
+            cursor: not-allowed;
+        }
+
+        .buy-name1, .buy-email1, .buy-tel1, 
+        .buy-name2{
+            display: flex;
+            gap: 20px;
+        }
+        .buy-name1 label {
+            width: 16%;
+        }
+        .buy-name2 input {
+            width: 15%;
+        }
+        /* 信用卡付款資訊 */
+        .cradicard {
+            background-color: white;
+            padding: 50px;
+            border-radius: 30px;
+        }
+
+        .cc-card-icon {
+            display: inline-block;
+            font-size: 30px;
+            margin: 10px 0;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-col {
+            flex:1;
+        }
+
+        .form-col label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .expiry-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .expiry-group select {
+            width: 80px;
+        }
+
+        .card-number-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .card-number-group input {
+            flex: 1;
+            text-align: center;
+        }        
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    .contain-main{
+        padding:10px 20px;
+        margin: 0 30px;
+        
+    }
+    .buy-sel-cardlist{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .buy-name1 label {
+    width: 50%;
+    }
+    input[type="tel"], input[type="email"], input[type="text"] {
+    width: 100%;
+    }
+    
+    .cradicard{
+        padding: 20px;
+        
+    }
+    
+    .form-row{
+        flex-direction: column;
+    }
+    
+    
+    
+
+}

@@ -185,3 +185,48 @@ table tr td {
 }
 
 /* =============================== */
+@media screen and (max-width: 768px) {
+    .title{
+        margin-top: 180px;
+        margin-bottom: 0;
+    }
+    .catalog{
+        padding: 10px 50px;
+        width: 100%;
+        margin-top: 100px;
+    }
+    
+    .artical{
+        padding: 0 30px;
+    }
+    
+    .contain{
+        margin: 20px 0px;
+        padding: 10px 20px;
+    }
+    .contain ul{
+        padding: 0 25px;
+    }
+    
+    .gotop {
+        background-color: #D8D8D8;
+        width: 50px;
+        height: 50px;    
+        right: 10px;
+    }
+    .gotop img{
+        width: 100%;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}

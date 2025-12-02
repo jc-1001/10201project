@@ -78,28 +78,36 @@ h4{
 }
 #criminal {
     background: #F03A3A;
-    background: linear-gradient(144deg, rgba(240, 58, 58, 1) 42%, rgba(255, 255, 255, 1) 100%);
-    
+    transition: background .9s ease;
 
 }
 #civil{
     background: #F0A13A;
-    background: linear-gradient(144deg, rgba(240, 161, 58, 1) 42%, rgba(255, 255, 255, 1) 100%);
+    transition: background .9s ease;
 }
 #administrative{
     background: #BEEADD;
-    background: linear-gradient(144deg, rgba(190, 234, 221, 1) 42%, rgba(255, 255, 255, 1) 100%);   
+    transition: background .9s ease;
     }
 #supreme-court{
     background: #8A422E;
-    background: linear-gradient(144deg, rgba(138, 66, 46, 1) 42%, rgba(255, 255, 255, 1) 100%);
+    transition: background .9s ease;
 }
 .news-law-card:hover .news-tag{
     top: 0px;
     left:0px;
 }
-.news-law-card:hover{
-    background: linear-gradient(to bottom, rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+#criminal:hover {
+    background: linear-gradient(144deg, rgba(240, 58, 58, 1) 42%, rgba(255, 255, 255, 1) 100%);
+}
+#civil:hover {
+    background: linear-gradient(144deg, rgba(240, 161, 58, 1) 42%, rgba(255, 255, 255, 1) 100%);
+}
+#administrative:hover {
+    background: linear-gradient(144deg, rgba(190, 234, 221, 1) 42%, rgba(255, 255, 255, 1) 100%); 
+}
+#supreme-court:hover {
+    background: linear-gradient(144deg, rgba(138, 66, 46, 1) 42%, rgba(255, 255, 255, 1) 100%);
 }
 /* ============================= */
 .know-law{
@@ -174,6 +182,18 @@ h4{
         justify-content: space-between;
         height: 200px;
     }
+    #criminal {
+    background: linear-gradient(144deg, rgba(240, 58, 58, 1) 42%, rgba(255, 255, 255, 1) 100%);
+    }
+    #civil {
+        background: linear-gradient(144deg, rgba(240, 161, 58, 1) 42%, rgba(255, 255, 255, 1) 100%);
+    }
+    #administrative {
+        background: linear-gradient(144deg, rgba(190, 234, 221, 1) 42%, rgba(255, 255, 255, 1) 100%); 
+    }
+    #supreme-court {
+        background: linear-gradient(144deg, rgba(138, 66, 46, 1) 42%, rgba(255, 255, 255, 1) 100%);
+    }
     .news-tag{
         position: static;
         font-size: 20px;
@@ -189,13 +209,42 @@ h4{
     }
     .news-txt{
         margin: 0 0 10px 0;
-        margin-left: 70%;
+        margin-left: 60%;
     }
+
+    /* 漸進式出現 JS*/
+    .news {
+        opacity: 0;
+        /* 2. 設定平滑過渡效果：淡入時間為 1 秒 */
+        transition: opacity 1s ease-in-out;
+    }
+
+    .news.is-visible {
+        opacity: 1;
+    }
+    /* ================================= */
     .know-law{
         padding: 0 5%;
     }
     .know-cardlist{
         grid-template-columns: repeat(2,1fr);
+    }
+    .card{
+        padding: 0 0;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .card-title{
+        padding: 10px 10px 0 10px;
+        text-align: start;
+        letter-spacing: 1px
+    }
+    .card-txt{
+        padding: 10px;
+        margin: 0 ;
+        letter-spacing: 1px;
+        line-height: 20px;
     }
     .more{
         margin: 50px 0;

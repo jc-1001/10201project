@@ -463,7 +463,29 @@ section.reason{
     gap: 20px; /* 卡片之間的間距 */
     justify-content: center; /* 在列少於 4 時，讓它們居中 */
     align-items: center; /* 頂部對齊 */
+    /* 動畫設計 */
+    animation-name: up-down-ani;
+    animation-duration: 2s; 
+    animation-timing-function: ease-in-out; 
+    animation-iteration-count: infinite;
+    animation-delay: 1s; /* 頁面加載後延遲 1 秒再開始 */
+    /* 確保元素在動畫開始時可以被看見*/
+    
 }
+/* 對話框動畫 */
+@keyframes up-down-ani {
+        0% {
+        transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-15px);
+            
+        }
+        100% {
+            transform: translateY(0); /* 回到底部 */ 
+        }
+    }
+
 
 .com-card {
     width: 250px;
@@ -755,15 +777,18 @@ section.reason{
     }
     .banner-phone-cir{
         position: absolute;
-        top: 220px;
-        left: 60px;
+        top: 270px;
+        left: 40px;
         /* 應用動畫屬性 */
+        transform-origin: center center;
         animation-name: spin; 
         animation-duration: 7s; /* 完整旋轉一圈所需時間 */
         animation-iteration-count: infinite; 
         animation-timing-function: linear; /* 旋轉保持勻速 */
     }
-
+    .banner-phone-cir img{
+        width: 90%;
+    }
 
     @keyframes spin {
         0% {
@@ -898,6 +923,12 @@ section.reason{
     
 
     /* --- 4. 客戶評論 (.comment) --- */
+    .comment{
+        padding: 0 5%;
+    }
+    .penlight img{
+        display: none;
+    }
     .com-cardlist-all-grid li:nth-child(4), .com-cardlist-all-grid li:nth-child(5), .com-cardlist-all-grid li:nth-child(6), .com-cardlist-all-grid li:nth-child(7) {
     width: 280px;
 }
@@ -909,7 +940,7 @@ section.reason{
         flex-wrap: nowrap;
         overflow:hidden;
         padding-bottom: 20px; /* 增加底部內邊距，避免滾動條遮擋內容 */
-        
+        animation: up-down-ani none !important;
         
         
     }
@@ -938,6 +969,9 @@ section.reason{
     .com-txt {
         font-size: 14px; /* 調整字體大小 */
         padding: 5px 10px 15px;
+    }
+    .up-down-icon {
+        animation: none !important; 
     }
     @keyframes scrolling {
             /* 0%：文字位於最右側外部 */
