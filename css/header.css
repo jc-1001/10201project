@@ -13,7 +13,7 @@
 /* =============================== */
 
 body{
-    background-image: url(./banner/background.png);
+    background-image: url(../indexImg/banner/background.png);
     /* background-repeat: repeat-y; */
     /* width: 1920px; */
     height: auto;
