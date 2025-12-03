@@ -444,3 +444,28 @@ a:visited{
     
     
 }
+@media screen and (max-width: 1024px){
+    .banner-title{
+        margin-top: -20px;
+    }
+    .banner-title h2{
+        font-size: 28px;
+    }
+    /* 調整 section 內邊距和最大寬度 */
+    section{
+        max-width: 960px;
+        padding: 0 50px; 
+    }
+    .ct-cardlist .ct-card{
+        width: auto; /* 讓寬度由 grid 決定 */
+        height: auto; /* 讓高度由內容決定 */
+        padding: 20px 15px; 
+    }
+    .ct-cardlist .ct-card .sub-title{
+        font-size: 14px;
+        padding-bottom: 10px;
+    }
+    .ct-cardlist .ct-card .contain{
+        font-size: 14px;
+    }
+}

@@ -113,7 +113,7 @@ a:visited{
 /* RWD 手機版樣式 (Max-width: 575px) */
 /* ================================================= */
 
-@media screen and (max-width: 575px){
+@media screen and (max-width: 768px){
 
     /* --- 升級文案區塊 --- */
     .talk-box {
@@ -208,3 +208,4 @@ a:visited{
     }
     
 }
+

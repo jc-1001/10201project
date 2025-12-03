@@ -1071,32 +1071,96 @@ section.reason{
     }
 
     
+}
+@media screen and (max-width: 1024px){
+
+    section {
+        max-width: 960px; /* 限制最大寬度 */
+        padding: 0 50px; /* 減少水平內邊距 */
+    }
+
+    .banner .contain .title h1 {
+    line-height: 50px;
+    font-size: 32px;
+    }
+    .banner .contain .txt {
+    margin: 15px 0;
+    font-size: 18px;
+    }
+    
+    .ab-card{
+        width: 300px; /* 限制卡片寬度 */
+    }
+    #ab-card1 {
+        top: -50px;
+        left: 20px; 
+    }
+    #ab-card2 {
+        top: 150px; 
+        left: 50%; 
+        transform: translateX(-50%);
+    }
+    #ab-card3 {
+        top: -90px;
+        right: 20px; 
+    }
+    .txt-sub {
+        width: 250px; 
+        font-size: 12px;
+    }
 
 
 
 
+    /* 理由 */
+    .reason{
+        max-width: 960px; /* 限制最大寬度 */
+        padding: 0 50px;
+    }
+    
+    .reason-text {
+        width: 90%; /* 佔滿寬度 */
+        max-width: 600px; /* 限制最大寬度 */
+        margin: 0 0 50px 0; /* 調整間距 */
+        text-align: center;
+    }
+    .sub-re-txt p {
+        font-size: 24px; /* 縮小字體 */
+        line-height: 1.5;
+    }
+    .re-content p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+    .reason-cardlist-big {
+        width: 100%;
+        justify-content: space-around; /* 卡片平均分佈 */
+    }
+    .circle {
+        width: 120px; /* 縮小圓圈 */
+        height: 120px;
+        margin: 15px;
+    }
+    .circle .title h3 {
+        font-size: 15px;
+    }
+    .reason .contain .reason-cardlist .txt {
+        padding-top: 20px; /* 調整間距 */
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    /* 5. 客戶評論 (.comment) */
+    .com-cardlist-all-grid {
+        gap: 15px; /* 縮小卡片間距 */
+        width: 100%;
+    }
+    /* 調整為 3 欄排列，讓卡片不要太小 */
+    .com-card {
+        width: 250px; 
+    }
+    .com-cardlist-all-grid li:nth-child(4),
+    .com-cardlist-all-grid li:nth-child(5),
+    .com-cardlist-all-grid li:nth-child(6),
+    .com-cardlist-all-grid li:nth-child(7){
+        width: 210px;
+    }
 }

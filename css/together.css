@@ -400,3 +400,45 @@ section{
     font-size: 15px;
     
 }
+
+
+/*桌機最大螢幕寬度 1024p */
+/* ================================== */
+/* 平板 / 小螢幕桌面樣式 (max-width: 1024px) */
+/* 適用於螢幕寬度 ≤ 1024px */
+@media screen and (max-width: 1024px) {
+    
+    /* 導覽列調整 */
+    .header .logo img{
+        height: 100px; 
+        left: 30px; 
+    }
+    .header-whiteLine{
+        width: 70%; 
+        max-width: 600px; 
+    }
+    .header-txt ul li{
+        padding: 20px 10px; 
+        font-size: 15px;
+    }
+
+    /* 內容區段調整 */
+    section{
+        max-width: 1024px; 
+        padding: 0 30px; 
+    }
+
+    /* 頁尾調整 */
+    .footer{
+        max-width: 1024px; 
+        justify-content: space-evenly; 
+    }
+    .footer .logo img{
+        width: 80%;
+        max-width: 180px; 
+    }
+    .txt-footer{
+        gap: 20px; 
+        padding-top: 50px; 
+    }
+}
