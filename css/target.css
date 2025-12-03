@@ -179,6 +179,7 @@ RWD - 手機 (Mobile, Max-width: 576px)
         font-size: 20px;
         margin: 15px 0;
         letter-spacing: 2px;
+        text-align: center;
     }
 
     /* 4. 手機上禁用 hover 效果 */
