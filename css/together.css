@@ -198,12 +198,10 @@ a:visited{
         .ph-menu-logo{
             justify-self: center;
             margin: 20px 0;
-            position: relative;
-            left: 150px;
-            top: 10px;
+            margin-left: 100px;
         }
         .ph-menu-logo img{
-            width: 25%;
+            width: 50%;
         }
         /* ---半透明覆蓋層--- */
         .menu-overlay {

@@ -211,17 +211,18 @@ html {
             background-color: #8a422e;
             width: 80%;
             /* height: 50svh; */
-            height: calc(60svh - 70px);
+            height: calc(100svh - 60px);
             transition: right .7s;
             z-index: 99;
 
         }
         .ph-menu-logo{
             justify-self: center;
-            margin: 20px 140px ;
+            margin: 20px 0;
+            margin-left: 100px;
         }
         .ph-menu-logo img{
-            width: 100%;
+            width: 50%;
         }
         /* ---半透明覆蓋層--- */
         .menu-overlay {
