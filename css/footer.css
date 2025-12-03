@@ -91,7 +91,7 @@
     background-color: #5A5A5A;
     width: 100%; /* 確保寬度佔滿 */
     position: relative;
-    top: -540px;
+    top: -560px;
 }
 /* 假設 footer/LAWSJIN.svg 是背景圖片 */
 .bg-footer img {
