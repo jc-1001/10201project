@@ -190,7 +190,7 @@ a:visited{
             background-color: #8a422e;
             width: 80%;
             /* height: 50svh; */
-            height: calc(100svh - 70px);
+            height: calc(100svh - 60px);
             transition: right .7s;
             z-index: 99;
 

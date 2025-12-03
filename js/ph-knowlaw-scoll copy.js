@@ -13,7 +13,7 @@ $(document).ready(function() {
         var sectionOffset = $newsSection.offset().top;
 
         // 4. 設定一個觸發點 (例如：當區塊的頂部進入到視窗底部上方 150px 處時觸發)
-        var triggerPoint = scrollPosition + windowHeight - 200; // 可以調整這個數值
+        var triggerPoint = scrollPosition + windowHeight - 300; // 可以調整這個數值
 
         // 5. 判斷是否應該顯示區塊
         // 如果 觸發點 (triggerPoint) 已經超過 區塊的位置 (sectionOffset)
