@@ -304,8 +304,8 @@
     </section>
 
                 <!-- 內容開始 -->
-
-    <ul class="com-cardlist-all-grid">
+<div class="com-cardlist-wrapper">
+    <ul class="com-cardlist-all-grid" id="commentList">
         <li class="com-card">
             <div class="com-pic">
                 <img src="./indexImg/comment-river-img/ms.wu.png" alt="評論輪播頭像">
@@ -387,6 +387,7 @@
             </div>
         </li>
     </ul>
+</div>
 </section>
 
                 
@@ -605,5 +606,14 @@
     <!-- <script type="text/javascript" src="./indexImg/js/vendors/slick/slick.min.js"></script> -->
     <script src="./js/scroll.js"></script>
     <!-- <script src="./indexImg/js/index-slick.js"></script> -->
+
+    
+<!-- 評論頭像跑馬燈控制 -->
+    <script>
+// 複製評論卡片實現無縫循環
+const commentList = document.getElementById('commentList');
+const cards = commentList.innerHTML;
+commentList.innerHTML = cards + cards; // 複製一份,共20張卡片
+</script>
 </body>
 </html>

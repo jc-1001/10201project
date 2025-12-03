@@ -807,7 +807,7 @@ section.reason{
         margin-left: 5%; /* 減少左邊距 */
         margin-right: 5%;
         margin-top: 300px;
-        margin-bottom: 200px;
+        margin-bottom: 250px;
     }
     .banner .contain .title{
         margin-top: 150px; 
@@ -871,37 +871,51 @@ section.reason{
         flex-direction: column;
         position: static; /* 取消相對定位的影響 */
         align-items: center; /* 內容置中 */
+        width: 100%;
     }
     
     /* 取消所有絕對定位，使其按照文件流垂直排列 */
     #ab-card1, #ab-card2, #ab-card3 {
         position: static;
-        width: 70%; /* 讓卡片佔滿寬度 */
+        width: 100%; /* 讓卡片佔滿寬度 */
+        max-width: 350px;
         margin-bottom: 40px; /* 增加卡片間距 */
+        
     }
+
+    
+    
+    .ab-pic {
+        width: 100%; /* 👈 新增 */
+        overflow: hidden;
+    }
+    
+    
     .txt-sub {
         width: 100%; /* 讓文字佔滿卡片寬度 */
     }
 
+
     /* --- 3. 使用理由 (.reason) --- */
     
     section.reason {
-        margin-top: 100px; /* 減少與上一區塊的巨大間距 */
+        margin-top: 100px; 
         padding: 0 5%;
     }
     .big-conner {
-        flex-direction: column; /* 垂直堆疊 */
+        flex-direction: column;
+        align-items: center;
     }
     .reason-text {
         width: 100%; /* 佔滿寬度 */
-        margin: 0 0 40px 0; /* 調整間距 */
+        margin: 0 0 40px 0; 
     }
     .sub-re-txt p {
-        font-size: 20px; /* 縮小字體 */
+        font-size: 20px; 
         line-height: 1.5;
     }
     .re-content p {
-        font-size: 14px; /* 縮小內文字體 */
+        font-size: 14px; 
         line-height: 1.8;
     }
     .reason-cardlist-big {
@@ -911,7 +925,7 @@ section.reason{
     .reason-cardlist {
         flex-direction: column;
     }
-    /* 讓圓圈內的文字和圖標更明顯 */
+    
     .circle {
         width: 150px;
         height: 150px;
@@ -932,15 +946,20 @@ section.reason{
     .com-cardlist-all-grid li:nth-child(4), .com-cardlist-all-grid li:nth-child(5), .com-cardlist-all-grid li:nth-child(6), .com-cardlist-all-grid li:nth-child(7) {
     width: 280px;
 }
+    .com-cardlist-wrapper {
+    overflow: hidden;
+    width: 100%;
+    }
     .com-cardlist-all-grid  {
-        
-        width:ma;
+        width: max-content; /* 讓容器自適應內容寬度 */
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         overflow:hidden;
         padding-bottom: 20px; /* 增加底部內邊距，避免滾動條遮擋內容 */
         animation: up-down-ani none !important;
+
+        animation: scrolling 10s linear infinite;
         
         
     }
@@ -954,8 +973,8 @@ section.reason{
         justify-content: start;
      }
     .com-card {
-        flex-direction: row; /* 卡片內部圖片和文字也垂直堆疊 */
-        width: 280px; /* 根據需求調整單個卡片的寬度 */
+        flex-direction: row; 
+        width: 280px; 
         flex-shrink: 0; /* 阻止卡片在空間不足時縮小 */
         margin: 10px 0;
         align-items: center;
@@ -967,7 +986,7 @@ section.reason{
         width: 60px; /* 縮小頭像 */
     }
     .com-txt {
-        font-size: 14px; /* 調整字體大小 */
+        font-size: 14px; 
         padding: 5px 10px 15px;
     }
     .up-down-icon {
@@ -1097,8 +1116,8 @@ section.reason{
     }
     #ab-card2 {
         top: 150px; 
-        left: 50%; 
-        transform: translateX(-50%);
+        left: 35%; 
+        
     }
     #ab-card3 {
         top: -90px;
