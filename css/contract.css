@@ -274,6 +274,8 @@ a:visited{
     /* banner */
     .banner-title{
         padding: 0 5%;
+        text-align: center;
+        font-size: 30px;
         justify-self: center;
         margin-bottom: 350px;
         display: flex;
