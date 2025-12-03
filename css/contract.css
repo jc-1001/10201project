@@ -262,7 +262,7 @@ a:visited{
 
 /* ============================ */
 /* ============================ */
-@media screen and (max-width: 576px){
+@media screen and (max-width: 768px){
     /* section介面要改padding: 0 5%; */
     
     .servers{
@@ -282,6 +282,9 @@ a:visited{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    .banner-title h2{
+        font-size: 30px;
     }
     .phone-downdown{
         display: block;
