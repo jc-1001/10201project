@@ -204,7 +204,7 @@ section{
 }
 
 /* 手機版 */
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
 html {
     position: static;
 }
@@ -219,7 +219,7 @@ html {
 }
 .big-title{
     margin-top: 50px;
-    margin-bottom: 250px;
+    margin-bottom: 400px;
 }
 .big-title {
         padding: 20px; /* 增加內邊距 */
@@ -386,7 +386,7 @@ html {
     background-color: #5A5A5A;
     width: 100%; /* 確保寬度佔滿 */
     position: relative;
-    top: -480px;
+    top: -540px;
 }
 /* 假設 footer/LAWSJIN.svg 是背景圖片 */
 .bg-footer img {

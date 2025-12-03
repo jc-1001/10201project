@@ -61,7 +61,7 @@
 
 
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
     /* 頁尾 */
 .footer {
     /* 移除原來的 space-evenly，改為垂直排列 */
@@ -91,7 +91,7 @@
     background-color: #5A5A5A;
     width: 100%; /* 確保寬度佔滿 */
     position: relative;
-    top: -480px;
+    top: -540px;
 }
 /* 假設 footer/LAWSJIN.svg 是背景圖片 */
 .bg-footer img {

@@ -190,6 +190,9 @@ RWD - 手機 (Mobile, Max-width: 768px)
         border-bottom: none; 
     }
 }
+
+
+
 @media screen and (min-width: 1024px){
     .target{
         margin-top: 160px;
