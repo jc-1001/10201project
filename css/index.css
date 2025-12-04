@@ -957,7 +957,7 @@ section.reason{
         flex-direction: row;
         flex-wrap: nowrap;
         overflow:hidden;
-        padding-bottom: 20px; /* 增加底部內邊距，避免滾動條遮擋內容 */
+        padding-bottom: 20px; 
         animation: up-down-ani none !important;
 
         animation: scrolling 10s linear infinite;
@@ -984,7 +984,7 @@ section.reason{
         
     }
     .com-pic img {
-        width: 60px; /* 縮小頭像 */
+        width: 60px; 
     }
     .com-txt {
         font-size: 14px; 
@@ -1000,7 +1000,7 @@ section.reason{
             }
             /* 100%：文字向左移動一個完整的寬度 */
             100% {
-                /* -100% 指的是移動文字元素自身寬度的一個距離 */
+                
                 transform: translateX(-100%); 
             }
         }
@@ -1021,24 +1021,23 @@ section.reason{
         flex-wrap: nowrap;
         overflow-x: auto; /* **關鍵：允許橫向滾動 (溢出)** */
         justify-content: flex-start; /* 卡片從左邊開始排列 */
-        padding-bottom: 20px; /* 增加底部間距，避免滾動條擋住內容 */
+        padding-bottom: 20px; 
         padding: 0;
     }
     /* .lawer-cardlist::-webkit-scrollbar {
         display: none; 
     } */
     .lawer-cardlist .lawer-card {
-        /* 讓每張卡片佔據容器約 85% 的寬度，留一點空間露出下一張卡片 */
         /* 這樣使用者就知道還可以滑動 */
         flex-shrink: 0; /* 防止卡片被壓縮 */
         width: 70%; 
-        margin: 0 10px; /* 卡片間距 */
+        margin: 0 10px; 
     }
     
     
-    /* 調整經驗內容樣式，使其在小螢幕下易讀 */
+    
     .experience ul {
-        font-size: 14px;
+        font-size: 12px;
         line-height: 1.4;
         padding: 5px 10px;
     }
@@ -1052,7 +1051,7 @@ section.reason{
         padding: 0 50px;
     }
     .contract {
-        flex-direction: column; /* 垂直堆疊 */
+        flex-direction: column; 
         align-items: center;
         padding: 0 5%;
     }
@@ -1067,13 +1066,13 @@ section.reason{
         
     } */
     .ct-cardlist {
-        flex-direction: column; /* 垂直堆疊卡片 */
+        flex-direction: column; 
         width: 100%;
         padding: 0 5%;
     }
     .ct-card {
         width: 100%;
-        margin-bottom: 20px; /* 增加卡片間距 */
+        margin-bottom: 20px;
         padding: 0;
     }
     .ct-pic{
@@ -1083,7 +1082,7 @@ section.reason{
         display: none;
     }
     .ct-title h3 {
-        font-size: 18px; /* 縮小標題字體 */
+        font-size: 18px; 
     }
     .ct-card .txt p {
         font-size: 14px;
@@ -1126,7 +1125,7 @@ section.reason{
         pointer-events: auto;
     }
 
-    /* 6. Contract 卡片圖片縮放與標題底線 */
+    /*卡片圖片縮放與標題底線 */
     .ct-card:hover .ct-pic img{
         scale: 1.2;
     }
@@ -1179,18 +1178,18 @@ section.reason{
 
     /* 理由 */
     .reason{
-        max-width: 960px; /* 限制最大寬度 */
+        max-width: 960px; 
         padding: 0 50px;
     }
     
     .reason-text {
-        width: 90%; /* 佔滿寬度 */
-        max-width: 600px; /* 限制最大寬度 */
-        margin: 0 0 50px 0; /* 調整間距 */
+        width: 90%; 
+        max-width: 600px; 
+        margin: 0 0 50px 0; 
         text-align: center;
     }
     .sub-re-txt p {
-        font-size: 24px; /* 縮小字體 */
+        font-size: 24px; 
         line-height: 1.5;
     }
     .re-content p {
@@ -1199,10 +1198,10 @@ section.reason{
     }
     .reason-cardlist-big {
         width: 100%;
-        justify-content: space-around; /* 卡片平均分佈 */
+        justify-content: space-around; 
     }
     .circle {
-        width: 120px; /* 縮小圓圈 */
+        width: 120px; 
         height: 120px;
         margin: 15px;
     }
@@ -1210,15 +1209,15 @@ section.reason{
         font-size: 15px;
     }
     .reason .contain .reason-cardlist .txt {
-        padding-top: 20px; /* 調整間距 */
+        padding-top: 20px; 
     }
 
     /* 5. 客戶評論 (.comment) */
     .com-cardlist-all-grid {
-        gap: 15px; /* 縮小卡片間距 */
+        gap: 15px;
         width: 100%;
     }
-    /* 調整為 3 欄排列，讓卡片不要太小 */
+    
     .com-card {
         width: 250px; 
     }

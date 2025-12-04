@@ -432,12 +432,23 @@ a:visited{
     .num p + p {
         font-size: 34px;
     }
-
+    
+    
+    
+    
+    
+    
     @media (hover: hover) and (pointer: fine) {
     .step-card:hover .st-icon {
         top: 15px; 
         left: 15px;
         }
+    .ct-card:hover {
+    /* border:3px solid rgba(311,121,111,11) ; */
+    /* x軸 y軸 暈染程度 顏色 */
+    box-shadow: 0 0px 30px #bc7100;
+    margin-top: -10px;
+    }   
     }
     
     
