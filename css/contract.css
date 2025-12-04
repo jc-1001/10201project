@@ -433,10 +433,11 @@ a:visited{
         font-size: 34px;
     }
 
-    /* 卡片懸停效果：調整圖示位置 */
+    @media (hover: hover) and (pointer: fine) {
     .step-card:hover .st-icon {
         top: 15px; 
         left: 15px;
+        }
     }
     
     

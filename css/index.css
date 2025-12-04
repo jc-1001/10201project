@@ -886,8 +886,9 @@ section.reason{
     
     
     .ab-pic {
-        width: 100%; /* 👈 新增 */
+        width: 80%; 
         overflow: hidden;
+        justify-items: center;
     }
     
     
@@ -1089,7 +1090,52 @@ section.reason{
         line-height: 1.6;
     }
 
+    /* hover 效果消失 */
+@media (hover: hover) and (pointer: fine) {
     
+    /* 1. Line Icon 縮放 */
+    .line-icon:hover img{
+        width: 100px;
+    }
+
+    /* 2. 按鈕底線消失 */
+    .button:hover .button-txt{
+        border-bottom:none;
+    }
+
+    /* 3. About Us 卡片圖片縮放 */
+    .ab-card:hover .ab-pic img{
+        scale: 1.2;
+    }
+    
+    /* 4. Reason 卡片顏色變化 (圓圈) */
+    .reason-card:hover .circle {
+        background-color: #FF9800 !important; 
+    }
+    .reason-card:hover .circle img {
+        filter: invert(100%); 
+    }
+    .reason-card:hover .circle .title h3 {
+        color: white;
+    }
+    
+    /* 5. Lawer 卡片詳細資訊顯示 */
+    .lawer-card:hover .experience {
+        border-radius: 7px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* 6. Contract 卡片圖片縮放與標題底線 */
+    .ct-card:hover .ct-pic img{
+        scale: 1.2;
+    }
+    .ct-card:hover .ct-title h3{
+        border-bottom:1px solid #444;
+    }
+    
+    
+}
 }
 @media screen and (max-width: 1024px){
 
@@ -1181,5 +1227,57 @@ section.reason{
     .com-cardlist-all-grid li:nth-child(6),
     .com-cardlist-all-grid li:nth-child(7){
         width: 210px;
+    }
+}
+
+
+/* hover 效果消失 */
+@media (hover: hover) and (pointer: fine) {
+    
+    /* 1. Line Icon 縮放 */
+    .line-icon:hover img{
+        width: 100px;
+    }
+
+    /* 2. 按鈕底線消失 */
+    .button:hover .button-txt{
+        border-bottom:none;
+    }
+
+    /* 3. About Us 卡片圖片縮放 */
+    .ab-card:hover .ab-pic img{
+        scale: 1.2;
+    }
+    
+    /* 4. Reason 卡片顏色變化 (圓圈) */
+    .reason-card:hover .circle {
+        background-color: #FF9800 !important; 
+    }
+    .reason-card:hover .circle img {
+        filter: invert(100%); 
+    }
+    .reason-card:hover .circle .title h3 {
+        color: white;
+    }
+    
+    /* 5. Lawer 卡片詳細資訊顯示 */
+    .lawer-card:hover .experience {
+        border-radius: 7px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* 6. Contract 卡片圖片縮放與標題底線 */
+    .ct-card:hover .ct-pic img{
+        scale: 1.2;
+    }
+    .ct-card:hover .ct-title h3{
+        border-bottom:1px solid #444;
+    }
+    
+    /* 7. Step Card 圖示位移 (如果您有這個元素) */
+    .step-card:hover .st-icon {
+        top: 15px; 
+        left: 15px;
     }
 }

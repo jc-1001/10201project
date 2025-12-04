@@ -171,5 +171,84 @@ a:visited{
     padding: 50px;
 }
 
-
+@media screen and (max-width: 768px){
+    /* header部分(LOGO&進度條) */
+    .header{
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    .header .logo img{
+        position: static;
+        max-height: 100px;
+    }
+    .loading{
+        padding: 0 50px;
+    }
+    .loading img{
+        width: 100%;
+        margin-top: 20px;
+    }
+    h2{
+        font-size: 18px;
+        line-height: 35px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    
+    /* 介面 */
+    .container{
+        flex-direction: column;
+        padding: 0 50px;
+        margin-bottom: 50px;
+    }
+    /* 小提示 */
+    .hint{
+        margin-top: 20px;
+        flex-direction: row;
+        gap: 0px;
+        justify-content: center;
+    }
+    .hint img{
+        width: 10%;
+    }
+    .hint p{
+        width: 30%;
+        text-align: center;
+    }
+    .hint-block{
+        display: flex;
+        padding: 10px;
+        width: 100%;
+        justify-content: start;
+    }
+    .hint-block p{
+        opacity: 1;
+        margin: 0px;
+        padding: 10px;
+        width: 100%;
+        font-size: 12px;
+    }
+    
+    .answer{
+        margin-left: 10px;
+    }
+    
+    
+    .contain-right{
+        margin-left:0;
+        
+    }
+    .button-all{
+        padding: 0 50px;    
+    }
+    .goback{
+        flex-direction: column;
+        gap: 10px;
+    } 
+    .button{
+        width:120px;
+    }
+    
+    
+}
 

@@ -11,6 +11,9 @@ a:visited{
     text-decoration:none;
 }
 
+a{
+    width: 100%;
+}
 /* ============================= */
 /* 升級文案 */
 .talk-box{
