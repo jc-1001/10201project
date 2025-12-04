@@ -27,6 +27,7 @@
     <section class="container">
       <!-- 左邊視窗 -->
       <div class="contain-left">
+        <form>
         <!-- 問題一 -->
         <div class="qa1">
           <div class="question">
@@ -106,7 +107,7 @@
             <h2>是否有押租金約定？押租金多少錢？</h2>
           </div>
           <div class="hint">
-            <img src="./sub-page-Img/contract/Lightbulb.svg" alt="" />
+            <img src="./sub-page-Img/contract/input2/Lightbulb.svg" alt="" />
             <p>小提醒</p>
             <div class="hint-block">
               <p>
@@ -160,13 +161,13 @@
             </div>
           </a>
           <a href="./input3.html">
-            <div class="button">
+            <button type="submit">
               <p>下一步</p>
-            </div>
+            </button>
           </a>
         </div>
+      </form>
       </div>
-
       <!-- 右邊視窗 -->
       <div class="contain-right">
         <div class="view-text">
@@ -203,7 +204,8 @@
       </div>
     </section>
     
-    
+    <script src="./js/vendors/jquery/jquery-3.7.1.min.js"></script>
+    <script src="./js/input2-submit.js"></script>
     <!-- 使用者輸入文字進入預覽 -->
     <script>
       // 1. 取得所有需要監聽的輸入元素(定義id/class名稱)

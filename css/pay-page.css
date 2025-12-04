@@ -148,18 +148,17 @@ a:visited{
     
 }
 
-.button{
+button {
     /* border: 1px solid black; */
     background-color: #ff9800;
+    border: none;
     border-radius: 10px;
     width: 184px;
     height: 70px;
     display: flex;
     justify-content: center;
-    align-content: center;
     align-items: center;
     margin-top: 20px;
-    
 }
 /* ============================ */
 /* 介面 */

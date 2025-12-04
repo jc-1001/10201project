@@ -38,15 +38,15 @@
     <br><hr><br>
 
     <h2>購買資訊</h2>
-    <form >
+    <form class="payment-form" >
         
         <div class="buy-name1">
             <label for="firstName">First name</label>
             <label for="lastName">Last name</label> 
         </div>
         <div class="buy-name2">
-            <input type="text" id="firstName" name="firstName">
-            <input type="text" id="lastName" name="lastName">
+            <input type="text" id="firstName" name="firstName" required>
+            <input type="text" id="lastName" name="lastName" required>
         </div>
         <br>
 
@@ -54,7 +54,7 @@
             <label for="email">Email</label>
         </div>
         <div class="buy-email2">
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" required>
         </div>
         <br>
 
@@ -62,7 +62,7 @@
             <label for="contactPhone">手機號碼(請依格式填入，如：0912345678 或 +886912345678)</label>
         </div>
         <div class="buy-tel2">
-            <input type="tel" id="contactPhone" name="contactPhone">
+            <input type="tel" id="contactPhone" name="contactPhone" required>
         </div>
         
         <br><hr><br>
@@ -117,11 +117,11 @@
         <div class="form-row">
             <div class="form-col">
                 <label for="cardHolderName">持卡人姓名</label>
-                <input type="text" id="cardHolderName" name="cardHolderName">
+                <input type="text" id="cardHolderName" name="cardHolderName" required>
             </div>
             <div class="form-col">
                 <label for="cvc">信用卡背後末三碼</label>
-                <input type="text" id="cvc" name="cvc" maxlength="3">
+                <input type="text" id="cvc" name="cvc" maxlength="3" required>
             </div>
         </div>
 
@@ -129,15 +129,15 @@
             <div class="form-col">
                 <label>信用卡卡號</label>
                 <div class="card-number-group">
-                    <input type="text" name="cardNumber1" maxlength="4">
-                    <input type="text" name="cardNumber2" maxlength="4">
-                    <input type="text" name="cardNumber3" maxlength="4">
-                    <input type="text" name="cardNumber4" maxlength="4">
+                    <input type="text" name="cardNumber1" maxlength="4" required>
+                    <input type="text" name="cardNumber2" maxlength="4" required>
+                    <input type="text" name="cardNumber3" maxlength="4" required>
+                    <input type="text" name="cardNumber4" maxlength="4" required>
                 </div>
             </div>
             <div class="form-col">
                 <label for="paymentPhone">手機號碼</label>
-                <input type="tel" id="paymentPhone" name="paymentPhone">
+                <input type="tel" id="paymentPhone" name="paymentPhone" required>
             </div>
         </div>
 
@@ -151,14 +151,16 @@
                     <img src="./sub-page-Img/update/backicon.svg" alt="">
                     <p>返回前一頁</p>
                 </div></a>
-                <div class="button">
+                <button type="submit">
                     <p>確認付款</p>
-                </div>
+                </button>
             </section>
+            </form>
         </div>
 
 
 
-      
+      <script src="./js/vendors/jquery/jquery-3.7.1.min.js"></script>
+      <script src="./js/paypage-submit.js"></script>
 </body>
 </html>
