@@ -529,6 +529,9 @@ section.reason{
     
 }
 
+.com-cardlist-all-grid li:nth-child(n + 11):nth-child(-n + 20) {
+    display: none;
+}
 /* ======================================= */
 .lawer{
     margin-top: 100px;
@@ -898,6 +901,9 @@ section.reason{
 
 
     /* --- 3. 使用理由 (.reason) --- */
+
+    
+    
     
     section.reason {
         margin-top: 100px; 
@@ -947,42 +953,7 @@ section.reason{
     .com-cardlist-all-grid li:nth-child(4), .com-cardlist-all-grid li:nth-child(5), .com-cardlist-all-grid li:nth-child(6), .com-cardlist-all-grid li:nth-child(7) {
     width: 280px;
 }
-    .com-cardlist-wrapper {
-    overflow: hidden;
-    width: 100%;
-    }
-    .com-cardlist-all-grid  {
-        width: max-content; /* 讓容器自適應內容寬度 */
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        overflow:hidden;
-        padding-bottom: 20px; 
-        animation: up-down-ani none !important;
 
-        animation: scrolling 10s linear infinite;
-        
-        
-    }
-    /* .com-cardlist-all-grid::-webkit-scrollbar {
-        display: none;
-    } */
-     .comment .contain .title h2{
-        display: flex;
-        flex-direction: row;
-        align-items: start;
-        justify-content: start;
-     }
-    .com-card {
-        flex-direction: row; 
-        width: 280px; 
-        flex-shrink: 0; /* 阻止卡片在空間不足時縮小 */
-        margin: 10px 0;
-        align-items: center;
-        text-align: center;
-        animation: scrolling 1s linear infinite;
-        
-    }
     .com-pic img {
         width: 60px; 
     }
@@ -993,19 +964,66 @@ section.reason{
     .up-down-icon {
         animation: none !important; 
     }
-    @keyframes scrolling {
-            /* 0%：文字位於最右側外部 */
-            0% {
-                transform: translateX(0%);
-            }
-            /* 100%：文字向左移動一個完整的寬度 */
-            100% {
-                
-                transform: translateX(-100%); 
-            }
+    .comment .contain .title h2{
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: start;
+        }
+    
+    
+    .com-cardlist-all-grid li:nth-child(n+11):nth-child(-n+20) {
+        display: flex; /* 或 display: block; */
+    }
+
+    @keyframes my_ani {
+        from {
+            left: 0;
+        }
+        to {
+            left: -2620px;
+        }
         }
 
+        .com-cardlist-wrapper {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        }
 
+        .com-cardlist-all-grid{
+        list-style: none;
+        margin: 0;
+        /* border: 1px solid black; */
+        /* overflow: hidden; */
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        /* width: max-content; 讓容器自適應內容寬度 */
+        flex-wrap: nowrap;
+        overflow:hidden;
+        padding-bottom: 20px; 
+        animation: up-down-ani none !important;
+        }
+
+        .com-card{
+        /* border: 1px solid blue; */
+        display: flex;
+        gap: 10px;
+        position: relative;
+        left: 0px;
+        flex-direction: row; 
+        width: 280px !important; 
+        flex-shrink: 0; /* 阻止卡片在空間不足時縮小 */
+        margin: 10px 0;
+        align-items: center;
+        text-align: center;
+                
+        animation-name: my_ani;
+        animation-duration: 35s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        }
 
 
 
@@ -1040,6 +1058,9 @@ section.reason{
         font-size: 12px;
         line-height: 1.4;
         padding: 5px 10px;
+    }
+    .experience li{
+        font-size: 12px;
     }
     .lawer-name {
         font-size: 14px;
