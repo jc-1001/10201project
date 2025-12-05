@@ -175,6 +175,7 @@ h4{
 @media screen and (max-width: 768px){
     /* section介面要改padding: 0 5%; */
     .news{
+        margin: 0;
         padding: 0 5%;
     }
     .news-cardlist{
@@ -205,7 +206,7 @@ h4{
 
     }
     .news-card-pic {
-        margin-left: 50px;
+        margin-left: 0px;
     }
     .news-card-pic img{
         width: 80%;
@@ -213,6 +214,7 @@ h4{
     .news-txt{
         margin: 0 0 10px 0;
         margin-left: 60%;
+        font-size: 15px
     }
 
     /* 漸進式出現 JS*/
