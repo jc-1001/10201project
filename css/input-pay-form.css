@@ -45,6 +45,43 @@ form{
     border: 2px dashed red;
     font-weight: bold;
 }
+/* 隱藏 radio button */
+.buy-sel-card input[type="radio"] {
+    accent-color: red;
+    transform: scale(1.5);
+    
+}
+
+
+/* input4 */
+/* 選中後的樣式 */
+.buy-sel-card:has(input[type="radio"]:checked) {
+    background-color: #FF9800;
+    font-weight: bold;
+}
+/* 讓 label 可以點擊 */
+.buy-sel-card {
+    cursor: pointer;
+}
+
+/* input4-1 */
+/* disabled 狀態的樣式 */
+.buy-sel-card:has(input[type="radio"]:disabled) {
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none; /* 完全禁用所有互動 */
+}
+
+.buy-sel-card:has(input[type="radio"]:disabled:checked) {
+    opacity: 1; 
+}
+
+
+
+
+
+
+
 
 /* 表單樣式 */
         form label {

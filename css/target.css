@@ -22,7 +22,7 @@ h4{
     /* 移除 position: absolute; 改為相對定位以確保內容流動性 */
     position: relative; 
     top: 0; /* 移除固定的 top: 200px */
-    margin-top: 250px; /* 確保在 banner-bg 下方有足夠空間 */
+    margin-top: 210px; /* 確保在 banner-bg 下方有足夠空間 */
     margin-bottom: 100px;
     padding: 0 20px; /* 增加左右間距 */
 }
@@ -49,7 +49,7 @@ h4{
     letter-spacing: 2px;
     text-align: center;
     /* 調整為流動間距，確保它位於 .target 之後 */
-    margin-top: 100px; 
+    margin-top: 60px; 
     margin-bottom: 50px;
 }
 
@@ -193,8 +193,11 @@ RWD - 手機 (Mobile, Max-width: 768px)
 
 
 
-@media screen and (min-width: 1024px){
+@media screen and (max-width: 1024px){
     .target{
         margin-top: 160px;
+    }
+    .lawer .title h3 {
+        margin-top: 120px;
     }
 }

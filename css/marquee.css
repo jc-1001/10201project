@@ -1,0 +1,53 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 向左移動 */
+    @keyframes scroll-left {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* 向右移動 */
+    @keyframes scroll-right {
+      from {
+        transform: translateX(-50%);
+      }
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    div.marquee {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    div.marquee-content {
+      display: flex;
+      width: max-content;
+    }
+    div.marquee.left{
+      margin-bottom: 10px;
+    }
+    /* 向左滾動 */
+    div.marquee.left div.marquee-content {
+      animation: scroll-left 25s linear infinite;
+    }
+
+    /* 向右滾動 */
+    div.marquee.right div.marquee-content {
+      animation: scroll-right 25s linear infinite;
+    }
+
+    div.marquee-content img {
+      display: block;
+      height: 100px;
+      object-fit: cover;
+    }

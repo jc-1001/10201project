@@ -291,3 +291,8 @@ ul{
     
     
 }
+@media screen and (min-width: 1024px){
+    .contain-right{
+        margin-left: 0;
+    }
+}

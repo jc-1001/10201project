@@ -529,7 +529,7 @@ section.reason{
     
 }
 
-.com-cardlist-all-grid li:nth-child(n + 11):nth-child(-n + 20) {
+.com-cardlist-all-grid li:nth-child(n + 11):nth-child(-n + 30) {
     display: none;
 }
 /* ======================================= */
@@ -780,7 +780,7 @@ section.reason{
     }
     .banner-phone-cir{
         position: absolute;
-        top: 270px;
+        top: 280px;
         left: 40px;
         /* 應用動畫屬性 */
         transform-origin: center center;
@@ -790,7 +790,7 @@ section.reason{
         animation-timing-function: linear; /* 旋轉保持勻速 */
     }
     .banner-phone-cir img{
-        width: 90%;
+        width: fit-content;
     }
 
     @keyframes spin {
@@ -972,8 +972,8 @@ section.reason{
         }
     
     
-    .com-cardlist-all-grid li:nth-child(n+11):nth-child(-n+20) {
-        display: flex; /* 或 display: block; */
+    .com-cardlist-all-grid li:nth-child(n+11):nth-child(-n+30) {
+        display: flex;
     }
 
     @keyframes my_ani {
@@ -981,7 +981,7 @@ section.reason{
             left: 0;
         }
         to {
-            left: -2620px;
+            left: -4380px;
         }
         }
 
