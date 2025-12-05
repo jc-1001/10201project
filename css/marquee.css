@@ -49,5 +49,6 @@
     div.marquee-content img {
       display: block;
       height: 100px;
+      /* cover,是為了確保所有圖片都能填滿 300x200 的空間,即使原始圖片尺寸不同也不會有留白或變形 */
       object-fit: cover;
     }

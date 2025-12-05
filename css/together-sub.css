@@ -1,91 +1,101 @@
 /* 基本設定 */
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
-html{
+
+html {
     position: relative;
 }
 
-h3{
+h3 {
     font-size: 26px;
     /* margin-left: 100px; */
 
 }
 
 
-body{
+body {
     background-image: url(../indexImg/banner/background.png);
     /* background-repeat: repeat-y; */
     /* width: 1920px; */
     height: auto;
-    
+
 }
-a:link{
+
+a:link {
     color: black;
-    text-decoration:none;
+    text-decoration: none;
 }
-a:visited{
+
+a:visited {
     color: black;
-    text-decoration:none;
+    text-decoration: none;
 }
 
 
 /* ============================= */
 /* 導覽列 */
-.header{
+.header {
     display: flex;
     flex-direction: row;
-    margin-top: 30px ;
+    margin-top: 30px;
     justify-content: space-between;
-    margin-bottom:30px;
+    margin-bottom: 30px;
 }
-.header .logo img{
-    
+
+.header .logo img {
+
     height: 120px;
     position: relative;
     top: -25px;
     left: 100px;
-    
+
 }
-.header-whiteLine{
+
+.header-whiteLine {
     background-color: white;
     box-sizing: border-box;
     width: 800px;
     height: 80px;
-    border-radius:40px 0 0 40px ;
+    border-radius: 40px 0 0 40px;
     /* padding-left: 100px;
     padding-right: 50px; */
     justify-content: center;
     align-content: center;
-    
+
 }
-.header-txt ul{
+
+.header-txt ul {
     display: flex;
     flex-direction: row;
     list-style: none;
     margin-left: 20px;
 }
-.header-txt ul li{
-    padding:20px ;
-    border-radius: 40px ;
+
+.header-txt ul li {
+    padding: 20px;
+    border-radius: 40px;
 }
+
 /* hover */
-.header-txt li:hover  {
+.header-txt li:hover {
     background-color: #FF9800;
     color: white;
 }
+
 /* ============================ */
 /* 抬頭背景圖 + 標題(這裡不是模板要自己改)*/
-.banner-bg img{
+.banner-bg img {
     box-sizing: border-box;
     width: 100%;
     position: absolute;
-    top: 0px; 
+    top: 0px;
     z-index: -1;
 
 }
+
 .big-title {
     display: flex;
     flex-direction: column;
@@ -93,95 +103,106 @@ a:visited{
     text-align: center;
     gap: 10px;
 }
-.big-title h2{
+
+.big-title h2 {
     font-size: 36px;
-    color:white ;
+    color: white;
 }
 
-.banner-subtitle p{
+.banner-subtitle p {
     font-size: 20px;
-    color:white ;
+    color: white;
 
 }
 
 /* ============================ */
 
-section{
+section {
     max-width: 1320px;
     margin: auto;
     height: auto;
     justify-content: center;
-    padding:0 150px;
+    padding: 0 150px;
     display: flex;
 }
+
 /* ========================== */
-.title{
+.title {
     font-size: 24px;
     letter-spacing: 2px;
     text-align: center;
     margin-bottom: 40px;
     /* 更改點↓ */
     /* 避開固定導覽列 */
-    margin-top: 120px; /* h2 位於 banner-bg 頂部 */
+    margin-top: 120px;
+    /* h2 位於 banner-bg 頂部 */
 }
+
 /* ====================== */
 /* 頁尾 */
-.footer{
+.footer {
     position: relative;
     display: flex;
     justify-content: space-evenly;
 }
-.bg-footer{
+
+.bg-footer {
     position: absolute;
     bottom: 0;
     background-color: white;
     z-index: -1;
 }
-.bg-footer .gray-line{
+
+.bg-footer .gray-line {
     /* border:1px solid #000000; */
     height: 35px;
-    background-color:#5A5A5A ;
+    background-color: #5A5A5A;
 }
-.bg-footer img{
+
+.bg-footer img {
     width: 100%;
 }
-.footer .logo{
+
+.footer .logo {
     padding-top: 84px;
 }
 
-.footer .logo img{
+.footer .logo img {
     width: 40%;
 }
 
-.txt-footer{
+.txt-footer {
     padding-top: 84px;
     display: flex;
 }
-.txt-footer1{
-    margin-right:30px;
+
+.txt-footer1 {
+    margin-right: 30px;
 }
 
-.txt-footer1 p{
+.txt-footer1 p {
     padding: 20px 0;
     font-size: 16px;
     display: flex;
     align-content: center;
     justify-content: center;
-    
-    
+
+
 }
-.txt-footer2 p{
+
+.txt-footer2 p {
     padding: 20px 0;
     font-size: 16px;
     display: flex;
     align-content: center;
     justify-content: center;
 }
-.copyright{
+
+.copyright {
     display: flex;
     align-self: self-end;
     font-size: 15px;
-    
+
 }
 
 
@@ -196,33 +217,38 @@ section{
 
 
 /* 桌機板banner圖片消失 */
-.ph-banner-bg{
+.ph-banner-bg {
     display: none;
 }
-.hamburger-menu{
+
+.hamburger-menu {
     display: none;
 }
 
 /* 手機版 */
 @media screen and (max-width: 768px) {
-html {
-    position: static;
-}
+    html {
+        position: static;
+    }
 
 
 
-.banner-bg img{
-    display: none;
-}
-.ph-banner-bg{
-    display: block;
-}
-.big-title{
-    margin-top: 50px;
-    margin-bottom: 400px;
-}
-.big-title {
-        padding: 20px; /* 增加內邊距 */
+    .banner-bg img {
+        display: none;
+    }
+
+    .ph-banner-bg {
+        display: block;
+    }
+
+    .big-title {
+        margin-top: 50px;
+        margin-bottom: 400px;
+    }
+
+    .big-title {
+        padding: 20px;
+        /* 增加內邊距 */
         text-align: center;
     }
 
@@ -232,17 +258,17 @@ html {
 
 
 
-/* banner圖片調整 */
+    /* banner圖片調整 */
     /* 1. 頂部底圖 */
 
-    .ph-banner-bg img{
+    .ph-banner-bg img {
         position: absolute;
         display: block;
         width: 100%;
         z-index: -1;
         top: 0;
         right: 0;
-}
+    }
 
 
     /* header調整 */
@@ -255,252 +281,324 @@ html {
     /* 調整 Logo 區域 */
     .header .logo img {
         /* 保持 logo 在左側 */
-        height: 80px; /* 縮小 logo 尺寸 */
-        top: 0px; 
-        left: 20px; 
+        height: 80px;
+        /* 縮小 logo 尺寸 */
+        top: 0px;
+        left: 20px;
     }
 
     .header-whiteLine {
         /* 隱藏整個清單容器 */
-        display: none; 
+        display: none;
     }
-    .hamburger-menu{
+
+    .hamburger-menu {
         display: block;
         right: 0;
     }
-    .menu-switch{
+
+    .menu-switch {
         display: none;
     }
-    
-    .hb {
-            position: fixed;
-            display: block;
-            width: 40px;
-            height: 40px;
-            background-color: #333;
-            top: 50px;
-            right: 10px;
-            z-index: 100;
-        }
-        .hb .bar {
-            display: block;
-            width: 80%;
-            height: 4px;
-            position: absolute;
-            left: 0;
-            right: 0;
-            margin: auto;
-            background-color: white;
-        }
-        .bar1 {
-            top: 6px;
-        }
-        .bar2 {
-            top: 18px;
-        }
-        .bar3 {
-            top: 30px;
-        }
-        .main-menu {
-            position: fixed;
-            /* display: none; */
-            top: 15%;
-            right: 150%;
-            background-color: #8a422e;
-            width: 80%;
-            /* height: 50svh; */
-            height: calc(100svh - 70px);
-            transition: right .7s;
-            z-index: 99;
 
-        }
-        .ph-menu-logo{
-            justify-self: center;
-            margin: 20px 0;
-        }
-        .ph-menu-logo img{
-            width: 70%;
-        }
-        /* ---半透明覆蓋層--- */
-        .menu-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* 半透明黑色 */
-            z-index: 98; /* 在選單和漢堡按鈕之下 */
-            opacity: 0; /* 預設隱藏 */
-            visibility: hidden; /* 預設不佔空間且無法互動 */
-            transition: opacity .7s, visibility .7s; /* 加入過渡動畫 */
-        }
-        .main-menu ul li{
-            list-style: none;
-        }
-        /* .main-menu ul li ~ li {
+    .hb {
+        position: fixed;
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color: #333;
+        top: 50px;
+        right: 10px;
+        z-index: 100;
+    }
+
+    .hb .bar {
+        display: block;
+        width: 80%;
+        height: 4px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: white;
+    }
+
+    .bar1 {
+        top: 6px;
+    }
+
+    .bar2 {
+        top: 18px;
+    }
+
+    .bar3 {
+        top: 30px;
+    }
+
+    .main-menu {
+        position: fixed;
+        /* display: none; */
+        top: 15%;
+        right: 150%;
+        background-color: #8a422e;
+        width: 80%;
+        /* height: 50svh; */
+        height: calc(100svh - 70px);
+        transition: right .7s;
+        z-index: 99;
+
+    }
+
+    .ph-menu-logo {
+        justify-self: center;
+        margin: 20px 0;
+    }
+
+    .ph-menu-logo img {
+        width: 70%;
+    }
+
+    /* ---半透明覆蓋層--- */
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        /* 半透明黑色 */
+        z-index: 98;
+        /* 在選單和漢堡按鈕之下 */
+        opacity: 0;
+        /* 預設隱藏 */
+        visibility: hidden;
+        /* 預設不佔空間且無法互動 */
+        transition: opacity .7s, visibility .7s;
+        /* 加入過渡動畫 */
+    }
+
+    .main-menu ul li {
+        list-style: none;
+    }
+
+    /* .main-menu ul li ~ li {
             border-top: 1px solid white;
         } */
-        .main-menu ul li a {
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            font-size: 20px;
-            color: #fff;
-        }
-        /* --- 選單開啓狀態--- */
-        .hamburger-menu:has(#menu-switch-id:checked) .menu-overlay {
-            opacity: 1;
-            visibility: visible;
-        }
-        .hamburger-menu:has(.menu-switch:checked) .main-menu {
-            right:0%;
-            
-        }
+    .main-menu ul li a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #fff;
+    }
 
-            /* 頁尾 */
-.footer {
-    
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    text-align: center;
-    padding: 20px 0; 
-    position: relative;
-    z-index: 1; 
-    background-color: white;
-}
+    /* --- 選單開啓狀態--- */
+    .hamburger-menu:has(#menu-switch-id:checked) .menu-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
 
-
-.bg-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%; 
-    height: fit-content;
-    background-color: white;
-    z-index: -1; 
-}
-.bg-footer .gray-line {
-    height: 35px;
-    background-color: #5A5A5A;
-    width: 100%; 
-    position: relative;
-    top: -550px;
-}
-
-.bg-footer img {
-    width: 100%;
-}
-
-/* Logo 區域 */
-.footer .logo {
-    padding-top: 20px; 
-    padding-bottom: 20px;
-}
-
-.footer .logo img {
-    width: 40%; 
-    max-width: 300px; /* 設置最大寬度避免過大 */
-    height: auto;
-}
-
-/* 導覽文字區域 (txt-footer) */
-.txt-footer {
-    /* 垂直排列三個項目 */
-    display: flex;
-    flex-direction: column; 
-    justify-content: center;
-    padding-top: 0;
-    margin-bottom: 20px; 
-}
-
-/* 導覽列  */
-.txt-footer1{
-    margin-right: 0; 
-    width: 100%; 
-}
-
-.txt-footer1 p, .txt-footer2 p {
-    padding: 20px 0; /* 調整行高 */
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-
-
-/* 版權資訊 (copyright) */
-.copyright p{
-    display: none;
-}
-
-
-
-.copyright img {
-    /* 讓 CC 圖標行也居中 */
-    display: none;
-   
-}
-
+    .hamburger-menu:has(.menu-switch:checked) .main-menu {
+        right: 0%;
 
     }
 
- /*================================== */
+    /* 頁尾 */
+    .footer {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+        z-index: 1;
+        background-color: white;
+    }
+
+
+    .bg-footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: fit-content;
+        background-color: white;
+        z-index: -1;
+    }
+
+    .bg-footer .gray-line {
+        height: 35px;
+        background-color: #5A5A5A;
+        width: 100%;
+        position: relative;
+        top:0px;
+    }
+
+    .bg-footer img {
+        position: absolute;
+        top:550px;
+        width: 100%;
+    }
+
+    /* Logo 區域 */
+    .footer .logo {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .footer .logo img {
+        width: 40%;
+        max-width: 300px;
+        /* 設置最大寬度避免過大 */
+        height: auto;
+    }
+
+    /* 導覽文字區域 (txt-footer) */
+    .txt-footer {
+        /* 垂直排列三個項目 */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 0;
+        margin-bottom: 20px;
+    }
+
+    /* 導覽列  */
+    .txt-footer1 {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .txt-footer1 p,
+    .txt-footer2 p {
+        padding: 20px 0;
+        /* 調整行高 */
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+
+
+    /* 版權資訊 (copyright) */
+    .copyright p {
+        display: none;
+    }
+
+
+
+    .copyright img {
+        /* 讓 CC 圖標行也居中 */
+        display: none;
+
+    }
+
+
+}
+
+/*================================== */
 /* 平板 / 小螢幕桌面樣式 (max-width: 1024px) */
 @media screen and (max-width: 1024px) {
-    
+
     /* 導覽列調整 */
-    .header .logo img{
-        height: 100px; 
+    .header .logo img {
+        height: 100px;
         top: -15px;
-        left: 30px; 
+        left: 30px;
     }
-    .header-whiteLine{
-        width: 60%; /* 讓導航欄容器響應式佔比 */
-        max-width: 650px; 
+
+    .header-whiteLine {
+        width: 60%;
+        /* 讓導航欄容器響應式佔比 */
+        max-width: 650px;
     }
-    .header-txt ul li{
-        padding: 20px 15px; 
+
+    .header-txt ul li {
+        padding: 20px 15px;
         font-size: 15px;
     }
 
     /* 導覽列調整 */
-    .header .logo img{
-        height: 100px; 
-        left: 30px; 
+    .header .logo img {
+        height: 100px;
+        left: 30px;
     }
-    .header-whiteLine{
-        width: 70%; 
-        max-width: 600px; 
+
+    .header-whiteLine {
+        width: 70%;
+        max-width: 600px;
     }
-    .header-txt ul li{
-        padding: 20px 10px; 
+
+    .header-txt ul li {
+        padding: 20px 10px;
         font-size: 15px;
     }
 
     /* 內容區段調整 */
-    section{
-        max-width: 1024px; 
-        padding: 0 30px; 
-    }
+    section {
+            max-width: 1024px;
+            padding: 0 30px;
+            margin: auto;
+            height: auto;
+            justify-content: center;
+            display: flex;
+        }
 
     /* 頁尾調整 */
-    .footer{
-        max-width: 1024px; 
-        justify-content: space-evenly; 
+    html {
+        /* 確保 html 佔滿整個視埠高度 */
+        min-height: 100vh;
+        position: relative;
     }
-    .footer .logo img{
+
+    body {
+        /* 讓 body 也佔滿高度，並允許它成為 Flex 或 Grid 容器 */
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer {
+        /* 移除 position: relative; 讓它作為 body 的一個 flex-item 即可 */
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    /* 調整 bg-footer */
+    .bg-footer {
+        position: absolute;
+        /* 為了保持您原有的視覺效果，這裡可以保留 absolute */
+        bottom: 0px;
+        /* 這樣 bottom: 0; 會貼齊它的父元素 .footer 的底部 */
+        background-color: white;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        
+    }
+
+    .bg-footer img {
+        width: 100%;
+        position: relative;
+        bottom: -30px;
+        /* height: auto; 讓圖片自然縮放 */
+    }
+
+    .footer .logo img {
         width: 80%;
-        max-width: 180px; 
+        max-width: 180px;
     }
-    .txt-footer{
-        gap: 20px; 
-        padding-top: 50px; 
+
+    .txt-footer {
+        gap: 20px;
+        padding-top: 50px;
     }
 
 
-    .big-title{
+    .big-title {
         margin-top: -30px;
     }
 }

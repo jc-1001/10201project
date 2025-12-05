@@ -210,5 +210,82 @@ a:visited{
         box-sizing: border-box;
     }
     
-}
 
+    
+    
+}
+@media screen and (max-width: 1024px){
+    /* 卡片內容調整 */
+    .up-card{
+        min-height: 380px;
+
+    }
+    .up-icon img {
+        width: 60px; 
+    }
+    .up-content {
+        font-size: 18px;
+        gap: 10px;
+        letter-spacing: 2px;
+    }
+    .up-tit{
+        font-weight: bold;
+        font-family: "noto sans";
+    }
+    .up-prize {
+        font-size: 16px;
+    }
+
+    /* 移除所有 hover 效果 */
+    .gate1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .gate2 {
+        display: flex;
+        height: auto;
+        padding: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.15); 
+        margin-top: 15px; 
+        padding-top: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+
+    .up-text {
+        list-style: none;
+        gap: 10px;
+        align-items: flex-start; 
+        padding-left: 0;
+        margin-left: 0;
+        width: 100%;
+    }
+    .up-text li {
+        list-style-type: none; 
+        margin: 0 auto;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 2px;
+        
+    }
+    
+    .gate1 {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .gate2 {
+        display: block; 
+        height: auto;
+        padding: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.15); 
+        margin-top: 15px; 
+        padding-top: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
