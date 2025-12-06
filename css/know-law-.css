@@ -162,7 +162,14 @@ h4{
 
 
 
-
+@media screen and (max-width: 1024px){
+    .news{
+        margin: 0 30px;
+    }
+    .know-cardlist{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
 
 
 
@@ -264,8 +271,3 @@ h4{
 
 
 
-@media screen and (max-width: 1024px){
-    .news{
-        margin: 0 30px;
-    }
-}
