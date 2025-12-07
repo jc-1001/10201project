@@ -2,8 +2,13 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>住宅租賃契約書範本</title>
      <style>
+        * {
+            box-sizing: border-box;
+        }
+        
         body {
             font-family: 'Times New Roman', '微軟正黑體', 'Microsoft JhengHei', serif;
             line-height: 1.8;
@@ -14,6 +19,7 @@
             background-color: #f9f9f9;
             border: 1px solid #ddd;
         }
+        
         .contract-header {
             text-align: center;
             font-size: 20px;
@@ -22,6 +28,7 @@
             padding-bottom: 10px;
             border-bottom: 3px double #333;
         }
+        
         .section-title {
             font-size: 16px;
             font-weight: bold;
@@ -30,6 +37,7 @@
             border-left: 5px solid #0056b3;
             padding-left: 10px;
         }
+        
         .article-title {
             font-weight: bold;
             margin-top: 15px;
@@ -37,6 +45,7 @@
             font-size: 16px;
             text-decoration: underline;
         }
+        
         .fillin {
             display: inline-block;
             min-width: 50px;
@@ -46,21 +55,26 @@
             font-weight: bold;
             color: #d9534f;
         }
+        
         .signature-block {
             margin-top: 30px;
             padding: 10px;
             border: 1px dashed #ccc;
         }
-        .signature-block div {
+        
+        .signature-block div, .signature-block p {
             margin-top: 10px;
         }
+        
         .indent-list {
             list-style: none;
             padding-left: 0;
         }
+        
         .indent-list li {
             margin-bottom: 5px;
         }
+        
         .indent-list li:before {
             content: counter(li) "、";
             counter-increment: li;
@@ -68,36 +82,172 @@
             display: inline-block;
             width: 2em;
         }
+        
         .article-content {
             padding-left: 20px;
         }
+        
         .article-content p{
             font-size: 16px;
         }
+        
         .checkbox {
             font-family: Arial, sans-serif;
             font-weight: normal;
         }
+        
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 10px;
+            font-size: 14px;
         }
+        
         th, td {
             border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
             vertical-align: top;
         }
+        
         th {
             background-color: #f2f2f2;
             font-weight: bold;
         }
+        
         .note {
             font-size: 0.9em;
             color: #666;
             padding-left: 20px;
             display: block;
+        }
+        
+        /* RWD 樣式 - 平板及手機版 (最大寬度 768px) */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 10px;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+            
+            .contract-header {
+                font-size: 18px;
+                padding-bottom: 8px;
+                margin-bottom: 15px;
+            }
+            
+            .section-title {
+                font-size: 15px;
+                margin-top: 15px;
+                margin-bottom: 8px;
+                padding-left: 8px;
+                border-left-width: 4px;
+            }
+            
+            .article-title {
+                font-size: 15px;
+                margin-top: 12px;
+                margin-bottom: 5px;
+            }
+            
+            .article-content {
+                padding-left: 10px;
+            }
+            
+            .article-content p {
+                font-size: 14px;
+            }
+            
+            .fillin {
+                min-width: 40px;
+                padding: 0 3px;
+                font-size: 13px;
+            }
+            
+            .signature-block {
+                margin-top: 20px;
+                padding: 8px;
+            }
+            
+            .signature-block div, .signature-block p {
+                margin-top: 8px;
+                font-size: 14px;
+            }
+            
+            .indent-list li {
+                margin-bottom: 8px;
+                font-size: 14px;
+            }
+            
+            .note {
+                font-size: 0.85em;
+                padding-left: 10px;
+            }
+            
+            /* 表格響應式處理 */
+            table {
+                font-size: 12px;
+                display: block;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            th, td {
+                padding: 6px;
+                font-size: 12px;
+            }
+            
+            /* 調整 checkbox 和 fillin 的間距 */
+            .checkbox {
+                margin: 0 2px;
+            }
+            
+            /* 調整列表縮排 */
+            .indent-list {
+                padding-left: 5px;
+            }
+            
+            ol.indent-list {
+                padding-left: 15px;
+            }
+        }
+        
+        /* 極小螢幕優化 (最大寬度 480px) */
+        @media screen and (max-width: 480px) {
+            body {
+                padding: 8px;
+                font-size: 13px;
+            }
+            
+            .contract-header {
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 14px;
+            }
+            
+            .article-title {
+                font-size: 14px;
+            }
+            
+            .article-content p {
+                font-size: 13px;
+            }
+            
+            table {
+                font-size: 11px;
+            }
+            
+            th, td {
+                padding: 4px;
+                font-size: 11px;
+            }
+            
+            .fillin {
+                min-width: 30px;
+                font-size: 12px;
+            }
         }
     </style> 
 </head>
@@ -107,7 +257,7 @@
 
 <div class="section-title">契約審閱權</div>
 <p class="article-content">
-    住宅租賃契約（以下簡稱本契約）於民國<span class="fillin">___</span>年<span class="fillin">___</span>月<span class="fillin">___</span>日經承租人攜回審閱<span class="fillin">___</span>日（契約審閱期間至少三日）。
+    住宅租賃契約(以下簡稱本契約)於民國<span class="fillin">___</span>年<span class="fillin">___</span>月<span class="fillin">___</span>日經承租人攜回審閱<span class="fillin">___</span>日(契約審閱期間至少三日)。
 </p>
 <div class="signature-block">
     <div>出租人簽章：<span class="fillin" style="min-width: 150px;"></span></div>
@@ -115,16 +265,16 @@
 </div>
 
 <p>
-    立契約書人**承租人** <span class="fillin">___</span>，**出租人** <span class="fillin">___</span>【為<span class="checkbox">□</span>所有權人<span class="checkbox">□</span>轉租人(應提示經原所有權人同意轉租之證明文件)】茲為住宅租賃事宜，雙方同意本契約條款如下：
+    立契約書人<strong>承租人</strong> <span class="fillin">___</span>，<strong>出租人</strong> <span class="fillin">___</span>【為<span class="checkbox">□</span>所有權人<span class="checkbox">□</span>轉租人(應提示經原所有權人同意轉租之證明文件)】茲為住宅租賃事宜，雙方同意本契約條款如下：
 </p>
 
 <div class="section-title">契約條款</div>
 
 <div class="article-title">第一條 租賃標的</div>
 <div class="article-content">
-    <p>** (一) 租賃住宅標示：**</p>
+    <p><strong>(一) 租賃住宅標示：</strong></p>
     <ol class="indent-list" style="list-style-type: decimal;">
-        <li>門牌<span class="fillin">___</span>縣(市)<span class="fillin">___</span>鄉（鎮、市、區）<span class="fillin">___</span>街(路)<span class="fillin">___</span>段<span class="fillin">___</span>巷<span class="fillin">___</span>弄<span class="fillin">___</span>號<span class="fillin">___</span>樓之<span class="fillin">___</span> (基地坐落<span class="fillin">___</span>段<span class="fillin">___</span>小段<span class="fillin">___</span>地號)。無門牌者，其房屋稅籍編號：<span class="fillin">___</span>或其位置略圖。</li>
+        <li>門牌<span class="fillin">___</span>縣(市)<span class="fillin">___</span>鄉(鎮、市、區)<span class="fillin">___</span>街(路)<span class="fillin">___</span>段<span class="fillin">___</span>巷<span class="fillin">___</span>弄<span class="fillin">___</span>號<span class="fillin">___</span>樓之<span class="fillin">___</span> (基地坐落<span class="fillin">___</span>段<span class="fillin">___</span>小段<span class="fillin">___</span>地號)。無門牌者，其房屋稅籍編號：<span class="fillin">___</span>或其位置略圖。</li>
         <li>專有部分建號<span class="fillin">___</span>，權利範圍<span class="fillin">___</span>，面積共計<span class="fillin">___</span>平方公尺。
             <p style="padding-left: 20px;">
                 (1)主建物面積：<br>
@@ -133,18 +283,18 @@
             </p>
         </li>
         <li>共有部分建號<span class="fillin">___</span>，權利範圍<span class="fillin">___</span>，持分面積<span class="fillin">___</span>平方公尺。</li>
-        <li>車位：<span class="checkbox">□</span>有（汽車停車位<span class="fillin">___</span>個、機車停車位<span class="fillin">___</span>個）<span class="checkbox">□</span>無。</li>
+        <li>車位：<span class="checkbox">□</span>有(汽車停車位<span class="fillin">___</span>個、機車停車位<span class="fillin">___</span>個)<span class="checkbox">□</span>無。</li>
         <li><span class="checkbox">□</span>有<span class="checkbox">□</span>無設定他項權利，若有，權利種類：<span class="fillin">_______</span>。</li>
         <li><span class="checkbox">□</span>有<span class="checkbox">□</span>無查封登記。</li>
     </ol>
-    <p>** (二) 租賃範圍：**</p>
+    <p><strong>(二) 租賃範圍：</strong></p>
     <ol class="indent-list" style="list-style-type: decimal;">
         <li>租賃住宅<span class="checkbox">□</span>全部<span class="checkbox">□</span>部分：第<span class="fillin">___</span>層<span class="checkbox">□</span>房間<span class="fillin">___</span>間<span class="checkbox">□</span>第<span class="fillin">___</span>室，面積<span class="fillin">___</span>平方公尺(如「租賃住宅位置格局示意圖」標註之租賃範圍)。</li>
         <li>車位(如無則免填)：
             <p style="padding-left: 20px;">
                 (1)汽車停車位種類及編號：<br>
-                地上(下）第<span class="fillin">___</span>層<span class="checkbox">□</span>平面式停車位<span class="checkbox">□</span>機械式停車位，編號第<span class="fillin">___</span>號。<br>
-                (2)機車停車位：地上(下）第<span class="fillin">___</span>層編號第<span class="fillin">___</span>號或其位置示意圖。<br>
+                地上(下)第<span class="fillin">___</span>層<span class="checkbox">□</span>平面式停車位<span class="checkbox">□</span>機械式停車位，編號第<span class="fillin">___</span>號。<br>
+                (2)機車停車位：地上(下)第<span class="fillin">___</span>層編號第<span class="fillin">___</span>號或其位置示意圖。<br>
                 (3)使用時間：<span class="checkbox">□</span>全日<span class="checkbox">□</span>日間<span class="checkbox">□</span>夜間<span class="checkbox">□</span>其他<span class="fillin">___</span>。
             </p>
         </li>
@@ -182,7 +332,7 @@
     租賃期間，使用租賃住宅所生之相關費用，依下列約定辦理：
 </p>
 <div class="article-content" style="padding-left: 0;">
-    <p>** (一) 管理費：**</p>
+    <p><strong>(一) 管理費：</strong></p>
     <ul style="list-style: none; padding-left: 20px;">
         <li><span class="checkbox">□</span>由出租人負擔。</li>
         <li><span class="checkbox">□</span>由承租人負擔。
@@ -194,8 +344,8 @@
         </li>
         <li><span class="checkbox">□</span>其他：<span class="fillin">___</span>。</li>
     </ul>
-    <p>** (二) 水費：**<span class="checkbox">□</span>由出租人負擔。<span class="checkbox">□</span>由承租人負擔。<span class="checkbox">□</span>其他：<span class="fillin">___</span>。</p>
-    <p>** (三) 電費：**</p>
+    <p><strong>(二) 水費：</strong><span class="checkbox">□</span>由出租人負擔。<span class="checkbox">□</span>由承租人負擔。<span class="checkbox">□</span>其他：<span class="fillin">___</span>。</p>
+    <p><strong>(三) 電費：</strong></p>
     <ul style="list-style: none; padding-left: 20px;">
         <li><span class="checkbox">□</span>由出租人負擔。</li>
         <li><span class="checkbox">□</span>由承租人負擔。</li>
@@ -203,39 +353,39 @@
             <p style="padding-left: 20px;">
                 <span class="checkbox">□</span>每期依電費單之「當期每度平均電價」計收。<br>
                 <span class="checkbox">□</span>每期每度<span class="fillin">______</span>元。但每度電費如有超過電費單之「當期每度平均電價」，應於結算時退還溢收電費。<br>
-                <span class="note">（備註：公共設施電費未向台灣電力股份有限公司申辦分攤併入租賃標的電費內者，出租人不得額外收取。）</span>
+                <span class="note">(備註：公共設施電費未向台灣電力股份有限公司申辦分攤併入租賃標的電費內者，出租人不得額外收取。)</span>
             </p>
         </li>
         <li><span class="checkbox">□</span>非以用電度數計費：
             <p style="padding-left: 20px;">
                 約定計費方式<span class="fillin" style="min-width: 250px;">________________</span>。<br>
-                <span class="note">（備註：出租人所收取之每期電費總金額，不得超過該租賃標的電費單之每期電費總額。）</span>
+                <span class="note">(備註：出租人所收取之每期電費總金額，不得超過該租賃標的電費單之每期電費總額。)</span>
             </p>
         </li>
     </ul>
-    <p>** (四) 瓦斯費：**<span class="checkbox">□</span>由出租人負擔。<span class="checkbox">□</span>由承租人負擔。<span class="checkbox">□</span>其他：<span class="fillin">___</span>。</p>
-    <p>** (五) 網路費：**<span class="checkbox">□</span>由出租人負擔。<span class="checkbox">□</span>由承租人負擔。<span class="checkbox">□</span>其他：<span class="fillin">____</span>。</p>
-    <p>** (六) 其他費用及其支付方式：** <span class="fillin" style="min-width: 200px;">___</span>。</p>
+    <p><strong>(四) 瓦斯費：</strong><span class="checkbox">□</span>由出租人負擔。<span class="checkbox">□</span>由承租人負擔。<span class="checkbox">□</span>其他：<span class="fillin">___</span>。</p>
+    <p><strong>(五) 網路費：</strong><span class="checkbox">□</span>由出租人負擔。<span class="checkbox">□</span>由承租人負擔。<span class="checkbox">□</span>其他：<span class="fillin">____</span>。</p>
+    <p><strong>(六) 其他費用及其支付方式：</strong> <span class="fillin" style="min-width: 200px;">___</span>。</p>
 </div>
 
 <div class="article-title">第六條 稅費負擔之約定</div>
 <div class="article-content">
     <p>
-        ** (一)** 租賃住宅之房屋稅、地價稅由**出租人負擔**。
+        <strong>(一)</strong> 租賃住宅之房屋稅、地價稅由<strong>出租人負擔</strong>。
     </p>
     <p>
-        ** (二)** 本契約租賃雙方同意辦理公證者，其公證費<span class="fillin">___</span>元整。
+        <strong>(二)</strong> 本契約租賃雙方同意辦理公證者，其公證費<span class="fillin">___</span>元整。
         <span class="checkbox">□</span>由出租人負擔。<span class="checkbox">□</span>由承租人負擔。<span class="checkbox">□</span>由租賃雙方平均負擔。<span class="checkbox">□</span>其他：<span class="fillin">___</span>。
     </p>
     <p>
-        ** (三)** 其他稅費及其支付方式：<span class="fillin" style="min-width: 200px;">___</span>。
+        <strong>(三)</strong> 其他稅費及其支付方式：<span class="fillin" style="min-width: 200px;">___</span>。
     </p>
 </div>
 
 <div class="article-title">第七條 使用租賃住宅之限制</div>
 <div class="article-content">
     <p>
-        本租賃住宅係供**居住使用**，承租人不得變更用途。
+        本租賃住宅係供<strong>居住使用</strong>，承租人不得變更用途。
     </p>
     <p>
         承租人同意遵守公寓大廈規約或其他住戶應遵行事項，不得違法使用、存放有爆炸性或易燃性物品。
@@ -286,7 +436,7 @@
         出租人應以合於所約定居住使用之租賃住宅，交付承租人，並應於租賃期間保持其合於居住使用之狀態。
     </p>
     <p>
-        出租人與承租人簽訂本契約前，租賃住宅有由承租人負責修繕之項目及範圍者，出租人應先向承租人說明並經承租人確認（如附件三），未經約明確認者，出租人應負責修繕，並提供有修繕必要時之聯絡方式。
+        出租人與承租人簽訂本契約前，租賃住宅有由承租人負責修繕之項目及範圍者，出租人應先向承租人說明並經承租人確認(如附件三)，未經約明確認者，出租人應負責修繕，並提供有修繕必要時之聯絡方式。
     </p>
     <p>
         依第五條規定約定電費由承租人負擔者，出租人應提供承租人租賃標的之電費資訊。承租人亦得逕向台灣電力股份有限公司申辦查詢租賃期間之有關電費資訊。
@@ -308,7 +458,7 @@
         前項承租人應賠償之金額，得由第四條第一項規定之押金中抵充，如有不足，並得向承租人請求給付不足之金額。
     </p>
     <p>
-        承租人經出租人同意轉租者，與次承租人簽訂轉租契約時，應不得逾出租人同意轉租之範圍及期間，並應於簽訂轉租契約後**三十日內**，以書面將轉租範圍、期間、次承租人之姓名及通訊住址等相關資料通知出租人。
+        承租人經出租人同意轉租者，與次承租人簽訂轉租契約時，應不得逾出租人同意轉租之範圍及期間，並應於簽訂轉租契約後<strong>三十日內</strong>，以書面將轉租範圍、期間、次承租人之姓名及通訊住址等相關資料通知出租人。
     </p>
 </div>
 
@@ -323,7 +473,7 @@
         本契約於期限屆滿前，除依第十六條及第十七條規定得提前終止租約外，租賃雙方<span class="checkbox">□</span>得<span class="checkbox">□</span>不得任意終止租約。
     </p>
     <p>
-        依前項約定得終止租約者，租賃之一方應**至少於終止前一個月通知他方**。一方未為先期通知而逕行終止租約者，應賠償他方**最高不得超過一個月租金額之違約金**。
+        依前項約定得終止租約者，租賃之一方應<strong>至少於終止前一個月通知他方</strong>。一方未為先期通知而逕行終止租約者，應賠償他方<strong>最高不得超過一個月租金額之違約金</strong>。
     </p>
     <p>
         前項承租人應賠償之違約金，得由第四條第一項規定之押金中抵充，如有不足，並得向承租人請求給付不足之金額。
@@ -339,7 +489,7 @@
         租賃關係消滅時，出租人應即結算租金及第五條約定之相關費用，並會同承租人共同完成屋況及附屬設備之點交手續，承租人應將租賃住宅返還出租人並遷出戶籍或其他登記。
     </p>
     <p>
-        前項租賃之一方未會同點交，經他方定相當期限催告仍不會同者，**視為完成點交**。
+        前項租賃之一方未會同點交，經他方定相當期限催告仍不會同者，<strong>視為完成點交</strong>。
     </p>
     <p>
         承租人未依第一項規定返還租賃住宅時，出租人應即明示不以不定期限繼續契約，並得向承租人請求未返還租賃住宅期間之相當月租金額，及相當月租金額計算之違約金(未足一個月者，以日租金折算)至返還為止。
@@ -352,7 +502,7 @@
 <div class="article-title">第十五條 租賃住宅所有權之讓與</div>
 <div class="article-content">
     <p>
-        出租人於租賃住宅交付後，承租人占有中，縱將其所有權讓與第三人，**本契約對於受讓人仍繼續存在**。
+        出租人於租賃住宅交付後，承租人占有中，縱將其所有權讓與第三人，<strong>本契約對於受讓人仍繼續存在</strong>。
     </p>
     <p>
         前項情形，出租人應移交押金及已預收之租金與受讓人，並以書面通知承租人。
@@ -368,23 +518,23 @@
         租賃期間有下列情形之一者，出租人得提前終止租約，且承租人不得要求任何賠償：
     </p>
     <ul style="list-style: none; padding-left: 0;">
-        <li>**(一)** 出租人為重新建築而必要收回。</li>
-        <li>**(二)** 承租人遲付租金之總額達二個月之租金額，經出租人定相當期限催告，仍不為支付。</li>
-        <li>**(三)** 承租人積欠管理費或其他應負擔之費用達二個月之租金額，經出租人定相當期限催告，仍不為支付。</li>
-        <li>**(四)** 承租人違反第七條第一項規定，擅自變更用途，經出租人阻止仍繼續為之。</li>
-        <li>**(五)** 承租人違反第七條第二項規定，違法使用、存放有爆炸性或易燃性物品，經出租人阻止仍繼續為之。</li>
-        <li>**(六)** 承租人違反第七條第三項規定，擅自將租賃住宅轉租或轉讓租賃權予他人。</li>
-        <li>**(七)** 承租人毀損租賃住宅或附屬設備，經出租人定相當期限催告修繕仍不為修繕或相當之賠償。</li>
-        <li>**(八)** 承租人違反第九條第一項規定，未經出租人同意，擅自進行室內裝修，經出租人阻止仍繼續為之。</li>
-        <li>**(九)** 承租人違反第九條第一項規定，未依相關法令規定進行室內裝修，經出租人阻止仍繼續為之。</li>
-        <li>**(十)** 承租人違反第九條第一項規定，進行室內裝修，損害原有建築結構之安全。</li>
+        <li><strong>(一)</strong> 出租人為重新建築而必要收回。</li>
+        <li><strong>(二)</strong> 承租人遲付租金之總額達二個月之租金額，經出租人定相當期限催告，仍不為支付。</li>
+        <li><strong>(三)</strong> 承租人積欠管理費或其他應負擔之費用達二個月之租金額，經出租人定相當期限催告，仍不為支付。</li>
+        <li><strong>(四)</strong> 承租人違反第七條第一項規定，擅自變更用途，經出租人阻止仍繼續為之。</li>
+        <li><strong>(五)</strong> 承租人違反第七條第二項規定，違法使用、存放有爆炸性或易燃性物品，經出租人阻止仍繼續為之。</li>
+        <li><strong>(六)</strong> 承租人違反第七條第三項規定，擅自將租賃住宅轉租或轉讓租賃權予他人。</li>
+        <li><strong>(七)</strong> 承租人毀損租賃住宅或附屬設備，經出租人定相當期限催告修繕仍不為修繕或相當之賠償。</li>
+        <li><strong>(八)</strong> 承租人違反第九條第一項規定，未經出租人同意，擅自進行室內裝修，經出租人阻止仍繼續為之。</li>
+        <li><strong>(九)</strong> 承租人違反第九條第一項規定，未依相關法令規定進行室內裝修，經出租人阻止仍繼續為之。</li>
+        <li><strong>(十)</strong> 承租人違反第九條第一項規定，進行室內裝修，損害原有建築結構之安全。</li>
     </ul>
     <p>
         出租人依前項規定提前終止租約者，應依下列規定期限，檢附相關事證，以書面通知承租人。但依前項第五款及第十款規定終止者，得不先期通知：
     </p>
     <ul style="list-style: none; padding-left: 0;">
-        <li>**(一)** 依前項第一款規定終止者，於終止前三個月。</li>
-        <li>**(二)** 依前項第二款至第四款、第六款至第九款規定終止者，於終止前三十日。</li>
+        <li><strong>(一)</strong> 依前項第一款規定終止者，於終止前三個月。</li>
+        <li><strong>(二)</strong> 依前項第二款至第四款、第六款至第九款規定終止者，於終止前三十日。</li>
     </ul>
 </div>
 
@@ -394,14 +544,14 @@
         租賃期間有下列情形之一，承租人得提前終止租約，出租人不得要求任何賠償：
     </p>
     <ul style="list-style: none; padding-left: 0;">
-        <li>**(一)** 租賃住宅未合於所約定居住使用，並有修繕之必要，經承租人定相當期限催告，仍不於期限內修繕。</li>
-        <li>**(二)** 租賃住宅因不可歸責承租人之事由致一部滅失，且其存餘部分不能達租賃之目的。</li>
-        <li>**(三)** 租賃住宅有危及承租人或其同居人之安全或健康之瑕疵；承租人於簽約時已明知該瑕疵或拋棄終止租約權利者，亦同。</li>
-        <li>**(四)** 承租人因疾病、意外產生有長期療養之需要。</li>
-        <li>**(五)** 因第三人就租賃住宅主張其權利，致承租人不能為約定之居住使用。</li>
+        <li><strong>(一)</strong> 租賃住宅未合於所約定居住使用，並有修繕之必要，經承租人定相當期限催告，仍不於期限內修繕。</li>
+        <li><strong>(二)</strong> 租賃住宅因不可歸責承租人之事由致一部滅失，且其存餘部分不能達租賃之目的。</li>
+        <li><strong>(三)</strong> 租賃住宅有危及承租人或其同居人之安全或健康之瑕疵；承租人於簽約時已明知該瑕疵或拋棄終止租約權利者，亦同。</li>
+        <li><strong>(四)</strong> 承租人因疾病、意外產生有長期療養之需要。</li>
+        <li><strong>(五)</strong> 因第三人就租賃住宅主張其權利，致承租人不能為約定之居住使用。</li>
     </ul>
     <p>
-        承租人依前項各款規定提前終止租約者，應於**終止前三十日**，檢附相關事證，以書面通知出租人。但前項第三款前段其情況危急者，得不先期通知。
+        承租人依前項各款規定提前終止租約者，應於<strong>終止前三十日</strong>，檢附相關事證，以書面通知出租人。但前項第三款前段其情況危急者，得不先期通知。
     </p>
     <p>
         承租人死亡，其繼承人得主張終止租約，其通知期限及方式，準用前項規定。
@@ -411,7 +561,7 @@
 <div class="article-title">第十八條 遺留物之處理</div>
 <div class="article-content">
     <p>
-        租賃關係消滅，依第十四條完成點交或視為完成點交之手續後，承租人仍於租賃住宅有遺留物者，除租賃雙方另有約定外，經出租人定相當期限向承租人催告，屆期仍不取回時，**視為拋棄其所有權**。
+        租賃關係消滅，依第十四條完成點交或視為完成點交之手續後，承租人仍於租賃住宅有遺留物者，除租賃雙方另有約定外，經出租人定相當期限向承租人催告，屆期仍不取回時，<strong>視為拋棄其所有權</strong>。
     </p>
     <p>
         出租人處理前項遺留物所生費用，得由第四條第一項規定之押金中抵充，如有不足，並得向承租人請求給付不足之費用。
@@ -433,7 +583,7 @@
 
 <div class="article-title">第二十條 條款疑義處理</div>
 <p class="article-content">
-    本契約各條款如有疑義時，應為**有利於承租人之解釋**。
+    本契約各條款如有疑義時，應為<strong>有利於承租人之解釋</strong>。
 </p>
 
 <div class="article-title">第二十一條 其他約定</div>
@@ -442,7 +592,7 @@
         本契約租賃雙方<span class="checkbox">□</span>同意<span class="checkbox">□</span>不同意辦理公證。
     </p>
     <p>
-        本契約經辦理公證者，租賃雙方<span class="checkbox">□</span>不同意；<span class="checkbox">□</span>同意公證書載明下列事項應**逕受強制執行**：
+        本契約經辦理公證者，租賃雙方<span class="checkbox">□</span>不同意；<span class="checkbox">□</span>同意公證書載明下列事項應<strong>逕受強制執行</strong>：
     </p>
     <ul style="list-style: none; padding-left: 20px;">
         <li><span class="checkbox">□</span>一、承租人如於租期屆滿後不返還租賃住宅。</li>
@@ -482,15 +632,15 @@
         <li><span class="checkbox">□</span>承租人負責修繕項目及範圍確認書</li>
         <li><span class="checkbox">□</span>附屬設備清單</li>
         <li><span class="checkbox">□</span>租賃住宅位置格局示意圖</li>
-        <li><span class="checkbox">□</span>其他（測量成果圖、室內空間現狀照片、稅籍證明等）</li>
+        <li><span class="checkbox">□</span>其他(測量成果圖、室內空間現狀照片、稅籍證明等)</li>
     </ul>
 </div>
 
 <div class="section-title">立契約書人資料</div>
 
-<table class="data-table">
+<table>
     <tr>
-        <td style="width: 20%;">**出租人**</td>
+        <td style="width: 20%;"><strong>出租人</strong></td>
         <td style="width: 30%;">姓名(名稱)：<span class="fillin" style="min-width: 150px;"></span> 簽章：<span class="fillin" style="min-width: 80px;"></span></td>
         <td style="width: 50%;" colspan="2">統一編號(身分證明文件編號)：<span class="fillin" style="min-width: 200px;"></span></td>
     </tr>
@@ -502,7 +652,7 @@
         <td colspan="4">聯絡電話：<span class="fillin" style="min-width: 200px;"></span></td>
     </tr>
     <tr>
-        <td style="width: 20%;">**承租人**</td>
+        <td style="width: 20%;"><strong>承租人</strong></td>
         <td style="width: 30%;">姓名(名稱)：<span class="fillin" style="min-width: 150px;"></span> 簽章：<span class="fillin" style="min-width: 80px;"></span></td>
         <td style="width: 50%;" colspan="2">統一編號(身分證明文件編號)：<span class="fillin" style="min-width: 200px;"></span></td>
     </tr>
@@ -514,7 +664,7 @@
         <td colspan="4">聯絡電話：<span class="fillin" style="min-width: 200px;"></span></td>
     </tr>
     <tr>
-        <td style="width: 20%;">**保證人**</td>
+        <td style="width: 20%;"><strong>保證人</strong></td>
         <td style="width: 30%;">姓名(名稱)：<span class="fillin" style="min-width: 150px;"></span> 簽章：<span class="fillin" style="min-width: 80px;"></span></td>
         <td style="width: 50%;" colspan="2">統一編號(身分證明文件編號)：<span class="fillin" style="min-width: 200px;"></span></td>
     </tr>
@@ -529,10 +679,10 @@
 
 <div class="section-title">不動產經紀業資訊</div>
 
-<table class="data-table">
+<table>
     <tr>
-        <td style="width: 20%;">**不動產經紀業**</td>
-        <td colspan="3">名稱（公司或商號）：<span class="fillin" style="min-width: 300px;"></span></td>
+        <td style="width: 20%;"><strong>不動產經紀業</strong></td>
+        <td colspan="3">名稱(公司或商號)：<span class="fillin" style="min-width: 300px;"></span></td>
     </tr>
     <tr>
         <td>地址</td>
@@ -554,7 +704,7 @@
         <td colspan="4">電子郵件信箱：<span class="fillin" style="min-width: 300px;"></span></td>
     </tr>
     <tr>
-        <td>**不動產經紀人**</td>
+        <td><strong>不動產經紀人</strong></td>
         <td>姓名：<span class="fillin" style="min-width: 150px;"></span> 簽章：<span class="fillin" style="min-width: 80px;"></span></td>
         <td>統一編號(身分證明文件編號)</td>
         <td><span class="fillin" style="min-width: 150px;"></span></td>
@@ -588,7 +738,7 @@
             <br>
             <span class="checkbox">□</span>頂樓<span class="fillin">___</span>平方公尺。<span class="checkbox">□</span>其他處所：<span class="fillin">___</span>平方公尺。
         </td>
-        <td>若為違建（未依法申請增、加建之建物），出租人應確實加以說明，使承租人得以充分認知此範圍之建物隨時有被拆除之虞或其他危險。</td>
+        <td>若為違建(未依法申請增、加建之建物)，出租人應確實加以說明，使承租人得以充分認知此範圍之建物隨時有被拆除之虞或其他危險。</td>
     </tr>
     <tr>
         <td>2</td>
@@ -602,15 +752,15 @@
         <td>
             一、建物型態：(一)一般建物...<br>
             二、現況格局...<br>
-            三、建物出租型態：(一)整棟（戶）出租...
-            </td>
+            三、建物出租型態：(一)整棟(戶)出租...
+        </td>
     </tr>
     <tr>
         <td>3</td>
         <td>
-            汽車停車位種類及編號：地上(下）第<span class="fillin">___</span>層<span class="checkbox">□</span>平面式停車位<span class="checkbox">□</span>機械式停車位<span class="checkbox">□</span>其他<span class="fillin">__</span>。<br>
+            汽車停車位種類及編號：地上(下)第<span class="fillin">___</span>層<span class="checkbox">□</span>平面式停車位<span class="checkbox">□</span>機械式停車位<span class="checkbox">□</span>其他<span class="fillin">__</span>。<br>
             編號：第<span class="fillin">__</span>號停車位<span class="fillin">__</span>個，<span class="checkbox">□</span>有<span class="checkbox">□</span>無獨立權狀。<span class="checkbox">□</span>有<span class="checkbox">□</span>無檢附分管協議及圖說。<br>
-            機車停車位：地上(下）第<span class="fillin">__</span>層，編號第<span class="fillin">__</span>號車位<span class="fillin">__</span>個或其位置示意圖。
+            機車停車位：地上(下)第<span class="fillin">__</span>層，編號第<span class="fillin">__</span>號車位<span class="fillin">__</span>個或其位置示意圖。
         </td>
         <td></td>
     </tr>
@@ -640,11 +790,11 @@
     <tr>
         <td>7</td>
         <td><span class="checkbox">□</span>有<span class="checkbox">□</span>無曾經做過鋼筋混凝土中水溶性氯離子含量檢測...</td>
-        <td>一、八十三年七月二十一日以前... (此處備註內容過多，建議查閱正式文件)</td>
+        <td>一、八十三年七月二十一日以前...</td>
     </tr>
     <tr>
         <td>8</td>
-        <td>本租賃住宅（專有部分）是否曾發生兇殺、自殺、一氧化碳中毒或其他非自然死亡之情事：...</td>
+        <td>本租賃住宅(專有部分)是否曾發生兇殺、自殺、一氧化碳中毒或其他非自然死亡之情事：...</td>
         <td></td>
     </tr>
     <tr>
@@ -679,7 +829,7 @@
 <div class="contract-header">附件二：出租人同意轉租範圍、租賃期間及終止租約事由確認書</div>
 
 <p>
-    出租人<span class="fillin">____</span>將後列住宅出租予承租人<span class="fillin">____</span>，並於民國<span class="fillin">__</span>年<span class="fillin">__</span>月<span class="fillin">__</span>日簽訂住宅租賃契約書在案，茲同意承租人得於租賃期間將住宅轉租，同意轉租範圍及租賃相關事項如附明細表。但承租人應於簽訂轉租契約後**三十日內**，將轉租範圍、期間、次承租人之姓名及通訊住址等相關資料告知本人。
+    出租人<span class="fillin">____</span>將後列住宅出租予承租人<span class="fillin">____</span>，並於民國<span class="fillin">__</span>年<span class="fillin">__</span>月<span class="fillin">__</span>日簽訂住宅租賃契約書在案，茲同意承租人得於租賃期間將住宅轉租，同意轉租範圍及租賃相關事項如附明細表。但承租人應於簽訂轉租契約後<strong>三十日內</strong>，將轉租範圍、期間、次承租人之姓名及通訊住址等相關資料告知本人。
 </p>
 <div class="signature-block" style="text-align: right;">
     <p>出租人：<span class="fillin" style="min-width: 150px;"></span> (簽章)</p>
@@ -695,5 +845,6 @@
     <p>(一) 本契約書範本之租賃標的用途，係由承租人供作居住使用... </p>
     <p>(二) 按一百十二年二月八日總統修正公布「租賃住宅市場發展及管理條例」第五條第一項規定... </p>
 </div>
+
 </body>
 </html>
