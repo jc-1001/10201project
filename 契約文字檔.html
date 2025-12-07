@@ -10,60 +10,92 @@
         }
         
         body {
-            font-family: 'Times New Roman', '微軟正黑體', 'Microsoft JhengHei', serif;
+            font-family: 'Noto Sans TC', '微軟正黑體', 'Microsoft JhengHei', sans-serif;
             line-height: 1.8;
-            color: #333;
+            color: #2c3e50;
             max-width: 900px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
+            padding: 40px 30px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+        }
+        
+        .contract-wrapper {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
         }
         
         .contract-header {
             text-align: center;
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px double #333;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            color: #1a365d;
+            border-bottom: 4px solid #3182ce;
+            letter-spacing: 2px;
+            position: relative;
+        }
+        
+        .contract-header::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #3182ce, #63b3ed);
+            border-radius: 2px;
         }
         
         .section-title {
-            font-size: 16px;
-            font-weight: bold;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            border-left: 5px solid #0056b3;
-            padding-left: 10px;
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: #2d3748;
+            background: linear-gradient(90deg, #ebf8ff 0%, transparent 100%);
+            padding: 12px 15px;
+            border-left: 5px solid #3182ce;
+            border-radius: 4px;
         }
         
         .article-title {
-            font-weight: bold;
-            margin-top: 15px;
-            margin-bottom: 5px;
-            font-size: 16px;
-            text-decoration: underline;
+            font-weight: 700;
+            margin-top: 25px;
+            margin-bottom: 12px;
+            font-size: 17px;
+            color: #2b6cb0;
+            padding-left: 10px;
+            border-left: 3px solid #4299e1;
         }
         
         .fillin {
             display: inline-block;
             min-width: 50px;
-            border-bottom: 1px solid #000;
-            padding: 0 5px;
+            border-bottom: 2px dotted #3182ce;
+            padding: 2px 8px;
             text-align: center;
-            font-weight: bold;
-            color: #d9534f;
+            font-weight: 600;
+            color: #2b6cb0;
+            background: #f7fafc;
+            border-radius: 2px;
         }
         
         .signature-block {
-            margin-top: 30px;
-            padding: 10px;
-            border: 1px dashed #ccc;
+            margin-top: 35px;
+            padding: 25px;
+            background: #f7fafc;
+            border: 2px dashed #cbd5e0;
+            border-radius: 8px;
         }
         
         .signature-block div, .signature-block p {
-            margin-top: 10px;
+            margin-top: 12px;
+            font-weight: 500;
+            color: #2d3748;
         }
         
         .indent-list {
@@ -72,82 +104,159 @@
         }
         
         .indent-list li {
-            margin-bottom: 5px;
+            margin-bottom: 10px;
+            padding: 8px 12px;
+            background: #f8fafc;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        
+        .indent-list li:hover {
+            background: #edf2f7;
         }
         
         .indent-list li:before {
             content: counter(li) "、";
             counter-increment: li;
-            font-weight: normal;
+            font-weight: 600;
             display: inline-block;
             width: 2em;
+            color: #3182ce;
         }
         
         .article-content {
             padding-left: 20px;
+            color: #4a5568;
         }
         
-        .article-content p{
+        .article-content p {
             font-size: 16px;
+            line-height: 1.9;
+        }
+        
+        .article-content > p > strong {
+            color: #2b6cb0;
         }
         
         .checkbox {
             font-family: Arial, sans-serif;
             font-weight: normal;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid #3182ce;
+            vertical-align: middle;
+            margin: 0 4px;
+            border-radius: 3px;
         }
         
         table {
             width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-top: 15px;
             font-size: 14px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
         
         th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
+            border: 1px solid #e2e8f0;
+            padding: 12px 15px;
             text-align: left;
             vertical-align: top;
         }
         
         th {
-            background-color: #f2f2f2;
-            font-weight: bold;
+            background: linear-gradient(135deg, #3182ce 0%, #2c5aa0 100%);
+            color: white;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        td {
+            background: white;
+        }
+        
+        tr:nth-child(even) td {
+            background: #f8fafc;
+        }
+        
+        tr:hover td {
+            background: #edf2f7;
         }
         
         .note {
             font-size: 0.9em;
-            color: #666;
-            padding-left: 20px;
+            color: #718096;
+            padding: 8px 15px;
             display: block;
+            background: #fef5e7;
+            border-left: 3px solid #f6ad55;
+            border-radius: 4px;
+            margin-top: 8px;
+        }
+        
+        strong {
+            color: #2b6cb0;
+            font-weight: 600;
+        }
+        
+        p {
+            margin: 12px 0;
+        }
+        
+        ul {
+            margin: 10px 0;
+        }
+        
+        /* 美化的打印樣式 */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .contract-wrapper {
+                box-shadow: none;
+                padding: 20px;
+            }
         }
         
         /* RWD 樣式 - 平板及手機版 (最大寬度 768px) */
         @media screen and (max-width: 768px) {
             body {
-                padding: 10px;
-                font-size: 14px;
-                line-height: 1.6;
+                padding: 15px 10px;
+            }
+            
+            .contract-wrapper {
+                padding: 25px 20px;
+                border-radius: 8px;
             }
             
             .contract-header {
-                font-size: 18px;
-                padding-bottom: 8px;
-                margin-bottom: 15px;
+                font-size: 22px;
+                padding-bottom: 15px;
+                margin-bottom: 20px;
+                letter-spacing: 1px;
+            }
+            
+            .contract-header::after {
+                width: 80px;
             }
             
             .section-title {
-                font-size: 15px;
-                margin-top: 15px;
-                margin-bottom: 8px;
-                padding-left: 8px;
-                border-left-width: 4px;
+                font-size: 16px;
+                margin-top: 25px;
+                margin-bottom: 12px;
+                padding: 10px 12px;
             }
             
             .article-title {
                 font-size: 15px;
-                margin-top: 12px;
-                margin-bottom: 5px;
+                margin-top: 18px;
+                margin-bottom: 10px;
             }
             
             .article-content {
@@ -156,32 +265,34 @@
             
             .article-content p {
                 font-size: 14px;
+                line-height: 1.7;
             }
             
             .fillin {
                 min-width: 40px;
-                padding: 0 3px;
+                padding: 2px 6px;
                 font-size: 13px;
             }
             
             .signature-block {
-                margin-top: 20px;
-                padding: 8px;
+                margin-top: 25px;
+                padding: 15px;
             }
             
             .signature-block div, .signature-block p {
-                margin-top: 8px;
+                margin-top: 10px;
                 font-size: 14px;
             }
             
             .indent-list li {
                 margin-bottom: 8px;
                 font-size: 14px;
+                padding: 6px 10px;
             }
             
             .note {
                 font-size: 0.85em;
-                padding-left: 10px;
+                padding: 6px 12px;
             }
             
             /* 表格響應式處理 */
@@ -190,16 +301,19 @@
                 display: block;
                 overflow-x: auto;
                 -webkit-overflow-scrolling: touch;
+                border-radius: 6px;
             }
             
             th, td {
-                padding: 6px;
+                padding: 8px 10px;
                 font-size: 12px;
             }
             
-            /* 調整 checkbox 和 fillin 的間距 */
+            /* 調整 checkbox */
             .checkbox {
-                margin: 0 2px;
+                width: 14px;
+                height: 14px;
+                margin: 0 3px;
             }
             
             /* 調整列表縮排 */
@@ -215,16 +329,19 @@
         /* 極小螢幕優化 (最大寬度 480px) */
         @media screen and (max-width: 480px) {
             body {
-                padding: 8px;
-                font-size: 13px;
+                padding: 10px 8px;
+            }
+            
+            .contract-wrapper {
+                padding: 20px 15px;
             }
             
             .contract-header {
-                font-size: 16px;
+                font-size: 20px;
             }
             
             .section-title {
-                font-size: 14px;
+                font-size: 15px;
             }
             
             .article-title {
@@ -240,7 +357,7 @@
             }
             
             th, td {
-                padding: 4px;
+                padding: 6px 8px;
                 font-size: 11px;
             }
             
@@ -253,11 +370,12 @@
 </head>
 <body>
 
-<div class="contract-header">住宅租賃契約書範本</div>
+
+<div class="contract-header">住宅租賃契約書</div>
 
 <div class="section-title">契約審閱權</div>
 <p class="article-content">
-    住宅租賃契約(以下簡稱本契約)於民國<span class="fillin">___</span>年<span class="fillin">___</span>月<span class="fillin">___</span>日經承租人攜回審閱<span class="fillin">___</span>日(契約審閱期間至少三日)。
+    住宅租賃契約(以下簡稱本契約)於民國<span class="fillin">114</span>年<span class="fillin">12</span>月<span class="fillin">8</span>日經承租人攜回審閱<span class="fillin">7</span>日(契約審閱期間至少三日)。
 </p>
 <div class="signature-block">
     <div>出租人簽章：<span class="fillin" style="min-width: 150px;"></span></div>
@@ -265,7 +383,7 @@
 </div>
 
 <p>
-    立契約書人<strong>承租人</strong> <span class="fillin">___</span>，<strong>出租人</strong> <span class="fillin">___</span>【為<span class="checkbox">□</span>所有權人<span class="checkbox">□</span>轉租人(應提示經原所有權人同意轉租之證明文件)】茲為住宅租賃事宜，雙方同意本契約條款如下：
+    立契約書人<strong>承租人</strong> <span class="fillin"></span>，<strong>出租人</strong> <span class="fillin"></span>【為<span class="checkbox"></span>所有權人<span class="checkbox"></span>轉租人(應提示經原所有權人同意轉租之證明文件)】茲為住宅租賃事宜，雙方同意本契約條款如下：
 </p>
 
 <div class="section-title">契約條款</div>
@@ -274,53 +392,54 @@
 <div class="article-content">
     <p><strong>(一) 租賃住宅標示：</strong></p>
     <ol class="indent-list" style="list-style-type: decimal;">
-        <li>門牌<span class="fillin">___</span>縣(市)<span class="fillin">___</span>鄉(鎮、市、區)<span class="fillin">___</span>街(路)<span class="fillin">___</span>段<span class="fillin">___</span>巷<span class="fillin">___</span>弄<span class="fillin">___</span>號<span class="fillin">___</span>樓之<span class="fillin">___</span> (基地坐落<span class="fillin">___</span>段<span class="fillin">___</span>小段<span class="fillin">___</span>地號)。無門牌者，其房屋稅籍編號：<span class="fillin">___</span>或其位置略圖。</li>
-        <li>專有部分建號<span class="fillin">___</span>，權利範圍<span class="fillin">___</span>，面積共計<span class="fillin">___</span>平方公尺。
+        <li>門牌<span class="fillin"></span>縣(市)<span class="fillin"></span>鄉(鎮、市、區)<span class="fillin"></span>街(路)<span class="fillin"></span>段<span class="fillin"></span>巷<span class="fillin"></span>弄<span class="fillin"></span>號<span class="fillin"></span>樓之<span class="fillin"></span> (基地坐落<span class="fillin"></span>段<span class="fillin"></span>小段<span class="fillin"></span>地號)。無門牌者，其房屋稅籍編號：<span class="fillin"></span>或其位置略圖。</li>
+        <li>專有部分建號<span class="fillin"></span>，權利範圍<span class="fillin"></span>，面積共計<span class="fillin"></span>平方公尺。
             <p style="padding-left: 20px;">
                 (1)主建物面積：<br>
-                <span class="fillin">___</span>層<span class="fillin">___</span>平方公尺，<span class="fillin">___</span>層<span class="fillin">___</span>平方公尺，<span class="fillin">___</span>層<span class="fillin">___</span>平方公尺共計<span class="fillin">___</span>平方公尺，用途<span class="fillin">___</span>。<br>
-                (2)附屬建物用途<span class="fillin">___</span>，面積<span class="fillin">___</span>平方公尺。
+                <span class="fillin"></span>層<span class="fillin"></span>平方公尺，<span class="fillin"></span>層<span class="fillin"></span>平方公尺，<span class="fillin"></span>層<span class="fillin"></span>平方公尺共計<span class="fillin"></span>平方公尺，用途<span class="fillin"></span>。<br>
+                (2)附屬建物用途<span class="fillin"></span>，面積<span class="fillin"></span>平方公尺。
             </p>
         </li>
-        <li>共有部分建號<span class="fillin">___</span>，權利範圍<span class="fillin">___</span>，持分面積<span class="fillin">___</span>平方公尺。</li>
-        <li>車位：<span class="checkbox">□</span>有(汽車停車位<span class="fillin">___</span>個、機車停車位<span class="fillin">___</span>個)<span class="checkbox">□</span>無。</li>
-        <li><span class="checkbox">□</span>有<span class="checkbox">□</span>無設定他項權利，若有，權利種類：<span class="fillin">_______</span>。</li>
-        <li><span class="checkbox">□</span>有<span class="checkbox">□</span>無查封登記。</li>
+        <li>共有部分建號<span class="fillin"></span>，權利範圍<span class="fillin"></span>，持分面積<span class="fillin"></span>平方公尺。</li>
+        <li>車位：<span class="checkbox"></span>有(汽車停車位<span class="fillin"></span>個、機車停車位<span class="fillin"></span>個)<span class="checkbox"></span>無。</li>
+        <li><span class="checkbox"></span>有<span class="checkbox"></span>無設定他項權利，若有，權利種類：<span class="fillin"></span>。</li>
+        <li><span class="checkbox"></span>有<span class="checkbox"></span>無查封登記。</li>
     </ol>
     <p><strong>(二) 租賃範圍：</strong></p>
     <ol class="indent-list" style="list-style-type: decimal;">
-        <li>租賃住宅<span class="checkbox">□</span>全部<span class="checkbox">□</span>部分：第<span class="fillin">___</span>層<span class="checkbox">□</span>房間<span class="fillin">___</span>間<span class="checkbox">□</span>第<span class="fillin">___</span>室，面積<span class="fillin">___</span>平方公尺(如「租賃住宅位置格局示意圖」標註之租賃範圍)。</li>
+        <li>租賃住宅<span class="checkbox"></span>全部<span class="checkbox"></span>部分：第<span class="fillin"></span>層<span class="checkbox"></span>房間<span class="fillin"></span>間<span class="checkbox"></span>第<span class="fillin"></span>室，面積<span class="fillin"></span>平方公尺(如「租賃住宅位置格局示意圖」標註之租賃範圍)。</li>
         <li>車位(如無則免填)：
             <p style="padding-left: 20px;">
                 (1)汽車停車位種類及編號：<br>
-                地上(下)第<span class="fillin">___</span>層<span class="checkbox">□</span>平面式停車位<span class="checkbox">□</span>機械式停車位，編號第<span class="fillin">___</span>號。<br>
-                (2)機車停車位：地上(下)第<span class="fillin">___</span>層編號第<span class="fillin">___</span>號或其位置示意圖。<br>
-                (3)使用時間：<span class="checkbox">□</span>全日<span class="checkbox">□</span>日間<span class="checkbox">□</span>夜間<span class="checkbox">□</span>其他<span class="fillin">___</span>。
+                地上(下)第<span class="fillin"></span>層<span class="checkbox"></span>平面式停車位<span class="checkbox"></span>機械式停車位，編號第<span class="fillin"></span>號。<br>
+                (2)機車停車位：地上(下)第<span class="fillin"></span>層編號第<span class="fillin"></span>號或其位置示意圖。<br>
+                (3)使用時間：<span class="checkbox"></span>全日<span class="checkbox"></span>日間<span class="checkbox"></span>夜間<span class="checkbox"></span>其他<span class="fillin"></span>。
             </p>
         </li>
-        <li>租賃附屬設備：<span class="checkbox">□</span>有<span class="checkbox">□</span>無附屬設備，若有，詳如附件一租賃標的現況確認書。</li>
+        <li>租賃附屬設備：<span class="checkbox"></span>有<span class="checkbox"></span>無附屬設備，若有，詳如附件一租賃標的現況確認書。</li>
     </ol>
 </div>
 
 <div class="article-title">第二條 租賃期間</div>
 <p class="article-content">
-    租賃期間自民國<span class="fillin">___</span>年<span class="fillin">___</span>月<span class="fillin">___</span>日起至民國<span class="fillin">___</span>年<span class="fillin">___</span>月<span class="fillin">___</span>日止。<br>
-    <span class="note">(租賃期間至少三十日以上)</span>
+    租賃期間自民國<span class="fillin"></span>年<span class="fillin"></span>月<span class="fillin"></span>日起至民國<span class="fillin"></span>年<span class="fillin"></span>月<span class="fillin"></span>日止。
+    <span class="note">💡 提醒：租賃期間至少三十日以上</span>
 </p>
 
 <div class="article-title">第三條 租金約定及支付</div>
 <p class="article-content">
-    承租人每月租金為新臺幣(下同)<span class="fillin">___</span>元整，每期應繳納<span class="fillin">___</span>個月租金，並於：
-    <span class="checkbox">□</span>每月<span class="fillin">___</span>日<br>
-    <span class="checkbox">□</span>每期<span class="fillin">___</span>前
+    承租人每月租金為新臺幣(下同)<span class="fillin"></span>元整，每期應繳納<span class="fillin"></span>個月租金，並於：
+    <span class="checkbox"></span>每月<span class="fillin"></span>日<br>
+    <span class="checkbox"></span>每期<span class="fillin"></span>前
     支付，不得藉任何理由拖延或拒絕；出租人於租賃期間亦不得藉任何理由要求調漲租金。<br>
-    租金支付方式：<span class="checkbox">□</span>現金繳付<span class="checkbox">□</span>轉帳繳付：金融機構：<span class="fillin">___</span>，戶名：<span class="fillin">___</span>，帳號：<span class="fillin">___</span>。<span class="checkbox">□</span>其他：<span class="fillin">___</span>。
+    租金支付方式：<span class="checkbox"></span>現金繳付<span class="checkbox"></span>轉帳繳付：金融機構：<span class="fillin"></span>，戶名：<span class="fillin"></span>，帳號：<span class="fillin"></span>。<span class="checkbox"></span>其他：<span class="fillin"></span>。
 </p>
 
 <div class="article-title">第四條 押金約定及返還</div>
 <div class="article-content">
     <p>
-        押金由租賃雙方約定為<span class="fillin">___</span>個月租金，金額為<span class="fillin">___</span>元整<span class="note">(最高不得超過二個月租金之總額)</span>。承租人應於簽訂本契約之同時給付出租人。
+        押金由租賃雙方約定為<span class="fillin"></span>個月租金，金額為<span class="fillin"></span>元整。承租人應於簽訂本契約之同時給付出租人。
+        <span class="note">💡 提醒：最高不得超過二個月租金之總額</span>
     </p>
     <p>
         前項押金，除有第十一條第四項、第十三條第三項、第十四條第四項及第十八條第二項得抵充之情形外，出租人應於租期屆滿或租賃契約終止，承租人返還租賃住宅時，返還押金或抵充本契約所生債務後之賸餘押金。
@@ -334,38 +453,38 @@
 <div class="article-content" style="padding-left: 0;">
     <p><strong>(一) 管理費：</strong></p>
     <ul style="list-style: none; padding-left: 20px;">
-        <li><span class="checkbox">□</span>由出租人負擔。</li>
-        <li><span class="checkbox">□</span>由承租人負擔。
+        <li><span class="checkbox"></span>由出租人負擔。</li>
+        <li><span class="checkbox"></span>由承租人負擔。
             <p style="padding-left: 20px;">
-                租賃住宅每月<span class="fillin">___</span>元整。<br>
-                停車位每月<span class="fillin">___</span>元整。<br>
+                租賃住宅每月<span class="fillin"></span>元整。<br>
+                停車位每月<span class="fillin"></span>元整。<br>
                 租賃期間因不可歸責於租賃雙方之事由，致本費用增加者，承租人就增加部分之金額，以負擔百分之十為限；如本費用減少者，承租人負擔減少後之金額。
             </p>
         </li>
-        <li><span class="checkbox">□</span>其他：<span class="fillin">___</span>。</li>
+        <li><span class="checkbox"></span>其他：<span class="fillin"></span>。</li>
     </ul>
-    <p><strong>(二) 水費：</strong><span class="checkbox">□</span>由出租人負擔。<span class="checkbox">□</span>由承租人負擔。<span class="checkbox">□</span>其他：<span class="fillin">___</span>。</p>
+    <p><strong>(二) 水費：</strong><span class="checkbox"></span>由出租人負擔。<span class="checkbox"></span>由承租人負擔。<span class="checkbox"></span>其他：<span class="fillin"></span>。</p>
     <p><strong>(三) 電費：</strong></p>
     <ul style="list-style: none; padding-left: 20px;">
-        <li><span class="checkbox">□</span>由出租人負擔。</li>
-        <li><span class="checkbox">□</span>由承租人負擔。</li>
-        <li><span class="checkbox">□</span>以用電度數計費：
+        <li><span class="checkbox"></span>由出租人負擔。</li>
+        <li><span class="checkbox"></span>由承租人負擔。</li>
+        <li><span class="checkbox"></span>以用電度數計費：
             <p style="padding-left: 20px;">
-                <span class="checkbox">□</span>每期依電費單之「當期每度平均電價」計收。<br>
-                <span class="checkbox">□</span>每期每度<span class="fillin">______</span>元。但每度電費如有超過電費單之「當期每度平均電價」，應於結算時退還溢收電費。<br>
-                <span class="note">(備註：公共設施電費未向台灣電力股份有限公司申辦分攤併入租賃標的電費內者，出租人不得額外收取。)</span>
+                <span class="checkbox"></span>每期依電費單之「當期每度平均電價」計收。<br>
+                <span class="checkbox"></span>每期每度<span class="fillin"></span>元。但每度電費如有超過電費單之「當期每度平均電價」，應於結算時退還溢收電費。
+                <span class="note">💡 備註：公共設施電費未向台灣電力股份有限公司申辦分攤併入租賃標的電費內者，出租人不得額外收取。</span>
             </p>
         </li>
-        <li><span class="checkbox">□</span>非以用電度數計費：
+        <li><span class="checkbox"></span>非以用電度數計費：
             <p style="padding-left: 20px;">
-                約定計費方式<span class="fillin" style="min-width: 250px;">________________</span>。<br>
-                <span class="note">(備註：出租人所收取之每期電費總金額，不得超過該租賃標的電費單之每期電費總額。)</span>
+                約定計費方式<span class="fillin" style="min-width: 250px;"></span>。
+                <span class="note">💡 備註：出租人所收取之每期電費總金額，不得超過該租賃標的電費單之每期電費總額。</span>
             </p>
         </li>
     </ul>
-    <p><strong>(四) 瓦斯費：</strong><span class="checkbox">□</span>由出租人負擔。<span class="checkbox">□</span>由承租人負擔。<span class="checkbox">□</span>其他：<span class="fillin">___</span>。</p>
-    <p><strong>(五) 網路費：</strong><span class="checkbox">□</span>由出租人負擔。<span class="checkbox">□</span>由承租人負擔。<span class="checkbox">□</span>其他：<span class="fillin">____</span>。</p>
-    <p><strong>(六) 其他費用及其支付方式：</strong> <span class="fillin" style="min-width: 200px;">___</span>。</p>
+    <p><strong>(四) 瓦斯費：</strong><span class="checkbox"></span>由出租人負擔。<span class="checkbox"></span>由承租人負擔。<span class="checkbox"></span>其他：<span class="fillin"></span>。</p>
+    <p><strong>(五) 網路費：</strong><span class="checkbox"></span>由出租人負擔。<span class="checkbox"></span>由承租人負擔。<span class="checkbox"></span>其他：<span class="fillin"></span>。</p>
+    <p><strong>(六) 其他費用及其支付方式：</strong> <span class="fillin" style="min-width: 200px;"></span>。</p>
 </div>
 
 <div class="article-title">第六條 稅費負擔之約定</div>
@@ -374,11 +493,11 @@
         <strong>(一)</strong> 租賃住宅之房屋稅、地價稅由<strong>出租人負擔</strong>。
     </p>
     <p>
-        <strong>(二)</strong> 本契約租賃雙方同意辦理公證者，其公證費<span class="fillin">___</span>元整。
-        <span class="checkbox">□</span>由出租人負擔。<span class="checkbox">□</span>由承租人負擔。<span class="checkbox">□</span>由租賃雙方平均負擔。<span class="checkbox">□</span>其他：<span class="fillin">___</span>。
+        <strong>(二)</strong> 本契約租賃雙方同意辦理公證者，其公證費<span class="fillin"></span>元整。
+        <span class="checkbox"></span>由出租人負擔。<span class="checkbox"></span>由承租人負擔。<span class="checkbox"></span>由租賃雙方平均負擔。<span class="checkbox"></span>其他：<span class="fillin"></span>。
     </p>
     <p>
-        <strong>(三)</strong> 其他稅費及其支付方式：<span class="fillin" style="min-width: 200px;">___</span>。
+        <strong>(三)</strong> 其他稅費及其支付方式：<span class="fillin" style="min-width: 200px;"></span>。
     </p>
 </div>
 
@@ -423,7 +542,7 @@
         承租人經出租人同意裝修者，其裝修增設部分若有損壞，由承租人負責修繕。
     </p>
     <p>
-        第一項情形，承租人返還租賃住宅時，應<span class="checkbox">□</span>負責回復原狀<span class="checkbox">□</span>現況返還<span class="checkbox">□</span>其他<span class="fillin">___</span>。
+        第一項情形，承租人返還租賃住宅時，應<span class="checkbox"></span>負責回復原狀<span class="checkbox"></span>現況返還<span class="checkbox"></span>其他<span class="fillin"></span>。
     </p>
 </div>
 
@@ -470,7 +589,7 @@
 <div class="article-title">第十三條 任意終止租約之約定</div>
 <div class="article-content">
     <p>
-        本契約於期限屆滿前，除依第十六條及第十七條規定得提前終止租約外，租賃雙方<span class="checkbox">□</span>得<span class="checkbox">□</span>不得任意終止租約。
+        本契約於期限屆滿前，除依第十六條及第十七條規定得提前終止租約外，租賃雙方<span class="checkbox"></span>得<span class="checkbox"></span>不得任意終止租約。
     </p>
     <p>
         依前項約定得終止租約者，租賃之一方應<strong>至少於終止前一個月通知他方</strong>。一方未為先期通知而逕行終止租約者，應賠償他方<strong>最高不得超過一個月租金額之違約金</strong>。
@@ -577,7 +696,7 @@
         如因地址變更未告知他方，致通知無法到達時，以第一次郵遞之日期推定為到達日。
     </p>
     <p>
-        第一項之通知得經租賃雙方約定以<span class="checkbox">□</span>電子郵件信箱：<span class="fillin">___</span><span class="checkbox">□</span>手機簡訊<span class="checkbox">□</span>即時通訊軟體以文字顯示方式為之。
+        第一項之通知得經租賃雙方約定以<span class="checkbox"></span>電子郵件信箱：<span class="fillin"></span><span class="checkbox"></span>手機簡訊<span class="checkbox"></span>即時通訊軟體以文字顯示方式為之。
     </p>
 </div>
 
@@ -589,18 +708,18 @@
 <div class="article-title">第二十一條 其他約定</div>
 <div class="article-content">
     <p>
-        本契約租賃雙方<span class="checkbox">□</span>同意<span class="checkbox">□</span>不同意辦理公證。
+        本契約租賃雙方<span class="checkbox"></span>同意<span class="checkbox"></span>不同意辦理公證。
     </p>
     <p>
-        本契約經辦理公證者，租賃雙方<span class="checkbox">□</span>不同意；<span class="checkbox">□</span>同意公證書載明下列事項應<strong>逕受強制執行</strong>：
+        本契約經辦理公證者，租賃雙方<span class="checkbox"></span>不同意；<span class="checkbox"></span>同意公證書載明下列事項應<strong>逕受強制執行</strong>：
     </p>
     <ul style="list-style: none; padding-left: 20px;">
-        <li><span class="checkbox">□</span>一、承租人如於租期屆滿後不返還租賃住宅。</li>
-        <li><span class="checkbox">□</span>二、承租人未依約給付之欠繳租金、費用及出租人或租賃住宅所有權人代繳之管理費，或違約時應支付之金額。</li>
-        <li><span class="checkbox">□</span>三、出租人如於租期屆滿或本契約終止時，應返還承租人之全部或一部押金。</li>
+        <li><span class="checkbox"></span>一、承租人如於租期屆滿後不返還租賃住宅。</li>
+        <li><span class="checkbox"></span>二、承租人未依約給付之欠繳租金、費用及出租人或租賃住宅所有權人代繳之管理費，或違約時應支付之金額。</li>
+        <li><span class="checkbox"></span>三、出租人如於租期屆滿或本契約終止時，應返還承租人之全部或一部押金。</li>
     </ul>
     <p>
-        公證書載明金錢債務逕受強制執行時，如有保證人者，前項後段第<span class="fillin">___</span>款之效力及於保證人。
+        公證書載明金錢債務逕受強制執行時，如有保證人者，前項後段第<span class="fillin"></span>款之效力及於保證人。
     </p>
 </div>
 
@@ -622,17 +741,17 @@
 <div class="section-title">附件清單</div>
 <div class="article-content" style="padding-left: 0;">
     <ul style="list-style: none; padding-left: 20px;">
-        <li><span class="checkbox">□</span>建物所有權狀影本或其他有權出租之證明文件</li>
-        <li><span class="checkbox">□</span>使用執照影本</li>
-        <li><span class="checkbox">□</span>雙方身分證明文件影本</li>
-        <li><span class="checkbox">□</span>保證人身分證影本</li>
-        <li><span class="checkbox">□</span>授權代理人簽約同意書</li>
-        <li><span class="checkbox">□</span>租賃標的現況確認書</li>
-        <li><span class="checkbox">□</span>出租人同意轉租範圍、租賃期間及終止租約事由確認書</li>
-        <li><span class="checkbox">□</span>承租人負責修繕項目及範圍確認書</li>
-        <li><span class="checkbox">□</span>附屬設備清單</li>
-        <li><span class="checkbox">□</span>租賃住宅位置格局示意圖</li>
-        <li><span class="checkbox">□</span>其他(測量成果圖、室內空間現狀照片、稅籍證明等)</li>
+        <li><span class="checkbox"></span>建物所有權狀影本或其他有權出租之證明文件</li>
+        <li><span class="checkbox"></span>使用執照影本</li>
+        <li><span class="checkbox"></span>雙方身分證明文件影本</li>
+        <li><span class="checkbox"></span>保證人身分證影本</li>
+        <li><span class="checkbox"></span>授權代理人簽約同意書</li>
+        <li><span class="checkbox"></span>租賃標的現況確認書</li>
+        <li><span class="checkbox"></span>出租人同意轉租範圍、租賃期間及終止租約事由確認書</li>
+        <li><span class="checkbox"></span>承租人負責修繕項目及範圍確認書</li>
+        <li><span class="checkbox"></span>附屬設備清單</li>
+        <li><span class="checkbox"></span>租賃住宅位置格局示意圖</li>
+        <li><span class="checkbox"></span>其他(測量成果圖、室內空間現狀照片、稅籍證明等)</li>
     </ul>
 </div>
 
@@ -720,34 +839,34 @@
 </table>
 
 <p style="text-align: center; margin-top: 30px; font-weight: bold;">
-    民 國 <span class="fillin">___</span> 年 <span class="fillin">___</span> 月 <span class="fillin">___</span> 日
+    民 國 <span class="fillin"></span> 年 <span class="fillin"></span> 月 <span class="fillin"></span> 日
 </p>
 
 <div style="page-break-before: always;"></div>
 <div class="contract-header">附件一：租賃標的現況確認書</div>
 
-<p>填表日期 民國<span class="fillin">___</span>年<span class="fillin">___</span>月<span class="fillin">___</span>日</p>
+<p>填表日期 民國<span class="fillin"></span>年<span class="fillin"></span>月<span class="fillin"></span>日</p>
 <table>
     <tr><th>項次</th><th>內容</th><th>備註說明</th></tr>
     <tr>
-        <td>1</td>
+        <td style="text-align: center;">1</td>
         <td>
-            <span class="checkbox">□</span>有<span class="checkbox">□</span>無包括未登記之改建、增建、加建、違建部分：
+            <span class="checkbox"></span>有<span class="checkbox"></span>無包括未登記之改建、增建、加建、違建部分：
             <br>
-            <span class="checkbox">□</span>壹樓<span class="fillin">___</span>平方公尺<span class="checkbox">□</span><span class="fillin">___</span>樓<span class="fillin">___</span>平方公尺。
+            <span class="checkbox"></span>壹樓<span class="fillin"></span>平方公尺<span class="checkbox"></span><span class="fillin"></span>樓<span class="fillin"></span>平方公尺。
             <br>
-            <span class="checkbox">□</span>頂樓<span class="fillin">___</span>平方公尺。<span class="checkbox">□</span>其他處所：<span class="fillin">___</span>平方公尺。
+            <span class="checkbox"></span>頂樓<span class="fillin"></span>平方公尺。<span class="checkbox"></span>其他處所：<span class="fillin"></span>平方公尺。
         </td>
         <td>若為違建(未依法申請增、加建之建物)，出租人應確實加以說明，使承租人得以充分認知此範圍之建物隨時有被拆除之虞或其他危險。</td>
     </tr>
     <tr>
-        <td>2</td>
+        <td style="text-align: center;">2</td>
         <td>
-            建物型態：<span class="fillin">_________</span>。
+            建物型態：<span class="fillin"></span>。
             <br>
-            建物現況格局：<span class="fillin">__</span>房(間、室)<span class="fillin">__</span>廳<span class="fillin">__</span>衛<span class="checkbox">□</span>有<span class="checkbox">□</span>無隔間。
+            建物現況格局：<span class="fillin"></span>房(間、室)<span class="fillin"></span>廳<span class="fillin"></span>衛<span class="checkbox"></span>有<span class="checkbox"></span>無隔間。
             <br>
-            建物出租型態：<span class="fillin">__________</span>。
+            建物出租型態：<span class="fillin"></span>。
         </td>
         <td>
             一、建物型態：(一)一般建物...<br>
@@ -756,85 +875,85 @@
         </td>
     </tr>
     <tr>
-        <td>3</td>
+        <td style="text-align: center;">3</td>
         <td>
-            汽車停車位種類及編號：地上(下)第<span class="fillin">___</span>層<span class="checkbox">□</span>平面式停車位<span class="checkbox">□</span>機械式停車位<span class="checkbox">□</span>其他<span class="fillin">__</span>。<br>
-            編號：第<span class="fillin">__</span>號停車位<span class="fillin">__</span>個，<span class="checkbox">□</span>有<span class="checkbox">□</span>無獨立權狀。<span class="checkbox">□</span>有<span class="checkbox">□</span>無檢附分管協議及圖說。<br>
-            機車停車位：地上(下)第<span class="fillin">__</span>層，編號第<span class="fillin">__</span>號車位<span class="fillin">__</span>個或其位置示意圖。
+            汽車停車位種類及編號：地上(下)第<span class="fillin"></span>層<span class="checkbox"></span>平面式停車位<span class="checkbox"></span>機械式停車位<span class="checkbox"></span>其他<span class="fillin"></span>。<br>
+            編號：第<span class="fillin"></span>號停車位<span class="fillin"></span>個，<span class="checkbox"></span>有<span class="checkbox"></span>無獨立權狀。<span class="checkbox"></span>有<span class="checkbox"></span>無檢附分管協議及圖說。<br>
+            機車停車位：地上(下)第<span class="fillin"></span>層，編號第<span class="fillin"></span>號車位<span class="fillin"></span>個或其位置示意圖。
         </td>
         <td></td>
     </tr>
     <tr>
-        <td>4</td>
+        <td style="text-align: center;">4</td>
         <td>
-            <span class="checkbox">□</span>有<span class="checkbox">□</span>無住宅用火災警報器。<br>
-            <span class="checkbox">□</span>有<span class="checkbox">□</span>無其他消防設施，若有，項目：(1)<span class="fillin">____</span>(2)<span class="fillin">____</span>(3)<span class="fillin">____</span>。<br>
-            <span class="checkbox">□</span>有<span class="checkbox">□</span>無定期辦理消防安全檢查。
+            <span class="checkbox"></span>有<span class="checkbox"></span>無住宅用火災警報器。<br>
+            <span class="checkbox"></span>有<span class="checkbox"></span>無其他消防設施，若有，項目：(1)<span class="fillin"></span>(2)<span class="fillin"></span>(3)<span class="fillin"></span>。<br>
+            <span class="checkbox"></span>有<span class="checkbox"></span>無定期辦理消防安全檢查。
         </td>
         <td>非屬應設置火警自動警報設備之住宅所有權人應依消防法第六條第五項規定設置及維護住宅用火災警報器。</td>
     </tr>
     <tr>
-        <td>5</td>
+        <td style="text-align: center;">5</td>
         <td>
-            <span class="checkbox">□</span>有<span class="checkbox">□</span>無滲漏水之情形，若有，滲漏水處：<span class="fillin">__</span>。<br>
-            滲漏水處之處理：<span class="checkbox">□</span>由出租人修繕後交屋。<span class="checkbox">□</span>由承租人修繕。<span class="checkbox">□</span>以現況交屋。<span class="checkbox">□</span>其他<span class="fillin">______</span>。
+            <span class="checkbox"></span>有<span class="checkbox"></span>無滲漏水之情形，若有，滲漏水處：<span class="fillin"></span>。<br>
+            滲漏水處之處理：<span class="checkbox"></span>由出租人修繕後交屋。<span class="checkbox"></span>由承租人修繕。<span class="checkbox"></span>以現況交屋。<span class="checkbox"></span>其他<span class="fillin"></span>。
         </td>
         <td></td>
     </tr>
     <tr>
-        <td>6</td>
-        <td><span class="checkbox">□</span>有<span class="checkbox">□</span>無曾經做過輻射屋檢測？ 若有，請檢附檢測證明文件。<br>
-            檢測結果<span class="checkbox">□</span>有<span class="checkbox">□</span>無輻射異常，若有異常之處理：<span class="checkbox">□</span>由出租人改善後交屋...</td>
+        <td style="text-align: center;">6</td>
+        <td><span class="checkbox"></span>有<span class="checkbox"></span>無曾經做過輻射屋檢測？ 若有，請檢附檢測證明文件。<br>
+            檢測結果<span class="checkbox"></span>有<span class="checkbox"></span>無輻射異常，若有異常之處理：<span class="checkbox"></span>由出租人改善後交屋...</td>
         <td>七十一年至七十三年領得使用執照之建築物，應特別留意檢測...</td>
     </tr>
     <tr>
-        <td>7</td>
-        <td><span class="checkbox">□</span>有<span class="checkbox">□</span>無曾經做過鋼筋混凝土中水溶性氯離子含量檢測...</td>
+        <td style="text-align: center;">7</td>
+        <td><span class="checkbox"></span>有<span class="checkbox"></span>無曾經做過鋼筋混凝土中水溶性氯離子含量檢測...</td>
         <td>一、八十三年七月二十一日以前...</td>
     </tr>
     <tr>
-        <td>8</td>
+        <td style="text-align: center;">8</td>
         <td>本租賃住宅(專有部分)是否曾發生兇殺、自殺、一氧化碳中毒或其他非自然死亡之情事：...</td>
         <td></td>
     </tr>
     <tr>
-        <td>9</td>
-        <td>供水及排水<span class="checkbox">□</span>是<span class="checkbox">□</span>否正常，若不正常，<span class="checkbox">□</span>由出租人修繕後交屋...</td>
+        <td style="text-align: center;">9</td>
+        <td>供水及排水<span class="checkbox"></span>是<span class="checkbox"></span>否正常，若不正常，<span class="checkbox"></span>由出租人修繕後交屋...</td>
         <td></td>
     </tr>
     <tr>
-        <td>10</td>
-        <td><span class="checkbox">□</span>有<span class="checkbox">□</span>無公寓大廈規約或其他住戶應遵行事項；若有，<span class="checkbox">□</span>有<span class="checkbox">□</span>無檢附規約...</td>
+        <td style="text-align: center;">10</td>
+        <td><span class="checkbox"></span>有<span class="checkbox"></span>無公寓大廈規約或其他住戶應遵行事項；若有，<span class="checkbox"></span>有<span class="checkbox"></span>無檢附規約...</td>
         <td></td>
     </tr>
     <tr>
-        <td>11</td>
-        <td><span class="checkbox">□</span>有<span class="checkbox">□</span>無管理委員會統一管理，若有...</td>
+        <td style="text-align: center;">11</td>
+        <td><span class="checkbox"></span>有<span class="checkbox"></span>無管理委員會統一管理，若有...</td>
         <td>停車位管理費以清潔費名義收取者亦同。</td>
     </tr>
     <tr>
-        <td>12</td>
-        <td>附屬設備項目如下：<span class="checkbox">□</span>電視<span class="fillin">__</span>臺<span class="checkbox">□</span>電視櫃<span class="fillin">__</span>件... <span class="checkbox">□</span>其他<span class="fillin">___</span>。</td>
+        <td style="text-align: center;">12</td>
+        <td>附屬設備項目如下：<span class="checkbox"></span>電視<span class="fillin"></span>臺<span class="checkbox"></span>電視櫃<span class="fillin"></span>件... <span class="checkbox"></span>其他<span class="fillin"></span>。</td>
         <td></td>
     </tr>
 </table>
 
 <div class="signature-block" style="text-align: right;">
-    <p>出租人：<span class="fillin" style="min-width: 250px;">___________________</span> (簽章)</p>
-    <p>承租人：<span class="fillin" style="min-width: 250px;">___________________</span> (簽章)</p>
-    <p>簽章日期：民國<span class="fillin">______</span>年<span class="fillin">______</span>月<span class="fillin">______</span>日</p>
+    <p>出租人：<span class="fillin" style="min-width: 250px;"></span> (簽章)</p>
+    <p>承租人：<span class="fillin" style="min-width: 250px;"></span> (簽章)</p>
+    <p>簽章日期：民國<span class="fillin"></span>年<span class="fillin"></span>月<span class="fillin"></span>日</p>
 </div>
 
 <div style="page-break-before: always;"></div>
 <div class="contract-header">附件二：出租人同意轉租範圍、租賃期間及終止租約事由確認書</div>
 
 <p>
-    出租人<span class="fillin">____</span>將後列住宅出租予承租人<span class="fillin">____</span>，並於民國<span class="fillin">__</span>年<span class="fillin">__</span>月<span class="fillin">__</span>日簽訂住宅租賃契約書在案，茲同意承租人得於租賃期間將住宅轉租，同意轉租範圍及租賃相關事項如附明細表。但承租人應於簽訂轉租契約後<strong>三十日內</strong>，將轉租範圍、期間、次承租人之姓名及通訊住址等相關資料告知本人。
+    出租人<span class="fillin"></span>將後列住宅出租予承租人<span class="fillin"></span>，並於民國<span class="fillin"></span>年<span class="fillin"></span>月<span class="fillin"></span>日簽訂住宅租賃契約書在案，茲同意承租人得於租賃期間將住宅轉租，同意轉租範圍及租賃相關事項如附明細表。但承租人應於簽訂轉租契約後<strong>三十日內</strong>，將轉租範圍、期間、次承租人之姓名及通訊住址等相關資料告知本人。
 </p>
 <div class="signature-block" style="text-align: right;">
     <p>出租人：<span class="fillin" style="min-width: 150px;"></span> (簽章)</p>
     <p>承租人：<span class="fillin" style="min-width: 150px;"></span> (簽章)</p>
-    <p>民 國 <span class="fillin">___</span> 年 <span class="fillin">___</span> 月 <span class="fillin">___</span> 日</p>
+    <p>民 國 <span class="fillin"></span> 年 <span class="fillin"></span> 月 <span class="fillin"></span> 日</p>
 </div>
 
 <div style="page-break-before: always;"></div>
@@ -846,5 +965,6 @@
     <p>(二) 按一百十二年二月八日總統修正公布「租賃住宅市場發展及管理條例」第五條第一項規定... </p>
 </div>
 
+</div>
 </body>
 </html>
