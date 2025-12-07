@@ -1302,13 +1302,13 @@ section.reason{
     }
 }
 @media screen and (max-width: 425px){
-    .banner-phone-cir{
-        top: 300px;
-        left: -25px;
+    .banner-phone-cir {
+    top: 270px;
+    left: 19px;
     }
     .banner-phone-cir img{
         
-        width: 80%;
+        width: 100%;
 
 
     }
