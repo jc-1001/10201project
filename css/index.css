@@ -778,10 +778,16 @@ section.reason{
         height: auto;
 
     }
+    
+    .banner-phone-cir img{ 
+        width: 100%;
+    }
     .banner-phone-cir{
         position: absolute;
-        top: 280px;
-        left: 40px;
+        top: 270px;
+        left: 19px;
+        /* top: 280px;
+        left: 40px; */
         /* 應用動畫屬性 */
         transform-origin: center center;
         animation-name: spin; 
@@ -1299,17 +1305,5 @@ section.reason{
     .step-card:hover .st-icon {
         top: 15px; 
         left: 15px;
-    }
-}
-@media screen and (max-width: 425px){
-    .banner-phone-cir {
-    top: 270px;
-    left: 19px;
-    }
-    .banner-phone-cir img{
-        
-        width: 100%;
-
-
     }
 }
