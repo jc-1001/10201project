@@ -38,12 +38,12 @@
     }
     /* 向左滾動 */
     div.marquee.left div.marquee-content {
-      animation: scroll-left 25s linear infinite;
+      animation: scroll-left 40s linear infinite;
     }
 
     /* 向右滾動 */
     div.marquee.right div.marquee-content {
-      animation: scroll-right 25s linear infinite;
+      animation: scroll-right 40s linear infinite;
     }
 
     div.marquee-content img {
