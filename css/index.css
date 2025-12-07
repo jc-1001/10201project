@@ -632,7 +632,8 @@ section.reason{
 }
 
 .lawer-name{
-    font-size:14px ;
+    font-size:16px ;
+    font-family: "noto sans TC";
     justify-items: center;
     background-color: white;
     border-radius:0 0 7px 7px ;
@@ -1308,6 +1309,10 @@ section.reason{
     }
     
     /* 5. Lawer 卡片詳細資訊顯示 */
+
+    .lawer-name{
+        font-size: 14px;
+    }
     .lawer-card:hover .experience {
         border-radius: 7px;
         opacity: 1;

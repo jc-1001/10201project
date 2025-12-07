@@ -33,6 +33,7 @@
     flex-direction:column;
     gap: 15px;
     margin: 15px 10px;
+    font-family: "noto sans TC";
 }
 .phone{
     display: flex;
@@ -173,6 +174,7 @@
 }
 .email-group{
     margin: 10px 0;
+    font-family: "noto sans TC";
 }
 .comment-group{
     margin: 10px 0;

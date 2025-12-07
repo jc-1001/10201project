@@ -170,7 +170,18 @@
 /* ============================================ */
 
 @media screen and (max-width: 768px) {
-    /* 減少動畫移動距離，讓手機版更流暢 */
+
+    /* 移除手機版上律師卡片動畫 */
+    .lawer-card {
+        opacity: 1; 
+        transform: none; /* 移除位移 */
+    }
+    .lawer-card.is-visible {
+        /* 覆蓋掉桌面版的動畫設定 */
+        animation: none !important;
+         /* !important 確保覆蓋掉所有可能的延遲和動畫 */
+    }
+
     @keyframes fadeInUp {
         from {
             opacity: 0;
@@ -207,7 +218,6 @@
     /* 縮短動畫時間 */
     .scroll-fade-in.is-visible,
     .lawer .title.is-visible,
-    .lawer-card.is-visible,
     .contract .title.is-visible,
     .contract .sub-txt.is-visible,
     .contract .button.is-visible,

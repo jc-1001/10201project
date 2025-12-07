@@ -102,6 +102,7 @@ h4{
 }
 .lawer-name{
     font-size: 24px;
+    font-family: "noto sans TC";
     border-bottom:none;
     margin: 30px 0;
     transition: border-bottom .7s ease; 

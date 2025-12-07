@@ -54,6 +54,7 @@
     justify-content: space-between;
     align-items: center;
     font-size: 18px;
+    font-family: "noto sans TC";
     letter-spacing: 2px;
     font-weight: 300px;
     height: 75px;
@@ -74,6 +75,7 @@
 .down-list{
     background-color: white;
     font-size:16px;
+    font-family: "noto sans TC";
     line-height: 35px;
     letter-spacing: 2px;
 
@@ -124,6 +126,7 @@
     }
     .down-list{
         font-size: 13px;
+        
     }
     
     .qa-cardlist{

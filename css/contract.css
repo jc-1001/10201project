@@ -311,6 +311,7 @@ a:visited{
     align-content: center;
     text-align: center;
     font-size: 20px;
+    font-family: "noto sans TC";
 }
 .st-button p:hover{
     background-color: white;
