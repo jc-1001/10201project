@@ -1,0 +1,217 @@
+/* ============================================ */
+/* 滾動漸進動畫效果 */
+/* ============================================ */
+
+/* 1. 定義淡入 + 上移動畫 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 2. 定義淡入 + 左移動畫 */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 3. 定義淡入 + 右移動畫 */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 4. 定義縮放淡入動畫 */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ============================================ */
+/* 通用滾動顯示類別 */
+/* ============================================ */
+
+/* 預設隱藏狀態 */
+.scroll-fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* 當元素進入視窗時顯示 */
+.scroll-fade-in.is-visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* ============================================ */
+/* 專業團隊區塊動畫 */
+/* ============================================ */
+
+/* 標題動畫 */
+.lawer .title {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.lawer .title.is-visible {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* 律師卡片動畫 - 依序出現 */
+.lawer-card {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.lawer-card.is-visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* 每張卡片延遲時間不同，產生依序出現效果 */
+.lawer-card:nth-child(1).is-visible {
+    animation-delay: 0.1s;
+}
+
+.lawer-card:nth-child(2).is-visible {
+    animation-delay: 0.3s;
+}
+
+.lawer-card:nth-child(3).is-visible {
+    animation-delay: 0.5s;
+}
+
+/* ============================================ */
+/* 契約生成區塊動畫 */
+/* ============================================ */
+
+/* 標題區塊從左側淡入 */
+.contract .title {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.contract .title.is-visible {
+    animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+/* 副標題從右側淡入 */
+.contract .sub-txt {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.contract .sub-txt.is-visible {
+    animation: fadeInRight 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+/* 按鈕縮放淡入 */
+.contract .button {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.contract .button.is-visible {
+    animation: fadeInScale 0.6s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+/* ============================================ */
+/* 契約卡片清單動畫 */
+/* ============================================ */
+
+/* 契約卡片動畫 - 依序出現 */
+.ct-card {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.ct-card.is-visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* 每張卡片延遲時間不同 */
+.ct-card:nth-child(1).is-visible {
+    animation-delay: 0.1s;
+}
+
+.ct-card:nth-child(2).is-visible {
+    animation-delay: 0.3s;
+}
+
+.ct-card:nth-child(3).is-visible {
+    animation-delay: 0.5s;
+}
+
+/* ============================================ */
+/* 手機版 RWD 調整 */
+/* ============================================ */
+
+@media screen and (max-width: 768px) {
+    /* 減少動畫移動距離，讓手機版更流暢 */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes fadeInRight {
+        from {
+            opacity: 0;
+            transform: translateX(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    /* 縮短動畫時間 */
+    .scroll-fade-in.is-visible,
+    .lawer .title.is-visible,
+    .lawer-card.is-visible,
+    .contract .title.is-visible,
+    .contract .sub-txt.is-visible,
+    .contract .button.is-visible,
+    .ct-card.is-visible {
+        animation-duration: 0.6s;
+    }
+}
