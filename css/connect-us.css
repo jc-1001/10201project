@@ -200,6 +200,10 @@
     font-size: 16px;
     
 }
+#email:focus,#Usaername:focus, #comment:focus {
+    border:1px solid #fe973d;
+    outline: none;
+}
 .button{
     width: 100%;
     /* border: 1px solid black; */
@@ -210,6 +214,7 @@
     align-content: center;
     letter-spacing: 2px;
 }
+
 
 
 /* ============================ */
