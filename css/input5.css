@@ -226,7 +226,7 @@ ul{
         flex-direction: column;
         gap: 10px;
     } 
-    .button{
+    button{
         width:120px;
     }
 

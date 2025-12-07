@@ -58,6 +58,29 @@
     
 }
 
+/* ==================================== */
+@media screen and (max-width: 820px){
+    
+    .footer .logo a img{
+        width: 60%;
+    }
+    .txt-footer1 p{
+        padding: 10px 0;
+        font-size: 16px;
+    }
+    
+    .txt-footer2 p{
+        padding: 10px 0;
+    }
+    
+    
+    
+    
+    
+    
+}
+
+
 
 
 

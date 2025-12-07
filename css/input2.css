@@ -285,14 +285,20 @@ ul{
         flex-direction: column;
         gap: 10px;
     } 
-    .button{
+    button{
         width:120px;
     }
     
     
 }
-@media screen and (min-width: 1024px){
+@media screen and (max-width: 1024px){
+    h2{
+        font-size: 20px;
+    }
+    .container{
+        padding: 0 80px;
+    }
     .contain-right{
-        margin-left: 0;
+        margin-left: 0px;
     }
 }

@@ -267,7 +267,7 @@ a:visited{
     background-color: #5A5A5A;
     width: 100%; /* 確保寬度佔滿 */
     position: relative;
-    top: -620px;
+    top: -470px;
 }
 /* 假設 footer/LAWSJIN.svg 是背景圖片 */
 .bg-footer img {
@@ -398,6 +398,38 @@ section{
     font-size: 15px;
     
 }
+
+
+
+/* ==================================== */
+@media screen and (max-width: 820px){
+    
+    .footer .logo a img{
+        width: 60%;
+    }
+    .txt-footer1 p{
+        padding: 10px 0;
+        font-size: 14px;
+    }
+    
+    .txt-footer2 p{
+        padding: 10px 0;
+        font-size: 14px;
+    }
+    .copyright{
+        font-size: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /*桌機最大螢幕寬度 1024p */

@@ -497,6 +497,26 @@ section {
 
 
 }
+/* ========================== */
+
+@media screen and (max-width: 820px){
+    .banner-subtitle p{
+        display: none;
+    }
+    .up-text li{
+        font-size: 10px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
 
 /*================================== */
 /* 平板 / 小螢幕桌面樣式 (max-width: 1024px) */
