@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(card);
     });
     
-    // 5. 通用滾動顯示功能（可選）
+    // 5. 通用滾動顯示功能
     // 如果您想為其他元素添加滾動效果，只需加上 .scroll-fade-in 類別
     const scrollElements = document.querySelectorAll('.scroll-fade-in');
     scrollElements.forEach(el => {
