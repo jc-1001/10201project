@@ -1,25 +1,28 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    
+
 }
+
 /* ========================== */
 /* 字型 */
 .noto-sans {
-  font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
+
 /* =============================== */
 
-body{
+body {
     background-image: url(../indexImg/banner/background.png);
     /* background-repeat: repeat-y; */
     /* width: 1920px; */
     height: auto;
-    
-    
+
+
 }
+
 /* 連結樣式 */
 /* a:link – 一般的、未被點擊過的連結
 
@@ -45,106 +48,117 @@ text-decoration:none;
 
 /* ================================== */
 /* 導覽列 */
-.header{
+.header {
     display: flex;
     flex-direction: row;
-    margin-top: 30px ;
+    margin-top: 30px;
     justify-content: space-between;
-    margin-bottom:30px;
+    margin-bottom: 30px;
     /* 更改點↓ */
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    width: 100%; /* 確保橫跨整個頁面 */
-    z-index: 1000; /* 確保它在其他內容之上 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* 確保橫跨整個頁面 */
+    z-index: 1000;
+    /* 確保它在其他內容之上 */
 }
-.header .logo img{
-    
+
+.header .logo img {
+
     height: 120px;
     position: relative;
     top: -25px;
     left: 100px;
-    
+
 }
-.header-whiteLine{
+
+.header-whiteLine {
     background-color: white;
     box-sizing: border-box;
     width: 800px;
     height: 80px;
-    border-radius:40px 0 0 40px ;
+    border-radius: 40px 0 0 40px;
     /* padding-left: 100px;
     padding-right: 50px; */
     justify-content: center;
     align-content: center;
-    
+
 }
-.header-txt ul{
+
+.header-txt ul {
     display: flex;
     flex-direction: row;
     list-style: none;
     margin-left: 20px;
 }
-.header-txt ul li{
-    padding:20px ;
-    border-radius: 40px ;
+
+.header-txt ul li {
+    padding: 20px;
+    border-radius: 40px;
 }
+
 /* hover */
-.header-txt li:hover  {
+.header-txt li:hover {
     background-color: #FF9800;
     color: white;
 }
+
 /* =================== */
 /* [class*="button"]{} */
 
 /* ======================= */
-section{
+section {
     max-width: 1320px;
     margin: auto;
     height: auto;
     justify-content: center;
     padding: 0 150px;
-   
+
 }
 
 /* 桌機板banner圖片消失 */
-.ph-banner-bg{
+.ph-banner-bg {
     display: none;
 }
-.hamburger-menu{
+
+.hamburger-menu {
     display: none;
 }
 
 /* 手機版 */
 @media screen and (max-width: 768px) {
-html {
-    position: static;
-}
+    html {
+        position: static;
+    }
 
 
 
-.banner-bg img{
-    display: none;
-}
-.ph-banner-bg{
-    display: block;
-}
-.big-title{
-    margin-top: 50px;
-    margin-bottom: 450px;
-}
+    .banner-bg img {
+        display: none;
+    }
+
+    .ph-banner-bg {
+        display: block;
+    }
+
+    .big-title {
+        margin-top: 50px;
+        margin-bottom: 450px;
+    }
 
 
-/* banner圖片調整 */
+    /* banner圖片調整 */
     /* 1. 頂部底圖 */
 
-    .ph-banner-bg img{
+    .ph-banner-bg img {
         position: absolute;
         display: block;
         width: 100%;
         z-index: -1;
         top: 0;
         right: 0;
-}
+    }
 
 
     /* header調整 */
@@ -157,153 +171,214 @@ html {
     /* 調整 Logo 區域 */
     .header .logo img {
         /* 保持 logo 在左側 */
-        height: 80px; /* 縮小 logo 尺寸 */
-        top: 0px; 
-        left: 20px; 
+        height: 80px;
+        /* 縮小 logo 尺寸 */
+        top: 0px;
+        left: 20px;
     }
 
     .header-whiteLine {
         /* 隱藏整個清單容器 */
-        display: none; 
+        display: none;
     }
-    .hamburger-menu{
+
+    .hamburger-menu {
         display: block;
         right: 0;
     }
-    .menu-switch{
+
+    .menu-switch {
         display: none;
     }
-    
-    .hb {
-            position: fixed;
-            display: block;
-            width: 40px;
-            height: 40px;
-            background-color: #333;
-            top: 50px;
-            right: 10px;
-            z-index: 100;
-        }
-        .hb .bar {
-            display: block;
-            width: 80%;
-            height: 4px;
-            position: absolute;
-            left: 0;
-            right: 0;
-            margin: auto;
-            background-color: white;
-        }
-        .bar1 {
-            top: 6px;
-        }
-        .bar2 {
-            top: 18px;
-        }
-        .bar3 {
-            top: 30px;
-        }
-        .main-menu {
-            position: fixed;
-            /* display: none; */
-            top: 15%;
-            right: 150%;
-            background-color: #8a422e;
-            width: 80%;
-            /* height: 50svh; */
-            height: calc(100svh - 60px);
-            transition: right .7s;
-            z-index: 99;
 
-        }
-        .ph-menu-logo{
-            justify-self: center;
-            margin: 20px 0;
-            margin-left: 100px;
-        }
-        .ph-menu-logo img{
-            width: 50%;
-        }
-        /* ---半透明覆蓋層--- */
-        .menu-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* 半透明黑色 */
-            z-index: 98; /* 在選單和漢堡按鈕之下 */
-            opacity: 0; /* 預設隱藏 */
-            visibility: hidden; /* 預設不佔空間且無法互動 */
-            transition: opacity .7s, visibility .7s; /* 加入過渡動畫 */
-        }
-        .main-menu ul li{
-            list-style: none;
-        }
-        /* .main-menu ul li ~ li {
+    .hb {
+        position: fixed;
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color: #333;
+        top: 50px;
+        right: 10px;
+        z-index: 100;
+        cursor: pointer;
+    }
+
+    .hb .bar {
+        display: block;
+        width: 80%;
+        height: 4px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: white;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .bar1 {
+        top: 6px;
+    }
+
+    .bar2 {
+        top: 18px;
+    }
+
+    .bar3 {
+        top: 30px;
+    }
+
+
+    /* 遮罩層 - 覆蓋選單外的區域 */
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        z-index: 98;
+        /* 在選單下方,但在頁面內容上方 */
+        cursor: pointer;
+    }
+
+
+
+    .main-menu {
+        position: fixed;
+        /* display: none; */
+        top: 15%;
+        right: 150%;
+        background-color: #8a422e;
+        width: 80%;
+        /* height: 50svh; */
+        height: calc(100svh - 60px);
+        transition: right .7s;
+        z-index: 99;
+
+    }
+
+    .ph-menu-logo {
+        justify-self: center;
+        margin: 20px 0;
+        margin-left: 100px;
+    }
+
+    .ph-menu-logo img {
+        width: 50%;
+    }
+
+    /* ---半透明覆蓋層--- */
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        /* 半透明黑色 */
+        z-index: 98;
+        /* 在選單和漢堡按鈕之下 */
+        opacity: 0;
+        /* 預設隱藏 */
+        visibility: hidden;
+        /* 預設不佔空間且無法互動 */
+        transition: opacity .7s, visibility .7s;
+        /* 加入過渡動畫 */
+    }
+
+    .main-menu ul li {
+        list-style: none;
+    }
+
+    /* .main-menu ul li ~ li {
             border-top: 1px solid white;
         } */
-        .main-menu ul li a {
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            font-size: 20px;
-            color: #fff;
-        }
-        /* --- 選單開啓狀態--- */
-        .hamburger-menu:has(#menu-switch-id:checked) .menu-overlay {
-            opacity: 1;
-            visibility: visible;
-        }
-        .hamburger-menu:has(.menu-switch:checked) .main-menu {
-            right:0%;
-            
-        }
+    .main-menu ul li a {
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #fff;
+    }
+
+    /* 當選單被打開時,變成 X 的動畫 */
+    .hamburger-menu:has(.menu-switch:checked) .bar1 {
+        transform: translateY(12px) rotate(45deg);
+    }
+
+    .hamburger-menu:has(.menu-switch:checked) .bar2 {
+        opacity: 0;
+    }
+
+    .hamburger-menu:has(.menu-switch:checked) .bar3 {
+        transform: translateY(-12px) rotate(-45deg);
+    }
+
+
+    /* --- 選單開啓狀態--- */
+    .hamburger-menu:has(#menu-switch-id:checked) .menu-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .hamburger-menu:has(.menu-switch:checked) .main-menu {
+        right: 0%;
+
+    }
 }
 
 
 /*================================== */
 /* 平板 / 小螢幕桌面樣式 (max-width: 1024px) */
 @media screen and (max-width: 1024px) {
-    
+
     /* 導覽列調整 */
-    .header{
+    .header {
         width: 100%;
         position: static;
     }
-    .header .logo img{
-        height: 100px; 
+
+    .header .logo img {
+        height: 100px;
         top: -15px;
-        left: 30px; 
+        left: 30px;
     }
-    .header-whiteLine{
-        width: 60%; /* 讓導航欄容器響應式佔比 */
-        max-width: 650px; 
+
+    .header-whiteLine {
+        width: 60%;
+        /* 讓導航欄容器響應式佔比 */
+        max-width: 650px;
     }
-    .header-txt ul li{
-        padding: 20px 15px; 
+
+    .header-txt ul li {
+        padding: 20px 15px;
         font-size: 15px;
     }
 
     /* 導覽列調整 */
-    .header .logo img{
-        height: 100px; 
-        left: 30px; 
+    .header .logo img {
+        height: 100px;
+        left: 30px;
     }
-    .header-whiteLine{
-        width: 70%; 
-        max-width: 600px; 
+
+    .header-whiteLine {
+        width: 70%;
+        max-width: 600px;
     }
-    .header-txt ul li{
-        padding: 20px 10px; 
+
+    .header-txt ul li {
+        padding: 20px 10px;
         font-size: 15px;
     }
 
     /* 內容區段調整 */
-    section{
-        max-width: 1024px; 
-        padding: 0 30px; 
+    section {
+        max-width: 1024px;
+        padding: 0 30px;
     }
 
-    
+
 }
