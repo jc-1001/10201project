@@ -65,6 +65,45 @@ a:visited{
 }
 
 /* ========================================== */
+
+/* 裝飾品區域 */
+#d1{
+    position: absolute;
+    top:0%;
+    left: -5%;
+    z-index: -1;
+}
+#d2{
+    position: absolute;
+    top:0%;
+    left: -5%;
+    z-index: -1;
+} 
+.little-deco img{
+    width: 50%;
+    animation-name: little-deco;
+    animation-duration: 2s; 
+    animation-timing-function: ease-in-out; 
+    animation-iteration-count: infinite;
+    animation-delay: 0s; /* 頁面加載後延遲 1 秒再開始 */
+}
+@keyframes little-deco{
+    0% {
+        transform: translateY(0);
+        
+        }
+        50% {
+            transform: translateY(-15px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+}
+
+/* ============================ */
+.servers{
+    position: relative;
+}
 .servers h3{
     font-size: 28px;
     text-align: center;
@@ -140,6 +179,9 @@ a:visited{
     }
 }
 /* ============================= */
+.sec-servers{
+    position: relative;
+}
 .ser-sibTitle{
     text-align: center;
     font-size: 20px;

@@ -744,7 +744,7 @@ section.reason{
 
 
 /* ================================================= */
-/* 💻 RWD 媒體查詢：最大寬度 576px 以下的手機版樣式 */
+/* 💻 RWD 媒體查詢：最大寬度 768px 以下的手機版樣式 */
 /* ================================================= */
 @media screen and (max-width: 768px) {
     * {
@@ -1299,5 +1299,17 @@ section.reason{
     .step-card:hover .st-icon {
         top: 15px; 
         left: 15px;
+    }
+}
+@media screen and (max-width: 425px){
+    .banner-phone-cir{
+        top: 300px;
+        left: -25px;
+    }
+    .banner-phone-cir img{
+        
+        width: 80%;
+
+
     }
 }
