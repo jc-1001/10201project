@@ -1,3 +1,25 @@
+/* 1. 定義淡出動畫：從完全不透明 (1) 變為完全透明 (0) */
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* 2. 定義淡入動畫：從完全透明 (0) 變為完全不透明 (1) */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 3. 預設讓頁面在載入時有一個淡入效果（提升新頁面載入時的柔和度） */
+body {
+    opacity: 0; /* 初始設定為透明 */
+    animation: fadeIn 0.3s ease-in-out forwards; /* 載入後執行 0.5 秒的淡入 */
+}
+
+/* 4. 定義用於連結點擊時的淡出類別 */
+.page-fade-out {
+    animation: fadeOut 0.3s ease-in-out forwards;
+}
 /* 基本設定 */
 
 h4{

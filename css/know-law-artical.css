@@ -6,6 +6,8 @@
 }
 html{
     position: relative;
+    /* 讓所有指向錨點 (anchor links) 的捲動動作變得平滑 */
+    scroll-behavior: smooth;
 }
 
 
