@@ -1,0 +1,179 @@
+
+
+/* 1. 定義從左側滑入動畫 */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 2. 定義從右側滑入動畫 */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 3. 定義淡入放大動畫 */
+@keyframes fadeInZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 4. 定義列表項目依序出現動畫 */
+@keyframes fadeInItem {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================== */
+
+/* 整個經歷區塊預設隱藏 */
+.experience {
+    opacity: 0;
+}
+
+/* 學歷背景：從左側滑入 */
+.experience:nth-child(1) {
+    transform: translateX(-80px);
+}
+
+.experience:nth-child(1).is-visible {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+/* 專業經歷：從右側滑入 */
+.experience:nth-child(2) {
+    transform: translateX(80px);
+}
+
+.experience:nth-child(2).is-visible {
+    animation: slideInRight 0.8s ease-out forwards;
+    animation-delay: 0.3s; /* 延遲出現，產生交錯效果 */
+}
+
+/* ============================================ */
+/* 標題文字特效 */
+/* ============================================ */
+
+.experience > p {
+    opacity: 0;
+}
+
+/* 標題淡入放大 */
+.experience.is-visible > p {
+    animation: fadeInZoom 0.6s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+
+/* ============================================ */
+/* 列表項目依序淡入 */
+/* ============================================ */
+
+.goodat ul li {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* 每個列表項目依序出現 */
+.experience.is-visible .goodat ul li {
+    animation: fadeInItem 0.5s ease-out forwards;
+}
+
+/* 為每個項目設定不同的延遲時間 */
+.experience.is-visible .goodat ul li:nth-child(1) {
+    animation-delay: 0.6s;
+}
+
+.experience.is-visible .goodat ul li:nth-child(2) {
+    animation-delay: 0.75s;
+}
+
+.experience.is-visible .goodat ul li:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.experience.is-visible .goodat ul li:nth-child(4) {
+    animation-delay: 1.05s;
+}
+
+/* ============================================ */
+/* 手機版 RWD 調整 */
+/* ============================================ */
+
+@media screen and (max-width: 576px) {
+    /* 縮短移動距離 */
+    @keyframes slideInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-40px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes slideInRight {
+        from {
+            opacity: 0;
+            transform: translateX(40px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    /* 縮短動畫時間 */
+    .experience:nth-child(1).is-visible,
+    .experience:nth-child(2).is-visible {
+        animation-duration: 0.6s;
+    }
+    
+    /* 減少延遲時間 */
+    .experience:nth-child(2).is-visible {
+        animation-delay: 0.2s;
+    }
+    
+    /* 列表項目延遲時間縮短 */
+    .experience.is-visible .goodat ul li:nth-child(1) {
+        animation-delay: 0.4s;
+    }
+    
+    .experience.is-visible .goodat ul li:nth-child(2) {
+        animation-delay: 0.5s;
+    }
+    
+    .experience.is-visible .goodat ul li:nth-child(3) {
+        animation-delay: 0.6s;
+    }
+    
+    .experience.is-visible .goodat ul li:nth-child(4) {
+        animation-delay: 0.7s;
+    }
+}
+

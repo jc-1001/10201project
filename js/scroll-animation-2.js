@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const observerOptions = {
         root: null, // 使用瀏覽器視窗作為觀察範圍
         rootMargin: '0px', // 不設定額外的邊距
-        threshold: 0.1 // 當元素 10% 進入視窗時觸發
+        threshold: 0.5 // 當元素 50% 進入視窗時觸發//修改!!!
     };
     
     // 2. 創建 Intersection Observer
