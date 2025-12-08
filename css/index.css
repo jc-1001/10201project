@@ -983,7 +983,7 @@ section.reason{
 }
 
     .com-pic img {
-        width: 60px; 
+        width: 100%; 
     }
     .com-txt {
         font-size: 14px; 
